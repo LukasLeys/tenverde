@@ -37,12 +37,19 @@ export default async function Datenschutz({ params }: { params: Promise<{ lang: 
           {de
             ? 'Diese Website setzt keine Cookies, speichert nichts in Ihrem Browser und verwendet keine Analyse- oder Trackingdienste. Beim Aufruf speichert der Hosting-Anbieter '
             : 'This website sets no cookies, stores nothing in your browser and uses no analytics or tracking services. When you visit, the hosting provider '}
-          <Platzhalter>{de ? 'Hoster ergänzen, voraussichtlich Vercel Inc.' : 'host to add, probably Vercel Inc.'}</Platzhalter>
+          Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA,
           {de
             ? ' technisch notwendige Server-Logdaten wie IP-Adresse, Datum, Uhrzeit und aufgerufene Seite. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren Betrieb (Art. 6 Abs. 1 lit. f DSGVO). Die Daten werden nach '
             : ' stores technically necessary server logs such as IP address, date, time and the page requested. The legal basis is our legitimate interest in secure operation (Art. 6(1)(f) GDPR). Logs are deleted after '}
           <Platzhalter>{de ? 'Frist ergänzen' : 'period to add'}</Platzhalter>
           {de ? ' gelöscht.' : '.'}
+        </p>
+
+        <p>
+          {de
+            ? 'Vercel betreibt ein weltweites Netz von Servern. Die Seiten werden möglichst nah am Besucher ausgeliefert, die Serverfunktionen laufen in Frankfurt am Main. Eine Übermittlung von Daten in die USA ist dabei nicht ausgeschlossen. Sie erfolgt auf Grundlage der Standardvertragsklauseln der Europäischen Kommission und des Auftragsverarbeitungsvertrags mit Vercel. '
+            : 'Vercel operates a worldwide network of servers. Pages are delivered from locations close to the visitor, server functions run in Frankfurt am Main. A transfer of data to the USA cannot be ruled out. It is based on the European Commission’s standard contractual clauses and the data processing agreement with Vercel. '}
+          <Platzhalter>{de ? 'rechtlich prüfen' : 'legal review'}</Platzhalter>
         </p>
 
         <h3>{de ? 'Schriftarten' : 'Fonts'}</h3>

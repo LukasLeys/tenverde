@@ -12,7 +12,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const sprache = await spracheAus(params);
-  return { ...seitenMeta('impressum', sprache, sprache === 'de' ? 'Impressum' : 'Legal notice'), robots: { index: true, follow: true } };
+  return seitenMeta('impressum', sprache, sprache === 'de' ? 'Impressum' : 'Legal notice');
 }
 
 export default async function Impressum({ params }: { params: Promise<{ lang: string }> }) {

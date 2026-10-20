@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  pruefen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run build
+      - name: Seiten prüfen
+        run: |
+          npx next start -p 3200 &
+          for i in $(seq 1 30); do curl -sf http://localhost:3200/ >/dev/null && break; sleep 1; done
+          npx playwright-core install --with-deps chromium
+          CHROMIUM_PFAD="$(node -e "console.log(require('playwright-core').chromium.executablePath())")" node tools/pruefe-seiten.mjs http://localhost:3200

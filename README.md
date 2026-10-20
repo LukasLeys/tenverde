@@ -29,15 +29,14 @@ node tools/pruefe-seiten.mjs http://localhost:3200 --shots <ordner>   # alle Sei
 
 Stationen mit `pruefen: true` in `lib/inhalt.ts` stammen aus öffentlichen Profilen und sind noch nicht bestätigt. Live werden sie nicht gezeigt. Mit `TENVERDE_VORSCHAU=1` erscheinen sie markiert, zum Durchsehen. Nach Bestätigung `pruefen` entfernen.
 
-## Vor dem Livegang offen
+## Betrieb
 
-- Domain: `tenverde.at` ist angenommen (`DOMAIN` in `lib/routen.ts`).
-- Impressum: Firmenbuchnummer, UID, Unternehmensgegenstand und Kammermitgliedschaft prüfen (markierte Stellen).
-- Datenschutz: Hosting-Anbieter und Aufbewahrungsfrist der Server-Logs eintragen.
-- Porträt von Lukas Leys einsetzen (Komponente `Portraet` in `components/Bausteine.tsx`).
-- Lebenslauf bestätigen und ergänzen (Ausbildung, Jahreszahlen).
-- Beschreibungen von immobily.io und beamswerk.ai bestätigen.
+- Live: https://tenverde.vercel.app (Vercel-Projekt `tenverde`, Team NeoJuris). Jeder Push auf `main` wird automatisch ausgeliefert.
+- Serverfunktionen laufen in Frankfurt (`vercel.json`). Sicherheits-Header (CSP, HSTS, X-Frame-Options und weitere) setzt `next.config.ts` im Production-Build.
+- Suchmaschinen sind gesperrt (`noindex`, robots.txt `Disallow: /`), bis in Vercel für Production `TENVERDE_INDEXIEREN=1` gesetzt ist. Erst freischalten, wenn die Seite unter tenverde.at läuft und Impressum und Datenschutz vollständig sind.
+- CI (`.github/workflows/ci.yml`): Typprüfung, Lint, Build und das Prüfskript über alle Seiten.
+- Die Szene schaltet auf langsamen Geräten in eine Sparstufe (nur jedes zweite Bild) und steht bei „Bewegung reduzieren“ still.
 
-## Deployment
+## Offen
 
-Für Vercel vorbereitet: keine Umgebungsvariablen nötig. Sicherheits-Header (CSP, HSTS, X-Frame-Options und weitere) setzt `next.config.ts` im Production-Build.
+Alle offenen Angaben und Entscheidungen stehen in `FRAGEN.md`. Markierte Platzhalter auf der Seite (lila hinterlegt) zeigen, wo im Impressum und Datenschutz noch etwas fehlt.

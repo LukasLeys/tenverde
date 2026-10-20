@@ -39,6 +39,12 @@ export const INTERN_ZU_EN: Record<string, string> = Object.fromEntries(
 
 export const DOMAIN = 'https://tenverde.at';
 
+/**
+ * Suchmaschinen dürfen die Seite erst indexieren, wenn sie unter der finalen Domain läuft und
+ * Impressum und Datenschutz vollständig sind. Freischalten mit TENVERDE_INDEXIEREN=1 (nur Production).
+ */
+export const INDEXIEREN = process.env.TENVERDE_INDEXIEREN === '1';
+
 /** Öffentliche Adresse → Seite und Sprache, z. B. "/en/about" → { seite: "ueber", sprache: "en" }. */
 export function seiteVonPfad(pfadname: string): { seite: Seite | null; sprache: Sprache } {
   const p = pfadname.replace(/\/$/, '') || '/';

@@ -7,7 +7,7 @@ import { Fuss } from '@/components/Fuss';
 import { Kopf } from '@/components/Kopf';
 import { Unterholz } from '@/components/Unterholz';
 import { ADRESSE, EMAIL, LINKEDIN, inhalt } from '@/lib/inhalt';
-import { DOMAIN, SPRACHEN, istSprache } from '@/lib/routen';
+import { DOMAIN, INDEXIEREN, SPRACHEN, istSprache } from '@/lib/routen';
 import { figtree, jost } from '@/lib/schriften';
 
 export const dynamicParams = false;
@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     applicationName: 'tenverde',
     authors: [{ name: 'Lukas Leys' }],
     formatDetection: { telephone: false, email: false, address: false },
+    robots: INDEXIEREN ? { index: true, follow: true } : { index: false, follow: false },
   };
 }
 

@@ -999,12 +999,6 @@ p { margin: 0; }
   box-shadow: 0 0 0 1px var(--line) inset;
 }
 
-/* Kontaktwege */
-.routes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.25rem, 3vw, 2.5rem); margin-top: clamp(3rem, 6vw, 5rem); }
-.routes .clearing { display: flex; flex-direction: column; }
-.routes .clearing p { margin-top: 1rem; color: var(--text-2); }
-.routes .clearing .btn { margin-top: auto; align-self: flex-start; }
-.routes .clearing p + .btn { margin-top: 2rem; }
 .clearing--ice { --c: var(--ice); }
 
 .mail-row { display: flex; flex-direction: column; align-items: center; gap: 1.25rem; }
@@ -1086,7 +1080,7 @@ p { margin: 0; }
 
 @media (max-width: 960px) {
   .subhero--split, .split { grid-template-columns: minmax(0, 1fr); }
-  .principles, .steps, .fields, .routes { grid-template-columns: minmax(0, 1fr); }
+  .principles, .steps, .fields { grid-template-columns: minmax(0, 1fr); }
   .principles::before { display: none; }
   .foot__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .foot__brand { grid-column: 1 / -1; }
@@ -1133,8 +1127,6 @@ p { margin: 0; }
 /* Korrekturen nach der ersten Sichtprüfung */
 .foot a.brand, .foot__list a, .foot__legal a, .foot__addr a { padding: 0; border-radius: 4px; }
 .foot__legal { margin-left: 0; }
-.routes .clearing p { flex: 1 0 auto; }
-.routes .clearing p + .btn { margin-top: 2rem; }
 .section { padding-top: clamp(6rem, 11vw, 10.5rem); }
 .brand svg { flex: none; }
 .menu-btn { white-space: nowrap; }
