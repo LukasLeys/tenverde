@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><title>tenverde GmbH</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet"><script src="./image-slot.js"></script><style>html{scroll-behavior:smooth}body{margin:0;background:#EDF0E8;color:#10251A;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}a{color:#1E7A46}a:hover{color:#10251A}</style></helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+
+<header style="padding:22px clamp(20px,5vw,72px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px">
+<a href="#top" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#10251A"><dc-import name="Leaf" variant="{{ logo }}" style="width:34px;height:34px" hint-size="34px,34px"></dc-import><span style="font-family:Newsreader,serif;font-size:28px;font-weight:500;letter-spacing:-0.01em">tenverde</span></a>
+<nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-size:17px">
+<a href="#unternehmen" style="color:#10251A;text-decoration:none;white-space:nowrap" style-hover="color:#1E7A46"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Unternehmen</sc-if><sc-if value="{{ en }}">Companies</sc-if></a>
+<a href="#gesucht" style="color:#10251A;text-decoration:none;white-space:nowrap" style-hover="color:#1E7A46"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Gesucht</sc-if><sc-if value="{{ en }}">Looking for</sc-if></a>
+<a href="#person" style="color:#10251A;text-decoration:none;white-space:nowrap" style-hover="color:#1E7A46"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Über mich</sc-if><sc-if value="{{ en }}">About</sc-if></a>
+<a href="#kontakt" style="color:#10251A;text-decoration:none;white-space:nowrap" style-hover="color:#1E7A46"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Kontakt</sc-if><sc-if value="{{ en }}">Contact</sc-if></a>
+<div style="display:flex;border:1.5px solid #10251A;border-radius:999px;overflow:hidden;font-size:15px;font-weight:600">
+<button onClick="{{ setDe }}" style="border:0;padding:6px 12px;cursor:pointer;font:inherit;background:{{ deBg }};color:{{ deFg }}">DE</button>
+<button onClick="{{ setEn }}" style="border:0;padding:6px 12px;cursor:pointer;font:inherit;background:{{ enBg }};color:{{ enFg }}">EN</button>
+</div>
+</nav>
+</header>
+
+<section id="top" style="position:relative;overflow:hidden;padding:clamp(48px,8vw,112px) clamp(20px,5vw,72px) clamp(72px,10vw,140px)">
+<sc-if value="{{ heroLeaf }}" hint-placeholder-val="{{ true }}"><div style="position:absolute;right:-8vw;top:50%;transform:translateY(-50%);width:min(64vw,760px);aspect-ratio:1;pointer-events:none"><dc-import name="Leaf" variant="{{ logo }}" color="#C4D9C0" style="width:100%;height:100%" hint-size="100%,100%"></dc-import></div></sc-if>
+<div style="position:relative;max-width:1240px;margin:0 auto">
+<h1 style="margin:0;max-width:11ch;font-family:Newsreader,serif;font-weight:400;font-size:clamp(52px,9vw,128px);line-height:0.98;letter-spacing:-0.025em;text-wrap:balance"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Wir investieren in Dinge, die wachsen.</sc-if><sc-if value="{{ en }}">We invest in things that grow.</sc-if></h1>
+<p style="margin:clamp(28px,4vw,44px) 0 0;max-width:34em;font-size:clamp(19px,1.6vw,22px);line-height:1.55;text-wrap:pretty"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">tenverde ist meine Beteiligungsgesellschaft mit Sitz in Innsbruck. Hier liegen meine Softwareunternehmen, meine Beteiligungen an Startups und meine Immobilien.</sc-if><sc-if value="{{ en }}">tenverde is my holding company, based in Innsbruck. It holds my software companies, my stakes in startups and my real estate.</sc-if></p>
+<div style="margin-top:36px;display:flex;flex-wrap:wrap;gap:14px">
+<a href="#gesucht" style="background:#10251A;color:#EDF0E8;text-decoration:none;padding:15px 24px;border-radius:999px;font-size:17px;font-weight:600" style-hover="background:#1E7A46;color:#EDF0E8"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Was ich suche</sc-if><sc-if value="{{ en }}">What I look for</sc-if></a>
+<a href="#kontakt" style="color:#10251A;text-decoration:none;padding:13.5px 24px;border-radius:999px;border:1.5px solid #10251A;font-size:17px;font-weight:600" style-hover="border-color:#1E7A46;color:#1E7A46"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Kontakt aufnehmen</sc-if><sc-if value="{{ en }}">Get in touch</sc-if></a>
+</div>
+</div>
+</section>
+
+<section id="unternehmen" style="padding:clamp(56px,8vw,112px) clamp(20px,5vw,72px)">
+<div style="max-width:1240px;margin:0 auto">
+<h2 style="margin:0 0 clamp(24px,4vw,48px);font-family:Newsreader,serif;font-weight:400;font-size:clamp(36px,5vw,60px);line-height:1.05;letter-spacing:-0.015em"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Unternehmen, die ich selbst aufbaue</sc-if><sc-if value="{{ en }}">Companies I am building</sc-if></h2>
+<div style="display:flex;flex-direction:column">
+
+<a href="https://neojuris.ai" target="_blank" rel="noopener" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));align-items:baseline;gap:10px 56px;padding:clamp(20px,3vw,32px) 0;text-decoration:none;color:#10251A" style-hover="color:#1E7A46">
+<span style="display:flex;align-items:baseline;gap:18px"><span style="font-size:17px;font-weight:600;color:#1E7A46;min-width:28px">01</span><span style="font-family:Newsreader,serif;font-size:clamp(40px,6vw,80px);line-height:1;letter-spacing:-0.02em">neojuris.ai</span></span>
+<span style="font-size:clamp(18px,1.5vw,21px);line-height:1.5;color:#3E5546;max-width:30em"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">KI-Software für juristische Arbeit. Recherche, Entwürfe und Prüfung von Dokumenten für Kanzleien und Rechtsabteilungen.</sc-if><sc-if value="{{ en }}">AI software for legal work. Research, drafting and document review for law firms and in-house teams.</sc-if></span>
+</a>
+
+<a href="https://immobily.io" target="_blank" rel="noopener" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));align-items:baseline;gap:10px 56px;padding:clamp(20px,3vw,32px) 0;text-decoration:none;color:#10251A" style-hover="color:#1E7A46">
+<span style="display:flex;align-items:baseline;gap:18px"><span style="font-size:17px;font-weight:600;color:#1E7A46;min-width:28px">02</span><span style="font-family:Newsreader,serif;font-size:clamp(40px,6vw,80px);line-height:1;letter-spacing:-0.02em">immobily.io</span></span>
+<span style="font-size:clamp(18px,1.5vw,21px);line-height:1.5;color:#3E5546;max-width:30em"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Software für Immobilien. Digitale Werkzeuge für Eigentümer, Verwalter und Makler.</sc-if><sc-if value="{{ en }}">Software for real estate. Digital tools for owners, property managers and agents.</sc-if></span>
+</a>
+
+<a href="https://beamswerk.ai" target="_blank" rel="noopener" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));align-items:baseline;gap:10px 56px;padding:clamp(20px,3vw,32px) 0;text-decoration:none;color:#10251A" style-hover="color:#1E7A46">
+<span style="display:flex;align-items:baseline;gap:18px"><span style="font-size:17px;font-weight:600;color:#1E7A46;min-width:28px">03</span><span style="font-family:Newsreader,serif;font-size:clamp(40px,6vw,80px);line-height:1;letter-spacing:-0.02em">beamswerk.ai</span></span>
+<span style="font-size:clamp(18px,1.5vw,21px);line-height:1.5;color:#3E5546;max-width:30em"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">KI-Anwendungen für Unternehmen. Automatisierung von Abläufen, die heute noch von Hand laufen.</sc-if><sc-if value="{{ en }}">AI applications for businesses. Automating workflows that still run by hand today.</sc-if></span>
+</a>
+
+<a href="https://diekryptologen.com/" target="_blank" rel="noopener" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));align-items:baseline;gap:10px 56px;padding:clamp(20px,3vw,32px) 0;text-decoration:none;color:#10251A" style-hover="color:#1E7A46">
+<span style="display:flex;align-items:baseline;gap:18px"><span style="font-size:17px;font-weight:600;color:#1E7A46;min-width:28px">04</span><span style="font-family:Newsreader,serif;font-size:clamp(40px,6vw,80px);line-height:1;letter-spacing:-0.02em">Die Kryptologen</span></span>
+<span style="font-size:clamp(18px,1.5vw,21px);line-height:1.5;color:#3E5546;max-width:30em"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Der Krypto-Podcast aus Wien. Bitcoin, Blockchain und Kryptoökonomie verständlich eingeordnet.</sc-if><sc-if value="{{ en }}">The crypto podcast from Vienna. Bitcoin, blockchain and the crypto economy explained clearly.</sc-if></span>
+</a>
+
+</div>
+</div>
+</section>
+
+<section id="gesucht" style="background:#0F3320;color:#E9F0E4;padding:clamp(64px,9vw,128px) clamp(20px,5vw,72px)">
+<div style="max-width:1240px;margin:0 auto">
+<h2 style="margin:0;max-width:16ch;font-family:Newsreader,serif;font-weight:400;font-size:clamp(40px,6vw,76px);line-height:1.02;letter-spacing:-0.02em;text-wrap:balance"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Ich suche Startups und Immobilien.</sc-if><sc-if value="{{ en }}">I am looking for startups and real estate.</sc-if></h2>
+<p style="margin:24px 0 0;max-width:36em;font-size:clamp(19px,1.6vw,22px);line-height:1.55;color:#C9D9CB;text-wrap:pretty"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">tenverde investiert eigenes Kapital und hält langfristig. Ich entscheide selbst und schnell, ohne Fonds und ohne Komitee.</sc-if><sc-if value="{{ en }}">tenverde invests its own capital and holds for the long term. I decide myself and quickly, with no fund and no committee.</sc-if></p>
+<div style="margin-top:clamp(48px,6vw,80px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:56px clamp(40px,6vw,96px)">
+
+<div style="display:flex;flex-direction:column;gap:28px">
+<h3 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(32px,3.6vw,44px);line-height:1.1;color:#8FD19E"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Startup-Beteiligungen</sc-if><sc-if value="{{ en }}">Startup investments</sc-if></h3>
+<dl style="margin:0;display:grid;grid-template-columns:minmax(110px,auto) minmax(0,1fr);gap:16px 28px;font-size:19px;line-height:1.45">
+<dt style="color:#A9C2AD"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Phase</sc-if><sc-if value="{{ en }}">Stage</sc-if></dt><dd style="margin:0">Pre-Seed, Seed</dd>
+<dt style="color:#A9C2AD"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Branchen</sc-if><sc-if value="{{ en }}">Sectors</sc-if></dt><dd style="margin:0">Software, KI, LegalTech, PropTech</dd>
+<dt style="color:#A9C2AD">Region</dt><dd style="margin:0"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Österreich, Deutschland, Schweiz</sc-if><sc-if value="{{ en }}">Austria, Germany, Switzerland</sc-if></dd>
+<dt style="color:#A9C2AD"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Ticket</sc-if><sc-if value="{{ en }}">Ticket</sc-if></dt><dd style="margin:0"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">nach Absprache</sc-if><sc-if value="{{ en }}">by arrangement</sc-if></dd>
+<dt style="color:#A9C2AD"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Dazu</sc-if><sc-if value="{{ en }}">Plus</sc-if></dt><dd style="margin:0"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Erfahrung aus Gründung, Produkt und Recht. Kontakte zu Kanzleien und in die Immobilienbranche.</sc-if><sc-if value="{{ en }}">Experience in founding, product and law. Contacts to law firms and the real estate industry.</sc-if></dd>
+</dl>
+<p style="margin:0;font-size:19px;line-height:1.5"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Pitch Deck bitte an </sc-if><sc-if value="{{ en }}">Please send your pitch deck to </sc-if><a href="mailto:office@tenverde.at?subject=Pitch%20Deck" style="color:#E9F0E4;font-weight:600" style-hover="color:#8FD19E">office@tenverde.at</a></p>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:28px">
+<h3 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(32px,3.6vw,44px);line-height:1.1;color:#8FD19E"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Immobilien</sc-if><sc-if value="{{ en }}">Real estate</sc-if></h3>
+<dl style="margin:0;display:grid;grid-template-columns:minmax(110px,auto) minmax(0,1fr);gap:16px 28px;font-size:19px;line-height:1.45">
+<dt style="color:#A9C2AD"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Objekte</sc-if><sc-if value="{{ en }}">Assets</sc-if></dt><dd style="margin:0"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Wohnhäuser, Zinshäuser, Grundstücke mit Widmung</sc-if><sc-if value="{{ en }}">Residential and multi-family buildings, zoned plots</sc-if></dd>
+<dt style="color:#A9C2AD">Region</dt><dd style="margin:0"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Tirol und Westösterreich</sc-if><sc-if value="{{ en }}">Tyrol and western Austria</sc-if></dd>
+<dt style="color:#A9C2AD"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Zustand</sc-if><sc-if value="{{ en }}">Condition</sc-if></dt><dd style="margin:0"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Bestand, gern mit Sanierungs- oder Entwicklungsbedarf</sc-if><sc-if value="{{ en }}">Existing stock, ideally in need of renovation or development</sc-if></dd>
+<dt style="color:#A9C2AD"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Ankauf</sc-if><sc-if value="{{ en }}">Deals</sc-if></dt><dd style="margin:0"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">direkt von Eigentümern oder über Makler, auch off-market</sc-if><sc-if value="{{ en }}">directly from owners or through agents, off-market welcome</sc-if></dd>
+</dl>
+<p style="margin:0;font-size:19px;line-height:1.5"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Exposé bitte an </sc-if><sc-if value="{{ en }}">Please send the exposé to </sc-if><a href="mailto:office@tenverde.at?subject=Immobilie" style="color:#E9F0E4;font-weight:600" style-hover="color:#8FD19E">office@tenverde.at</a></p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="person" style="padding:clamp(64px,9vw,128px) clamp(20px,5vw,72px)">
+<div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(36px,6vw,96px);align-items:end">
+<div style="max-width:440px;width:100%;aspect-ratio:4/5"><image-slot id="portrait-lukas-leys" shape="rect" placeholder="Porträt Lukas Leys hier ablegen" style="width:100%;height:100%"></image-slot></div>
+<div style="display:flex;flex-direction:column;gap:22px;padding-bottom:8px">
+<h2 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(44px,6vw,80px);line-height:1;letter-spacing:-0.02em">Lukas Leys</h2>
+<p style="margin:0;font-size:19px;font-weight:600"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Gründer und Geschäftsführer der tenverde GmbH</sc-if><sc-if value="{{ en }}">Founder and managing director of tenverde GmbH</sc-if></p>
+<p style="margin:0;max-width:32em;font-size:clamp(19px,1.5vw,21px);line-height:1.6;color:#2E4537;text-wrap:pretty"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Ich gründe Softwareunternehmen und investiere in junge Firmen und in Immobilien. tenverde bündelt das unter einem Dach. Was ich aufbaue, will ich lange halten und in Ruhe wachsen lassen.</sc-if><sc-if value="{{ en }}">I found software companies and invest in young businesses and in real estate. tenverde brings all of it under one roof. What I build, I intend to hold for a long time and let grow at its own pace.</sc-if></p>
+<a href="https://www.linkedin.com/in/lukasleys/" target="_blank" rel="noopener" style="align-self:flex-start;font-size:19px;font-weight:600;color:#1E7A46" style-hover="color:#10251A"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Profil auf LinkedIn</sc-if><sc-if value="{{ en }}">Profile on LinkedIn</sc-if></a>
+</div>
+</div>
+</section>
+
+<section id="kontakt" style="background:#DCE5D6;padding:clamp(64px,9vw,128px) clamp(20px,5vw,72px)">
+<div style="max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:28px">
+<h2 style="margin:0;font-family:Newsreader,serif;font-weight:400;font-size:clamp(36px,5vw,60px);line-height:1.05;letter-spacing:-0.015em"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Schreiben Sie mir.</sc-if><sc-if value="{{ en }}">Write to me.</sc-if></h2>
+<a href="mailto:office@tenverde.at" style="align-self:flex-start;font-family:Newsreader,serif;font-size:clamp(34px,6.5vw,92px);line-height:1;letter-spacing:-0.02em;color:#10251A;text-underline-offset:0.12em;text-decoration-thickness:2px;word-break:break-word" style-hover="color:#1E7A46">office@tenverde.at</a>
+<p style="margin:12px 0 0;font-size:19px;line-height:1.6">tenverde GmbH<br>Kirschentalgasse 14/D21<br>6020 Innsbruck, <sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Österreich</sc-if><sc-if value="{{ en }}">Austria</sc-if></p>
+</div>
+</section>
+
+<footer style="padding:28px clamp(20px,5vw,72px) 36px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 32px;font-size:16px;color:#3E5546">
+<span style="display:flex;align-items:center;gap:10px"><dc-import name="Leaf" variant="{{ logo }}" style="width:20px;height:20px" hint-size="20px,20px"></dc-import>© 2026 tenverde GmbH</span>
+<span style="display:flex;gap:24px"><a href="Impressum.dc.html" style="color:#3E5546" style-hover="color:#10251A">Impressum</a><a href="Impressum.dc.html#datenschutz" style="color:#3E5546" style-hover="color:#10251A"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Datenschutz</sc-if><sc-if value="{{ en }}">Privacy</sc-if></a></span>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;logo&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;],&quot;default&quot;:&quot;1&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Marke&quot;},&quot;heroLeaf&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Marke&quot;}}">
+class Component extends DCLogic {
+  state = { lang: 'de' };
+  componentDidMount() {
+    try {
+      const q = new URLSearchParams(location.search).get('lang');
+      const s = q || localStorage.getItem('tenverde-lang');
+      if (s === 'en' || s === 'de') this.setLang(s);
+    } catch (e) {}
+  }
+  setLang(l) {
+    this.setState({ lang: l });
+    try { localStorage.setItem('tenverde-lang', l); } catch (e) {}
+    document.documentElement.lang = l;
+  }
+  renderVals() {
+    const en = this.state.lang === 'en';
+    const on = '#10251A', off = 'transparent';
+    return {
+      de: !en, en,
+      logo: String(this.props.logo ?? '1'),
+      heroLeaf: this.props.heroLeaf ?? true,
+      setDe: () => this.setLang('de'), setEn: () => this.setLang('en'),
+      deBg: en ? off : on, deFg: en ? on : '#EDF0E8',
+      enBg: en ? on : off, enFg: en ? '#EDF0E8' : on,
+    };
+  }
+}
+</script>
+</body>
+</html>

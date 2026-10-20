@@ -1,0 +1,447 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T22:29:36.043Z",
+  "title": "Design System: tenverde",
+  "extensions": {
+    "colorMeta": {
+      "loam": {
+        "role": "neutral",
+        "displayName": "Loam",
+        "canonical": "oklch(16.0% 0.013 155.7)",
+        "tonalRamp": [
+          "oklch(15% 0.008 155.7)",
+          "oklch(25% 0.013 155.7)",
+          "oklch(35% 0.013 155.7)",
+          "oklch(48% 0.013 155.7)",
+          "oklch(60% 0.013 155.7)",
+          "oklch(72% 0.013 155.7)",
+          "oklch(84% 0.013 155.7)",
+          "oklch(95% 0.008 155.7)"
+        ]
+      },
+      "loam-2": {
+        "role": "neutral",
+        "displayName": "Tiefer Loam",
+        "canonical": "oklch(19.4% 0.017 160.0)",
+        "tonalRamp": [
+          "oklch(15% 0.010 160.0)",
+          "oklch(25% 0.017 160.0)",
+          "oklch(35% 0.017 160.0)",
+          "oklch(48% 0.017 160.0)",
+          "oklch(60% 0.017 160.0)",
+          "oklch(72% 0.017 160.0)",
+          "oklch(84% 0.017 160.0)",
+          "oklch(95% 0.010 160.0)"
+        ]
+      },
+      "cyan": {
+        "role": "primary",
+        "displayName": "Sporencyan",
+        "canonical": "oklch(86.8% 0.094 188.0)",
+        "tonalRamp": [
+          "oklch(15% 0.056 188.0)",
+          "oklch(25% 0.094 188.0)",
+          "oklch(35% 0.094 188.0)",
+          "oklch(48% 0.094 188.0)",
+          "oklch(60% 0.094 188.0)",
+          "oklch(72% 0.094 188.0)",
+          "oklch(84% 0.094 188.0)",
+          "oklch(95% 0.056 188.0)"
+        ]
+      },
+      "lilac": {
+        "role": "secondary",
+        "displayName": "Sporenlila",
+        "canonical": "oklch(77.6% 0.108 295.2)",
+        "tonalRamp": [
+          "oklch(15% 0.065 295.2)",
+          "oklch(25% 0.108 295.2)",
+          "oklch(35% 0.108 295.2)",
+          "oklch(48% 0.108 295.2)",
+          "oklch(60% 0.108 295.2)",
+          "oklch(72% 0.108 295.2)",
+          "oklch(84% 0.108 295.2)",
+          "oklch(95% 0.065 295.2)"
+        ]
+      },
+      "ice": {
+        "role": "tertiary",
+        "displayName": "Eisblau",
+        "canonical": "oklch(82.4% 0.075 256.1)",
+        "tonalRamp": [
+          "oklch(15% 0.045 256.1)",
+          "oklch(25% 0.075 256.1)",
+          "oklch(35% 0.075 256.1)",
+          "oklch(48% 0.075 256.1)",
+          "oklch(60% 0.075 256.1)",
+          "oklch(72% 0.075 256.1)",
+          "oklch(84% 0.075 256.1)",
+          "oklch(95% 0.045 256.1)"
+        ]
+      },
+      "moss": {
+        "role": "tertiary",
+        "displayName": "Moos",
+        "canonical": "oklch(88.0% 0.067 152.9)",
+        "tonalRamp": [
+          "oklch(15% 0.040 152.9)",
+          "oklch(25% 0.067 152.9)",
+          "oklch(35% 0.067 152.9)",
+          "oklch(48% 0.067 152.9)",
+          "oklch(60% 0.067 152.9)",
+          "oklch(72% 0.067 152.9)",
+          "oklch(84% 0.067 152.9)",
+          "oklch(95% 0.040 152.9)"
+        ]
+      },
+      "vein": {
+        "role": "tertiary",
+        "displayName": "Wurzelgrün",
+        "canonical": "oklch(82.0% 0.075 153.6)",
+        "tonalRamp": [
+          "oklch(15% 0.045 153.6)",
+          "oklch(25% 0.075 153.6)",
+          "oklch(35% 0.075 153.6)",
+          "oklch(48% 0.075 153.6)",
+          "oklch(60% 0.075 153.6)",
+          "oklch(72% 0.075 153.6)",
+          "oklch(84% 0.075 153.6)",
+          "oklch(95% 0.045 153.6)"
+        ]
+      },
+      "bloom": {
+        "role": "neutral",
+        "displayName": "Weißblüte",
+        "canonical": "oklch(98.9% 0.016 156.9)",
+        "tonalRamp": [
+          "oklch(15% 0.010 156.9)",
+          "oklch(25% 0.016 156.9)",
+          "oklch(35% 0.016 156.9)",
+          "oklch(48% 0.016 156.9)",
+          "oklch(60% 0.016 156.9)",
+          "oklch(72% 0.016 156.9)",
+          "oklch(84% 0.016 156.9)",
+          "oklch(95% 0.010 156.9)"
+        ]
+      },
+      "head": {
+        "role": "neutral",
+        "displayName": "Titelgrau",
+        "canonical": "oklch(92.6% 0.021 156.8)",
+        "tonalRamp": [
+          "oklch(15% 0.012 156.8)",
+          "oklch(25% 0.021 156.8)",
+          "oklch(35% 0.021 156.8)",
+          "oklch(48% 0.021 156.8)",
+          "oklch(60% 0.021 156.8)",
+          "oklch(72% 0.021 156.8)",
+          "oklch(84% 0.021 156.8)",
+          "oklch(95% 0.012 156.8)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Text",
+        "canonical": "oklch(90.2% 0.021 156.8)",
+        "tonalRamp": [
+          "oklch(15% 0.013 156.8)",
+          "oklch(25% 0.021 156.8)",
+          "oklch(35% 0.021 156.8)",
+          "oklch(48% 0.021 156.8)",
+          "oklch(60% 0.021 156.8)",
+          "oklch(72% 0.021 156.8)",
+          "oklch(84% 0.021 156.8)",
+          "oklch(95% 0.013 156.8)"
+        ]
+      },
+      "text-2": {
+        "role": "neutral",
+        "displayName": "Text 2",
+        "canonical": "oklch(77.9% 0.029 157.2)",
+        "tonalRamp": [
+          "oklch(15% 0.017 157.2)",
+          "oklch(25% 0.029 157.2)",
+          "oklch(35% 0.029 157.2)",
+          "oklch(48% 0.029 157.2)",
+          "oklch(60% 0.029 157.2)",
+          "oklch(72% 0.029 157.2)",
+          "oklch(84% 0.029 157.2)",
+          "oklch(95% 0.017 157.2)"
+        ]
+      },
+      "text-3": {
+        "role": "neutral",
+        "displayName": "Text 3",
+        "canonical": "oklch(70.0% 0.034 156.8)",
+        "tonalRamp": [
+          "oklch(15% 0.020 156.8)",
+          "oklch(25% 0.034 156.8)",
+          "oklch(35% 0.034 156.8)",
+          "oklch(48% 0.034 156.8)",
+          "oklch(60% 0.034 156.8)",
+          "oklch(72% 0.034 156.8)",
+          "oklch(84% 0.034 156.8)",
+          "oklch(95% 0.020 156.8)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Ader",
+        "canonical": "rgba(159, 211, 174, 0.22)",
+        "tonalRamp": [
+          "oklch(15% 0.045 153.6)",
+          "oklch(25% 0.075 153.6)",
+          "oklch(35% 0.075 153.6)",
+          "oklch(48% 0.075 153.6)",
+          "oklch(60% 0.075 153.6)",
+          "oklch(72% 0.075 153.6)",
+          "oklch(84% 0.075 153.6)",
+          "oklch(95% 0.045 153.6)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hauptüberschrift des ersten Bildes, Jost 200, Wörter reagieren auf Licht."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Abschnittstitel und die Leuchtadresse."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Projektnamen und Lichtungstitel."
+      },
+      "title-small": {
+        "displayName": "Title small",
+        "purpose": "Titel in Ader-Listen, Schritten und Lebenslauf."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Einleitung unter Titeln."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Fließtext in Figtree, tabellarische Ziffern."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Navigation, Sprachumschalter, Zeiten, Fußzeile."
+      }
+    },
+    "shadows": [
+      {
+        "name": "bloom-glow",
+        "value": "0 0 0 1px rgba(255,255,255,0.6) inset, 0 6px 24px rgba(190,255,232,0.45), 0 14px 60px rgba(134,232,223,0.35), 0 20px 120px rgba(187,168,244,0.25)",
+        "purpose": "Blütenschein der gefüllten Leuchtpille."
+      },
+      {
+        "name": "bloom-glow-hover",
+        "value": "0 0 0 1px #fff inset, 0 8px 30px rgba(210,255,238,0.65), 0 18px 80px rgba(134,232,223,0.5), 0 26px 140px rgba(187,168,244,0.35)",
+        "purpose": "Blütenschein bei Hover."
+      },
+      {
+        "name": "glow-pill",
+        "value": "0 0 0 1px rgba(134,232,223,0.55) inset, 0 4px 24px rgba(134,232,223,0.12)",
+        "purpose": "Glühpille in Artfarbe (lila: 187,168,244)."
+      },
+      {
+        "name": "node",
+        "value": "0 0 0 4px rgba(134,232,223,0.16), 0 0 18px rgba(134,232,223,0.8)",
+        "purpose": "Leuchtender Knoten an Adern und im Lebenslauf."
+      },
+      {
+        "name": "hairline",
+        "value": "0 0 0 1px var(--line) inset",
+        "purpose": "Innenrand statt Rahmen für Chips und Kopierknopf."
+      },
+      {
+        "name": "focus-ring",
+        "value": "outline: 2px solid var(--focus); outline-offset: 4px; box-shadow: 0 0 0 6px rgba(134,232,223,0.18)",
+        "purpose": "Fokus auf allen Bedienelementen."
+      },
+      {
+        "name": "portrait",
+        "value": "0 0 0 1px rgba(187,168,244,0.28) inset, 0 30px 80px rgba(0,0,0,0.45)",
+        "purpose": "Einziger dunkler Schatten, nur unter dem Porträt."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Einzige Kurve für alle Übergänge (0,3 bis 0,8s)."
+      },
+      {
+        "name": "emerge",
+        "value": "1.8s, blur(10px) und opacity 0.35 nach scharf, 110ms Versatz pro Wort",
+        "purpose": "Wörter der Hauptüberschrift tauchen auf."
+      },
+      {
+        "name": "trieb",
+        "value": "stroke-dashoffset 80 nach 0 in 0.9s, Verzögerung 0.5s",
+        "purpose": "Trieb wächst aus dem letzten Wort."
+      },
+      {
+        "name": "scene",
+        "value": "Canvas: Lichtfeld am Zeiger, Pulse beim Scrollen zu data-anchor, Blüte bei data-bloom; prefers-reduced-motion zeigt ein stilles Bild",
+        "purpose": "Signaturbewegung der Welt."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "520px"
+      },
+      {
+        "name": "timeline",
+        "value": "600px"
+      },
+      {
+        "name": "stack-hero",
+        "value": "860px"
+      },
+      {
+        "name": "stack-grids",
+        "value": "960px"
+      },
+      {
+        "name": "menu",
+        "value": "1024px"
+      },
+      {
+        "name": "growths",
+        "value": "1100px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Leuchtpille Blüte",
+      "kind": "button",
+      "refersTo": "button-bloom",
+      "description": "Primäre Handlung, eine pro Ansicht.",
+      "html": "<a class=\"ds-btn-bloom\" href=\"#\">Was ich suche</a>",
+      "css": ".ds-btn-bloom{display:inline-flex;align-items:center;min-height:3.5rem;padding:0 1.75rem;border-radius:999px;background:var(--bloom,#f3fff7);color:#08110c;font:600 1.0625rem/1 var(--f-text,Figtree,sans-serif);text-decoration:none;box-shadow:0 0 0 1px rgba(255,255,255,.6) inset,0 6px 24px rgba(190,255,232,.45),0 14px 60px rgba(134,232,223,.35),0 20px 120px rgba(187,168,244,.25);transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s cubic-bezier(.16,1,.3,1)}.ds-btn-bloom:hover{transform:translateY(-2px);box-shadow:0 0 0 1px #fff inset,0 8px 30px rgba(210,255,238,.65),0 18px 80px rgba(134,232,223,.5),0 26px 140px rgba(187,168,244,.35)}.ds-btn-bloom:focus-visible{outline:2px solid #f3fff7;outline-offset:4px}"
+    },
+    {
+      "name": "Leuchtpille Glühen",
+      "kind": "button",
+      "refersTo": "button-glow",
+      "description": "E-Mail-Handlung in Lichtungen.",
+      "html": "<a class=\"ds-btn-glow\" href=\"#\">Pitch Deck senden <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 6h16v12H4zM4 7l8 6 8-6\"/></svg></a>",
+      "css": ".ds-btn-glow{display:inline-flex;align-items:center;gap:.6rem;min-height:3.5rem;padding:0 1.75rem;border-radius:999px;color:#f3fff7;background:rgba(134,232,223,.07);font:600 1.0625rem/1 Figtree,sans-serif;text-decoration:none;box-shadow:0 0 0 1px rgba(134,232,223,.55) inset,0 4px 24px rgba(134,232,223,.12);transition:background-color .35s cubic-bezier(.16,1,.3,1),box-shadow .35s cubic-bezier(.16,1,.3,1)}.ds-btn-glow:hover{background:rgba(134,232,223,.16);box-shadow:0 0 0 1px rgba(190,255,232,.9) inset,0 6px 30px rgba(134,232,223,.28)}.ds-btn-glow:focus-visible{outline:2px solid #f3fff7;outline-offset:4px}"
+    },
+    {
+      "name": "Leuchtpille Lila",
+      "kind": "button",
+      "refersTo": "button-lilac",
+      "description": "Immobilien- und Projektwege.",
+      "html": "<a class=\"ds-btn-lilac\" href=\"#\">Exposé senden</a>",
+      "css": ".ds-btn-lilac{display:inline-flex;align-items:center;min-height:3.5rem;padding:0 1.75rem;border-radius:999px;color:#f3fff7;background:rgba(187,168,244,.08);font:600 1.0625rem/1 Figtree,sans-serif;text-decoration:none;box-shadow:0 0 0 1px rgba(187,168,244,.6) inset,0 4px 24px rgba(187,168,244,.12);transition:background-color .35s cubic-bezier(.16,1,.3,1)}.ds-btn-lilac:hover{background:rgba(187,168,244,.18);box-shadow:0 0 0 1px rgba(222,212,255,.95) inset,0 6px 30px rgba(187,168,244,.3)}.ds-btn-lilac:focus-visible{outline:2px solid #f3fff7;outline-offset:4px}"
+    },
+    {
+      "name": "Textlink",
+      "kind": "custom",
+      "description": "Verweis auf Unterseiten mit lila Unterstreichung.",
+      "html": "<a class=\"ds-textlink\" href=\"#\"><span>Strategie lesen</span> <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-textlink{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;color:#d4e3d9;font:500 1.0625rem Figtree,sans-serif;text-decoration:none;text-shadow:0 0 14px rgba(187,168,244,.35);transition:color .3s}.ds-textlink span{text-decoration:underline;text-decoration-color:rgba(187,168,244,.6);text-underline-offset:.3em}.ds-textlink:hover{color:#f3fff7;text-shadow:0 0 16px rgba(222,212,255,.8)}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Pillenlinks mit Textlicht und Sprachumschalter.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\">Strategie</a><a href=\"#\" aria-current=\"page\">Ankaufsprofil</a><span class=\"ds-lang\"><a aria-current=\"true\">DE</a><a>EN</a></span></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:.25rem;background:#090f0b;padding:1rem}.ds-nav>a{display:inline-flex;align-items:center;min-height:44px;padding:0 .85rem;border-radius:999px;color:#d4e3d9;font:500 1rem Figtree,sans-serif;text-decoration:none;text-shadow:0 0 14px rgba(134,232,223,.28)}.ds-nav>a:hover,.ds-nav>a[aria-current=page]{color:#f3fff7;text-shadow:0 0 16px rgba(190,255,232,.75)}.ds-nav>a[aria-current=page]{background:rgba(134,232,223,.08)}.ds-lang{display:inline-flex;padding:3px;margin-left:1rem;border-radius:999px;border:1px solid rgba(159,211,174,.22)}.ds-lang a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:40px;border-radius:999px;color:#a9bdb0;font:600 .9375rem/1 Figtree,sans-serif}.ds-lang a[aria-current=true]{background:#f3fff7;color:#090f0b;box-shadow:0 2px 14px rgba(190,255,232,.35)}"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Themen als Anzeige-Pillen.",
+      "html": "<span class=\"ds-chip\">PropTech</span>",
+      "css": ".ds-chip{display:inline-block;padding:.6rem 1.1rem;border-radius:999px;color:#d4e3d9;background:rgba(13,21,16,.85);box-shadow:0 0 0 1px rgba(159,211,174,.22) inset;font:400 1.0625rem Figtree,sans-serif}"
+    },
+    {
+      "name": "Lichtung mit Kriterien",
+      "kind": "card",
+      "refersTo": "clearing",
+      "description": "Ersetzt Karten: rahmenlose, abgedunkelte Fläche mit Lichtfleck und Kriterien an Adern.",
+      "html": "<article class=\"ds-clearing\"><h3>Startups, früh</h3><dl><dt>Phase</dt><dd>Pre-Seed und Seed</dd><dt>Region</dt><dd>Österreich, Deutschland, Schweiz</dd></dl></article>",
+      "css": ".ds-clearing{--c:#86e8df;padding:clamp(2rem,4vw,3.5rem);color:#d4e3d9;font:400 1.0625rem/1.65 Figtree,sans-serif;background:radial-gradient(closest-side at 32% 18%,color-mix(in oklab,var(--c) 14%,transparent),transparent),radial-gradient(farthest-side at 50% 50%,rgba(13,21,16,.95) 0%,rgba(10,16,12,.85) 62%,rgba(9,15,11,0) 100%),#090f0b}.ds-clearing h3{margin:0;font:300 clamp(1.75rem,2.8vw,2.5rem)/1.1 Jost,Futura,sans-serif;color:#f3fff7;text-shadow:0 0 26px color-mix(in oklab,var(--c) 45%,transparent)}.ds-clearing dl{display:grid;grid-template-columns:minmax(7.5rem,auto) 1fr;column-gap:1.75rem;margin:2rem 0 0}.ds-clearing dt,.ds-clearing dd{margin:0;padding:.95rem 0;border-top:1px solid color-mix(in oklab,var(--c) 22%,transparent)}.ds-clearing dt{color:color-mix(in oklab,var(--c) 70%,#d4e3d9);font-weight:500;font-size:1rem}"
+    },
+    {
+      "name": "Ader-Liste",
+      "kind": "custom",
+      "description": "Senkrechte Ader mit leuchtenden Knoten.",
+      "html": "<ul class=\"ds-vein\"><li><h3>Software und KI</h3><p>Ich baue KI-Software für Recht.</p></li><li><h3>Immobilien</h3><p>Ein KI-Agent für Immobilien.</p></li></ul>",
+      "css": ".ds-vein{--c:#86e8df;list-style:none;margin:0;padding:0;position:relative;display:flex;flex-direction:column;gap:1.75rem;background:#090f0b}.ds-vein::before{content:'';position:absolute;left:.5rem;top:.6rem;bottom:.6rem;width:1px;background:linear-gradient(to bottom,color-mix(in oklab,var(--c) 70%,transparent),color-mix(in oklab,var(--c) 10%,transparent))}.ds-vein li{position:relative;padding-left:2.5rem}.ds-vein li::before{content:'';position:absolute;left:calc(.5rem - 4px);top:.55rem;width:9px;height:9px;border-radius:50%;background:#f3fff7;box-shadow:0 0 0 3px color-mix(in oklab,var(--c) 30%,transparent),0 0 16px color-mix(in oklab,var(--c) 80%,transparent)}.ds-vein h3{margin:0;font:300 clamp(1.4rem,2vw,1.75rem)/1.1 Jost,sans-serif;color:#f3fff7}.ds-vein p{margin:.4rem 0 0;color:#a9bdb0;font:400 1.0625rem/1.65 Figtree,sans-serif}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Der Leuchtwald",
+    "overview": "Wachstum ist Licht. Die Seite ist ein nächtlicher Waldboden aus warmem Grünschwarz. Ein Wurzelnetz wächst als Canvas-Szene (`lib/unterholz/engine.js`) hinter allen Seiten, verbindet die Abschnitte und leuchtet dort, wo Aufmerksamkeit hinfällt: Ein Lichtfeld folgt dem Zeiger (auf Touch dem Scrollen), weckt Wurzeln, Blätter und einzelne Wörter, und Lichtpulse laufen beim Scrollen zu jedem Abschnitt. Bei reduzierter Bewegung zeigt die Szene ein stilles Bild.\n\nText liegt nie direkt auf dem Netz, sondern auf ruhigen, abgedunkelten Lichtungen. Titel sind sehr leicht und groß, Licht ist das einzige Ornament. Es gibt keine gerahmten Karten: Inhalte wachsen als Gewächse, Kriterien hängen an feinen Adern, Knöpfe sind Leuchtpillen. Abgelehnt ist die übliche Investorenseite (dunkler Hero mit einem Neon-Akzent, Logo-Raster, Kennzahlenkacheln).\n\nDie Bildmarke Blatt (fünf Varianten) ist das Saatgut des Systems: Sie ist Logo, Artzeichen der Projekte, Blattform im Wurzelnetz und Baustein der Rosette im ersten Bild.",
+    "keyCharacteristics": [
+      "Grünschwarzer Grund mit zwei sehr schwachen Lichtnebeln (Cyan oben rechts, Lila unten links) und dunkler Vignette.",
+      "Lebende Canvas-Szene als Hintergrund aller Seiten, gesteuert über Datenattribute im Markup.",
+      "Jost 200 bis 300 für Titel, Figtree für Text.",
+      "Weißblüte nur für das aktive oder wichtigste Element.",
+      "Tiefe entsteht durch Glühen, nie durch Schlagschatten oder Rahmen."
+    ],
+    "rules": [
+      {
+        "name": "The Eine-Blüte Rule",
+        "body": "Weißblüte ist dem aktiven oder wichtigsten Element vorbehalten. Pro Ansicht gibt es höchstens eine gefüllte Leuchtpille.",
+        "section": "colors"
+      },
+      {
+        "name": "The Artfarben Rule",
+        "body": "Farbige Elemente setzen ihre Farbe über die lokale Variable `--c` (cyan, lilac, ice, moss) und leiten Schein, Adern und Beschriftungen per `color-mix` davon ab. Keine neuen Farbtöne pro Bauteil.",
+        "section": "colors"
+      },
+      {
+        "name": "The Leichtgewicht Rule",
+        "body": "Titel stehen in Jost 200 bis 300; je größer, desto leichter. Fett gibt es nur im Text (500 bis 600 für Knöpfe und Beschriftungen).",
+        "section": "typography"
+      },
+      {
+        "name": "The Leuchtwort Rule",
+        "body": "Wörter in Titeln sind einzeln adressierbar (`.w`) und reagieren über `--lit` auf das Lichtfeld. Sie werden heller und glühen, ändern aber nie ihre Größe oder Laufweite.",
+        "section": "typography"
+      },
+      {
+        "name": "The Lichtung Rule",
+        "body": "Text sitzt auf ruhigen Flächen. Elemente mit Text tragen `data-calm`, damit die Szene dort Wurzeln und Sporen dimmt; Lichtungen haben eine radial auslaufende, abgedunkelte Fläche statt eines Kastens.",
+        "section": "layout"
+      },
+      {
+        "name": "The Wuchsstelle Rule",
+        "body": "Wo das Wurzelnetz andocken soll, steht `data-anchor`; `data-ring` zeichnet einen Lichtring, `data-strong` hält ihn hell, `data-bloom` lässt die Stelle bei Hover und Fokus aufblühen. Neue Abschnitte werden über diese Attribute an die Szene angeschlossen, nicht über eigene Effekte.",
+        "section": "layout"
+      },
+      {
+        "name": "The Licht-statt-Schatten Rule",
+        "body": "Erhebung zeigt sich als Glühen in den Weltfarben. Dunkle, versetzte Schatten gibt es nur einmal, sehr weich, unter dem Porträt.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do Farben nur über die Variablen in `:root` führen und Bauteilfarben über `--c` setzen.",
+      "Do jeden neuen Textbereich mit `data-calm` vor der Szene beruhigen und Wuchsstellen mit `data-anchor` anschließen.",
+      "Do Titel in Jost 200 bis 300 setzen, Text in Figtree.",
+      "Do Tiefe durch Glühen und Innenränder zeigen.",
+      "Do für reduzierte Bewegung eine stille Szene ohne Einblendungen zeigen.",
+      "Do Zielflächen mindestens 44px hoch halten."
+    ],
+    "donts": [
+      "Don't gerahmte Karten, Kachelraster oder Kennzahlenkacheln bauen; Inhalte stehen auf Lichtungen oder an Adern.",
+      "Don't Weißblüte als Flächenfarbe für mehr als ein Element pro Ansicht verwenden.",
+      "Don't harte oder versetzte Schatten setzen.",
+      "Don't Kicker oder Großbuchstaben-Zeilen über Titel stellen.",
+      "Don't Symbole als Schriftzeichen setzen; Symbole kommen als SVG aus dem Sprite.",
+      "Don't Schriften von fremden Servern laden."
+    ]
+  }
+}

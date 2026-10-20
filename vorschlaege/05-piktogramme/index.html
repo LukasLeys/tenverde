@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tenverde GmbH · Innsbruck</title>
+<meta name="description" content="tenverde ist meine Beteiligungsgesellschaft mit Sitz in Innsbruck. Hier liegen meine Softwareunternehmen, meine Beteiligungen an Startups und meine Immobilien.">
+<meta name="theme-color" content="#0057B8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="piktogramme.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#inhalt" data-i18n="skip">Zum Inhalt springen</a>
+
+<!-- Piktogramm-System: ein Raster 64 x 64, Modul 8, Strich 6. Das Blatt ist die Grundform. -->
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="g-leaf" viewBox="0 0 64 64"><g transform="rotate(35 32 32)"><path fill="currentColor" fill-rule="evenodd" d="M32 58C14 46 12 22 32 6C52 22 50 46 32 58ZM30.4 52L32 14L33.6 52Z"/></g></symbol>
+    <symbol id="g-leaf-line" viewBox="0 0 64 64"><g transform="rotate(35 32 32)" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M32 61V20"/><path d="M32 45C15 41 13 18 32 6C51 18 49 41 32 45"/></g></symbol>
+    <symbol id="g-grid" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width=".4"><path d="M8 0V64M16 0V64M24 0V64M32 0V64M40 0V64M48 0V64M56 0V64M0 8H64M0 16H64M0 24H64M0 32H64M0 40H64M0 48H64M0 56H64M0 0L64 64M64 0L0 64"/><circle cx="32" cy="32" r="16"/><circle cx="32" cy="32" r="28"/></g></symbol>
+
+    <symbol id="p-leaf" viewBox="0 0 64 64"><use href="#g-leaf" x="1" y="1" width="62" height="62"/></symbol>
+    <symbol id="p-seed" viewBox="0 0 64 64"><g transform="translate(8 5) scale(.75)" fill="currentColor"><path d="M32 61V35" fill="none" stroke="currentColor" stroke-width="8"/><path d="M31 39C20 41 9 34 7 20C21 18 30 26 31 39Z"/><path d="M33 34C33 19 43 8 58 7C59 22 48 34 33 34Z"/></g><rect x="6" y="51" width="52" height="6" fill="currentColor"/></symbol>
+    <symbol id="p-house" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="6"><path d="M5 33L32 9L59 33"/><path d="M14 25V57H50V25"/></g><use href="#g-leaf" x="18" y="28" width="28" height="28"/></symbol>
+    <symbol id="p-code" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="6"><path d="M19 14L7 32L19 50"/><path d="M45 14L57 32L45 50"/></g><use href="#g-leaf" x="14" y="14" width="36" height="36"/></symbol>
+    <symbol id="p-waves" viewBox="0 0 64 64"><use href="#g-leaf" x="-2" y="15" width="34" height="34"/><g fill="none" stroke="currentColor" stroke-width="6"><path d="M30.1 17.9A20 20 0 0 1 30.1 46.1"/><path d="M36.5 11.5A29 29 0 0 1 36.5 52.5"/><path d="M42.9 5.1A38 38 0 0 1 42.9 58.9"/></g></symbol>
+    <symbol id="p-scales" viewBox="0 0 64 64"><use href="#g-leaf" x="20" y="-1" width="24" height="24"/><g fill="none" stroke="currentColor" stroke-width="6"><path d="M32 21V53"/><path d="M6 25H58"/><path d="M17 56H47"/></g><path fill="currentColor" d="M12 28L3 45H21Z"/><path fill="currentColor" d="M52 28L43 45H61Z"/></symbol>
+    <symbol id="p-immo" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="6"><path d="M5 33L32 9L59 33"/><path d="M14 25V57H50V25"/></g><g fill="none" stroke="currentColor" stroke-width="5"><path d="M27 33L20 42L27 51"/><path d="M37 33L44 42L37 51"/></g><use href="#g-leaf" x="23" y="15" width="18" height="18"/></symbol>
+    <symbol id="p-mail" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="6"><path d="M4 26H48V58H4Z"/><path d="M4 26L26 44L48 26"/></g><use href="#g-leaf" x="34" y="0" width="30" height="30"/></symbol>
+
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M3 12H20M13 5L20 12L13 19" fill="none" stroke="currentColor" stroke-width="3"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path fill="currentColor" d="M6 4H10V20H6ZM14 4H18V20H14Z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M6 3L20 12L6 21Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 5H21M3 12H21M3 19H21" fill="none" stroke="currentColor" stroke-width="3"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5L19 19M19 5L5 19" fill="none" stroke="currentColor" stroke-width="3"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <a class="lockup" href="#top" aria-label="tenverde">
+    <svg class="lockup-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#g-leaf"/></svg>
+    <span class="lockup-word">tenverde</span>
+  </a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="hauptnav">
+    <svg class="ico" aria-hidden="true" focusable="false"><use class="menu-ico" href="#i-menu"/></svg>
+    <span data-i18n="menu">Menü</span>
+  </button>
+  <nav class="nav" id="hauptnav" aria-label="Hauptnavigation" data-i18n-aria="nav.aria">
+    <ul>
+      <li><a class="sign" href="#unternehmen"><svg class="ico down" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span data-i18n="nav.companies">Unternehmen</span></a></li>
+      <li><a class="sign" href="#gesucht"><svg class="ico down" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span data-i18n="nav.looking">Gesucht</span></a></li>
+      <li><a class="sign" href="#ueber"><svg class="ico down" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span data-i18n="nav.about">Über mich</span></a></li>
+      <li><a class="sign" href="#kontakt"><svg class="ico down" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span data-i18n="nav.contact">Kontakt</span></a></li>
+    </ul>
+  </nav>
+  <div class="lang" role="group" aria-label="Sprache wählen" data-i18n-aria="lang.aria">
+    <button type="button" data-lang="de" aria-pressed="true" lang="de">DE</button>
+    <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+  </div>
+</header>
+
+<main id="inhalt">
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <div class="hero-text">
+    <h1 id="hero-title" data-i18n="hero.title">Wir investieren in Dinge, die wachsen.</h1>
+    <p class="lead" data-i18n="hero.lead">tenverde ist meine Beteiligungsgesellschaft mit Sitz in Innsbruck. Hier liegen meine Softwareunternehmen, meine Beteiligungen an Startups und meine Immobilien.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="mailto:office@tenverde.at"><span data-i18n="hero.cta">Kontakt aufnehmen</span><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-quiet" href="#gesucht"><span data-i18n="hero.cta2">Was ich suche</span><svg class="ico down" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+
+  <div class="field">
+    <svg class="field-grid" aria-hidden="true" focusable="false"><defs><pattern id="fgrid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="currentColor" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#fgrid)"/></svg>
+    <figure class="stage">
+      <svg class="sun" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+        <defs><clipPath id="sunclip"><circle cx="100" cy="100" r="100"/></clipPath></defs>
+        <g clip-path="url(#sunclip)" fill="currentColor"><rect y="0" width="200" height="64"/><rect y="70" width="200" height="34"/><rect y="110" width="200" height="22"/><rect y="138" width="200" height="16"/><rect y="160" width="200" height="11"/><rect y="177" width="200" height="8"/><rect y="190" width="200" height="5"/></g>
+      </svg>
+      <div class="board" id="board" data-flap="p-leaf" data-slats="8" data-grid="1" aria-hidden="true">
+        <svg viewBox="0 0 64 64" focusable="false"><use class="grid" href="#g-grid"/><use href="#p-leaf"/></svg>
+      </div>
+      <figcaption class="sr-only" data-i18n="hero.fig">Piktogrammfamilie von tenverde: Blatt, Startups, Immobilien, Software, Podcast, Recht. Jedes Piktogramm baut auf dem Blatt auf.</figcaption>
+    </figure>
+    <div class="readout">
+      <div class="flapword" id="flapword" aria-hidden="true"><span class="cell">t</span><span class="cell">e</span><span class="cell">n</span><span class="cell">v</span><span class="cell">e</span><span class="cell">r</span><span class="cell">d</span><span class="cell">e</span></div>
+      <button class="pause" type="button" id="pause" aria-pressed="false" aria-label="Animation anhalten" data-i18n-aria="anim.pause">
+        <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-pause"/></svg>
+      </button>
+    </div>
+    <div class="index" role="group" aria-label="Piktogramm zeigen" data-i18n-aria="index.aria">
+      <button type="button" data-show="0" aria-label="Blatt" data-i18n-aria="pic.leaf" aria-pressed="true"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#p-leaf"/></svg></button>
+      <button type="button" data-show="1" aria-label="Startups" data-i18n-aria="pic.seed" aria-pressed="false"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#p-seed"/></svg></button>
+      <button type="button" data-show="2" aria-label="Immobilien" data-i18n-aria="pic.house" aria-pressed="false"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#p-house"/></svg></button>
+      <button type="button" data-show="3" aria-label="Software" data-i18n-aria="pic.code" aria-pressed="false"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#p-code"/></svg></button>
+      <button type="button" data-show="4" aria-label="Podcast" data-i18n-aria="pic.waves" aria-pressed="false"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#p-waves"/></svg></button>
+      <button type="button" data-show="5" aria-label="Recht" data-i18n-aria="pic.scales" aria-pressed="false"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#p-scales"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<section class="companies" id="unternehmen" aria-labelledby="co-title">
+  <div class="wrap">
+    <h2 id="co-title" data-i18n="co.title">Unternehmen, die ich selbst aufbaue</h2>
+    <ul class="results">
+      <li>
+        <a class="result" href="https://neojuris.ai" target="_blank" rel="noopener">
+          <span class="tile tile-green" data-flap="p-scales" data-slats="6" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><use href="#p-scales"/></svg></span>
+          <span class="r-name">neojuris.ai</span>
+          <span class="r-desc" data-i18n="co.1">KI-Software für juristische Arbeit. Recherche, Entwürfe und Prüfung von Dokumenten für Kanzleien und Rechtsabteilungen.</span>
+          <span class="r-go"><svg class="ico ne" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span class="sr-only" data-i18n="newtab">(öffnet in neuem Tab)</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="result" href="https://immobily.io" target="_blank" rel="noopener">
+          <span class="tile tile-snow" data-flap="p-immo" data-slats="6" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><use href="#p-immo"/></svg></span>
+          <span class="r-name">immobily.io</span>
+          <span class="r-desc" data-i18n="co.2">Software für Immobilien. Digitale Werkzeuge für Eigentümer, Verwalter und Makler.</span>
+          <span class="r-go"><svg class="ico ne" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span class="sr-only" data-i18n="newtab">(öffnet in neuem Tab)</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="result" href="https://beamswerk.ai" target="_blank" rel="noopener">
+          <span class="tile tile-green" data-flap="p-code" data-slats="6" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><use href="#p-code"/></svg></span>
+          <span class="r-name">beamswerk.ai</span>
+          <span class="r-desc" data-i18n="co.3">KI-Anwendungen für Unternehmen. Automatisierung von Abläufen, die heute noch von Hand laufen.</span>
+          <span class="r-go"><svg class="ico ne" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span class="sr-only" data-i18n="newtab">(öffnet in neuem Tab)</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="result" href="https://diekryptologen.com/" target="_blank" rel="noopener">
+          <span class="tile tile-snow" data-flap="p-waves" data-slats="6" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><use href="#p-waves"/></svg></span>
+          <span class="r-name">Die Kryptologen</span>
+          <span class="r-desc" data-i18n="co.4">Der Krypto-Podcast aus Wien. Bitcoin, Blockchain und Kryptoökonomie verständlich eingeordnet.</span>
+          <span class="r-go"><svg class="ico ne" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span class="sr-only" data-i18n="newtab">(öffnet in neuem Tab)</span></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="looking" id="gesucht" aria-labelledby="look-title">
+  <div class="wrap">
+    <div class="look-head">
+      <h2 id="look-title" data-i18n="look.title">Ich suche Startups und Immobilien.</h2>
+      <p class="look-lead" data-i18n="look.lead">tenverde investiert eigenes Kapital und hält langfristig. Ich entscheide selbst und schnell, ohne Fonds und ohne Komitee.</p>
+    </div>
+    <div class="sheets">
+      <article class="sheet" aria-labelledby="s-title">
+        <div class="sheet-head sheet-green">
+          <span class="sheet-picto" data-flap="p-seed" data-slats="6" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><use href="#p-seed"/></svg></span>
+          <h3 id="s-title" data-i18n="s.title">Startup-Beteiligungen</h3>
+        </div>
+        <dl class="crit">
+          <div><dt data-i18n="s.stage.l">Phase</dt><dd>Pre-Seed, Seed</dd></div>
+          <div><dt data-i18n="s.sec.l">Branchen</dt><dd data-i18n="s.sec.v">Software, KI, LegalTech, PropTech</dd></div>
+          <div><dt data-i18n="reg.l">Region</dt><dd data-i18n="s.reg.v">Österreich, Deutschland, Schweiz</dd></div>
+          <div><dt>Ticket</dt><dd data-i18n="s.tic.v">nach Absprache</dd></div>
+          <div><dt data-i18n="s.plus.l">Dazu</dt><dd data-i18n="s.plus.v">Erfahrung aus Gründung, Produkt und Recht. Kontakte zu Kanzleien und in die Immobilienbranche.</dd></div>
+        </dl>
+        <a class="btn btn-primary btn-block" href="mailto:office@tenverde.at?subject=Pitch%20Deck"><span data-i18n="s.cta">Pitch Deck senden</span><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="sheet" aria-labelledby="r-title">
+        <div class="sheet-head sheet-blue">
+          <span class="sheet-picto" data-flap="p-house" data-slats="6" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><use href="#p-house"/></svg></span>
+          <h3 id="r-title" data-i18n="r.title">Immobilien</h3>
+        </div>
+        <dl class="crit">
+          <div><dt data-i18n="r.obj.l">Objekte</dt><dd data-i18n="r.obj.v">Wohnhäuser, Zinshäuser, Grundstücke mit Widmung</dd></div>
+          <div><dt data-i18n="reg.l">Region</dt><dd data-i18n="r.reg.v">Tirol und Westösterreich</dd></div>
+          <div><dt data-i18n="r.cond.l">Zustand</dt><dd data-i18n="r.cond.v">Bestand, gern mit Sanierungs- oder Entwicklungsbedarf</dd></div>
+          <div><dt data-i18n="r.deal.l">Ankauf</dt><dd data-i18n="r.deal.v">direkt von Eigentümern oder über Makler, auch off-market</dd></div>
+        </dl>
+        <a class="btn btn-primary btn-block" href="mailto:office@tenverde.at?subject=Immobilie"><span data-i18n="r.cta">Exposé senden</span><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="ueber" aria-labelledby="about-title">
+  <div class="wrap about-grid">
+    <div class="badge-wrap">
+      <div class="lanyard" aria-hidden="true"></div>
+      <div class="badge">
+        <div class="badge-top">
+          <svg class="lockup-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#g-leaf"/></svg>
+          <span class="lockup-word">tenverde</span>
+        </div>
+        <div class="portrait" role="img" aria-label="Platzhalter: Porträt Lukas Leys folgt" data-i18n-aria="portrait">
+          <svg class="portrait-grid" viewBox="0 0 64 80" preserveAspectRatio="none" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width=".3"><path d="M8 0V80M16 0V80M24 0V80M32 0V80M40 0V80M48 0V80M56 0V80M0 8H64M0 16H64M0 24H64M0 32H64M0 40H64M0 48H64M0 56H64M0 64H64M0 72H64"/></g></svg>
+          <svg class="portrait-leaf" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#g-leaf-line"/></svg>
+          <span class="portrait-label" data-i18n="portrait.label">Porträt Lukas Leys folgt</span>
+        </div>
+        <div class="badge-body">
+          <p class="badge-name">Lukas Leys</p>
+          <p class="badge-role" data-i18n="about.role">Gründer und Geschäftsführer der tenverde GmbH</p>
+        </div>
+        <div class="badge-codes" aria-hidden="true">
+          <span class="code c-green"><svg viewBox="0 0 64 64" focusable="false"><use href="#p-code"/></svg></span>
+          <span class="code c-blue"><svg viewBox="0 0 64 64" focusable="false"><use href="#p-seed"/></svg></span>
+          <span class="code c-ink"><svg viewBox="0 0 64 64" focusable="false"><use href="#p-house"/></svg></span>
+        </div>
+      </div>
+    </div>
+    <div class="about-text">
+      <h2 id="about-title" data-i18n="about.title">Über mich</h2>
+      <p class="about-person"><strong>Lukas Leys</strong>, <span data-i18n="about.role">Gründer und Geschäftsführer der tenverde GmbH</span></p>
+      <p class="about-copy" data-i18n="about.text">Ich gründe Softwareunternehmen und investiere in junge Firmen und in Immobilien. tenverde bündelt das unter einem Dach. Was ich aufbaue, will ich lange halten und in Ruhe wachsen lassen.</p>
+      <a class="sign sign-snow" href="https://www.linkedin.com/in/lukasleys/" target="_blank" rel="noopener"><svg class="ico ne" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg><span data-i18n="about.link">Profil auf LinkedIn</span><span class="sr-only" data-i18n="newtab">(öffnet in neuem Tab)</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt" aria-labelledby="contact-title">
+  <div class="wrap contact-grid">
+    <div class="contact-main">
+      <h2 id="contact-title" data-i18n="contact.title">Schreiben Sie mir.</h2>
+      <a class="mail-sign" href="mailto:office@tenverde.at"><span class="mail-text">office@tenverde.at</span><span class="mail-arrow"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></span></a>
+      <address>tenverde GmbH<br>Kirschentalgasse 14/D21<br>6020 Innsbruck, <span data-i18n="contact.country">Österreich</span></address>
+    </div>
+    <span class="contact-picto" data-flap="p-mail" data-slats="8" aria-hidden="true"><svg viewBox="0 0 64 64" focusable="false"><use href="#p-mail"/></svg></span>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-row">
+    <a class="lockup lockup-foot" href="#top" aria-label="tenverde">
+      <svg class="lockup-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#g-leaf"/></svg>
+      <span class="lockup-word">tenverde</span>
+    </a>
+    <p>© 2026 tenverde GmbH</p>
+    <ul class="foot-links">
+      <li><a href="../impressum.html" data-i18n="foot.imprint">Impressum</a></li>
+      <li><a href="../impressum.html#datenschutz" data-i18n="foot.privacy">Datenschutz</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="piktogramme.js"></script>
+</body>
+</html>

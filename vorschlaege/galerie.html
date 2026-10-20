@@ -1,0 +1,117 @@
+<title>tenverde Entwürfe</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Hanken+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: eine Spalte von Entwürfen, je Zeile großer Desktop-Screenshot plus Handy daneben, Text darunter */
+:root{
+  --bg:#EEF0EC; --fg:#151A16; --muted:#4D5650; --line:#C9CFC9; --accent:#1E6B45; --shot:#DADFD9;
+  --display:'Familjen Grotesk',ui-sans-serif,system-ui,sans-serif;
+  --text:'Hanken Grotesk',ui-sans-serif,system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121513;--fg:#E7EBE7;--muted:#A3ADA6;--line:#2C332E;--accent:#7FCB9C;--shot:#1C211E;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121513;--fg:#E7EBE7;--muted:#A3ADA6;--line:#2C332E;--accent:#7FCB9C;--shot:#1C211E;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--text);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:2px}
+::selection{background:var(--accent);color:var(--bg)}
+.wrap{max-width:1280px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:56px 80px}
+header{display:flex;flex-direction:column;gap:16px;max-width:62ch;margin-bottom:56px}
+header .mark{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:22px}
+header .mark svg{width:26px;height:26px;fill:var(--accent)}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(36px,5.4vw,64px);line-height:1.02;letter-spacing:-0.02em;margin:0;text-wrap:balance}
+header p{margin:0;color:var(--muted);font-size:18px}
+ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:72px}
+li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,190px);gap:20px 24px;align-items:start;padding-top:28px;border-top:1px solid var(--line)}
+.shots{display:contents}
+.desk,.mob{display:block;background:var(--shot);border-radius:6px;overflow:hidden;box-shadow:0 1px 2px rgb(0 0 0 / .08),0 8px 24px -12px rgb(0 0 0 / .25)}
+.desk img,.mob img{display:block;width:100%;height:auto}
+.desk{grid-column:1;grid-row:2}
+.mob{grid-column:2;grid-row:2;border-radius:14px}
+.info{grid-column:1 / -1;grid-row:1;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 32px}
+.info h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,3.2vw,40px);line-height:1.05;letter-spacing:-0.015em;margin:0;display:flex;gap:14px;align-items:baseline}
+.info h2 span{font-variant-numeric:tabular-nums;color:var(--muted);font-weight:500;font-size:clamp(18px,1.9vw,24px)}
+.info .open{font-weight:600;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center}
+.desc{grid-column:1 / -1;grid-row:3;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:8px 40px;color:var(--muted)}
+.desc p{margin:0;max-width:62ch}
+.desc strong{color:var(--fg);font-weight:600}
+footer{margin-top:80px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:15px;max-width:72ch}
+@media (max-width:640px){
+  li{grid-template-columns:minmax(0,1fr) minmax(0,96px);gap:16px}
+  .mob{border-radius:8px}
+}
+</style>
+
+<div class="wrap">
+<header>
+<span class="mark"><svg viewBox="0 0 64 64" aria-hidden="true"><g transform="rotate(35 32 32)"><path fill-rule="evenodd" d="M32 58C14 46 12 22 32 6C52 22 50 46 32 58ZM30.4 52L32 14L33.6 52Z"/></g></svg>tenverde</span>
+<h1>Zehn Startseiten für tenverde</h1>
+<p>Jeder Entwurf ist eine vollständige, klickbare Seite mit allen Inhalten, Deutsch und Englisch umschaltbar. Die Bewegung und das Zusammenspiel mit der Maus sieht man erst auf der geöffneten Seite.</p>
+</header>
+
+<ol>
+<li>
+<div class="info"><h2><span>01</span>Lorbeerkuppel</h2><a class="open" href="01-lorbeerkuppel/index.html">Entwurf öffnen</a></div>
+<a class="desk" href="01-lorbeerkuppel/index.html" aria-label="Lorbeerkuppel öffnen"><img src="vorschau/01-desktop.jpg" alt="Desktop: goldene Kuppel aus Blättern über einer weißen Fassade" width="1200" height="750" loading="lazy"></a>
+<a class="mob" href="01-lorbeerkuppel/index.html" tabindex="-1" aria-hidden="true"><img src="vorschau/01-mobil.jpg" alt="" width="390" height="844" loading="lazy"></a>
+<div class="desc"><p>Die Wiener Secession als Haus der eigenen Firmen. Die Kuppel besteht aus rund 1.000 tenverde-Blättern, darunter Inschrift und Tür.</p><p><strong>Bewegung:</strong> Die Blätter drehen sich zum Mauszeiger und fangen Licht, in Ruhe atmet die Kuppel.</p></div>
+</li>
+<li>
+<div class="info"><h2><span>02</span>Wertpapier</h2><a class="open" href="02-wertpapier/index.html">Entwurf öffnen</a></div>
+<a class="desk" href="02-wertpapier/index.html" aria-label="Wertpapier öffnen"><img src="vorschau/02-desktop.jpg" alt="Desktop: Urkunde mit Guilloche-Rosette und Blatt im Siegel" width="1200" height="750" loading="lazy"></a>
+<a class="mob" href="02-wertpapier/index.html" tabindex="-1" aria-hidden="true"><img src="vorschau/02-mobil.jpg" alt="" width="390" height="844" loading="lazy"></a>
+<div class="desc"><p>Die Seite ist eine Urkunde der tenverde GmbH. Kupons für die vier Firmen, ein Zeichnungsschein als Kontakt, die Unterschrift von Lukas Leys.</p><p><strong>Bewegung:</strong> Die Rosette wird live aus Kurven gezeichnet und verformt sich unter dem Mauszeiger.</p></div>
+</li>
+<li>
+<div class="info"><h2><span>03</span>Kartenblatt</h2><a class="open" href="03-kartenblatt/index.html">Entwurf öffnen</a></div>
+<a class="desk" href="03-kartenblatt/index.html" aria-label="Kartenblatt öffnen"><img src="vorschau/03-desktop.jpg" alt="Desktop: topografische Karte mit Höhenlinien, roter Route und Zeichenerklärung" width="1200" height="750" loading="lazy"></a>
+<a class="mob" href="03-kartenblatt/index.html" tabindex="-1" aria-hidden="true"><img src="vorschau/03-mobil.jpg" alt="" width="390" height="844" loading="lazy"></a>
+<div class="desc"><p>Ein Blatt der Alpenvereinskarte von Norden nach Süden. Firmen sind Hütten, die Suchprofile Routenbeschreibungen, das Ziel liegt auf den Koordinaten von Innsbruck.</p><p><strong>Bewegung:</strong> Die Höhenlinien zeichnen sich ein, eine Lupe zeigt Koordinaten, die rote Route wächst beim Scrollen mit.</p></div>
+</li>
+<li>
+<div class="info"><h2><span>04</span>Schalen</h2><a class="open" href="04-schalen/index.html">Entwurf öffnen</a></div>
+<a class="desk" href="04-schalen/index.html" aria-label="Schalen öffnen"><img src="vorschau/04-desktop.jpg" alt="Desktop: weiße Glasschale über Nachthimmel und Bergsilhouette" width="1200" height="750" loading="lazy"></a>
+<a class="mob" href="04-schalen/index.html" tabindex="-1" aria-hidden="true"><img src="vorschau/04-mobil.jpg" alt="" width="390" height="844" loading="lazy"></a>
+<div class="desc"><p>Die Schalen der Hungerburgbahn. Die Seite fährt von der Talstation auf die Bergstation, jede Firma ist eine Station.</p><p><strong>Bewegung:</strong> Ein Lichtreflex folgt dem Mauszeiger über die Schalen, rechts steigt die Kabine mit dem Scrollen.</p></div>
+</li>
+<li>
+<div class="info"><h2><span>05</span>Piktogramme</h2><a class="open" href="05-piktogramme/index.html">Entwurf öffnen</a></div>
+<a class="desk" href="05-piktogramme/index.html" aria-label="Piktogramme öffnen"><img src="vorschau/05-desktop.jpg" alt="Desktop: blaue Fläche mit grünem Piktogramm und Fallblatt-Anzeige" width="1200" height="750" loading="lazy"></a>
+<a class="mob" href="05-piktogramme/index.html" tabindex="-1" aria-hidden="true"><img src="vorschau/05-mobil.jpg" alt="" width="390" height="844" loading="lazy"></a>
+<div class="desc"><p>Ein Erscheinungsbild im Geist der Spiele von Innsbruck 1976. Das Blatt wird zur Piktogrammfamilie, für jede Firma und jede Tätigkeit eines.</p><p><strong>Bewegung:</strong> Die Piktogramme wechseln wie auf einer Fallblattanzeige, beim Überfahren klappt das der Firma um.</p></div>
+</li>
+<li>
+<div class="info"><h2><span>06</span>Pitch Deck</h2><a class="open" href="06-pitchdeck/index.html">Entwurf öffnen</a></div>
+<a class="desk" href="06-pitchdeck/index.html" aria-label="Pitch Deck öffnen"><img src="vorschau/06-desktop.jpg" alt="Desktop: orange Titelfolie mit blauem Blatt und Folienleiste" width="1200" height="750" loading="lazy"></a>
+<a class="mob" href="06-pitchdeck/index.html" tabindex="-1" aria-hidden="true"><img src="vorschau/06-mobil.jpg" alt="" width="390" height="844" loading="lazy"></a>
+<div class="desc"><p>tenverde antwortet auf Pitch Decks mit einem eigenen Deck. Sieben Folien im Format 16:9, jede mit eigener Farbe.</p><p><strong>Bewegung:</strong> Pfeiltasten und Folienleiste blättern, beim Scrollen öffnet sich jede Folie aus einem Rahmen.</p></div>
+</li>
+<li id="plakat-zeile">
+<div class="info"><h2><span>07</span>Plakat</h2><a class="open" href="07-plakat/index.html">Entwurf öffnen</a></div>
+<a class="desk" href="07-plakat/index.html" aria-label="Plakat öffnen"><img src="vorschau/07-desktop.jpg" alt="Desktop: Tiroler Berglandschaft in flachen Siebdruckfarben mit Schriftband" width="1200" height="750" loading="lazy"></a>
+<a class="mob" href="07-plakat/index.html" tabindex="-1" aria-hidden="true"><img src="vorschau/07-mobil.jpg" alt="" width="390" height="844" loading="lazy"></a>
+<div class="desc"><p>Ein Tiroler Reiseplakat in vier flachen Druckfarben. Die Nordkette in Ebenen, darunter ein Imperativ in Blockschrift.</p><p><strong>Bewegung:</strong> Die Ebenen verschieben sich mit Maus und Scrollen, die Farben wechseln je Abschnitt wie Jahreszeiten.</p></div>
+</li>
+<li>
+<div class="info"><h2><span>08</span>Leuchtwald</h2><a class="open" href="08-leuchtwald/index.html">Entwurf öffnen</a></div>
+<a class="desk" href="08-leuchtwald/index.html" aria-label="Leuchtwald öffnen"><img src="vorschau/08-desktop.jpg" alt="Desktop: leuchtende Blattrosette über einem Wurzelnetz im Dunkeln" width="1200" height="750" loading="lazy"></a>
+<a class="mob" href="08-leuchtwald/index.html" tabindex="-1" aria-hidden="true"><img src="vorschau/08-mobil.jpg" alt="" width="390" height="844" loading="lazy"></a>
+<div class="desc"><p>Ein Waldboden bei Nacht, auf dem Wachstum Licht ist. Wurzeln verbinden die Abschnitte, die Firmen sind vier Gewächse.</p><p><strong>Bewegung:</strong> Wo der Mauszeiger hinkommt, wachen Wurzeln und Blätter auf. Beim Scrollen läuft ein Lichtimpuls die Wurzel entlang.</p></div>
+</li>
+<li>
+<div class="info"><h2><span>09</span>Dunkelkammer</h2><a class="open" href="09-dunkelkammer/index.html">Entwurf öffnen</a></div>
+<a class="desk" href="09-dunkelkammer/index.html" aria-label="Dunkelkammer öffnen"><img src="vorschau/09-desktop.jpg" alt="Desktop: Abzug in der Entwicklerschale unter Rotlicht, daneben Timer und Probestreifen" width="1200" height="750" loading="lazy"></a>
+<a class="mob" href="09-dunkelkammer/index.html" tabindex="-1" aria-hidden="true"><img src="vorschau/09-mobil.jpg" alt="" width="390" height="844" loading="lazy"></a>
+<div class="desc"><p>Entwicklung im wörtlichen Sinn. Die Firmen hängen als Abzüge an der Leine, dein Porträt wird später hier entwickelt.</p><p><strong>Bewegung:</strong> Überschrift und Blatt entwickeln sich in der Schale, im Kontakt geht das Licht an.</p></div>
+</li>
+<li>
+<div class="info"><h2><span>10</span>Loden</h2><a class="open" href="10-loden/index.html">Entwurf öffnen</a></div>
+<a class="desk" href="10-loden/index.html" aria-label="Loden öffnen"><img src="vorschau/10-desktop.jpg" alt="Desktop: gesticktes grünes Blatt auf rotem Loden, Navigation als Webetiketten" width="1200" height="750" loading="lazy"></a>
+<a class="mob" href="10-loden/index.html" tabindex="-1" aria-hidden="true"><img src="vorschau/10-mobil.jpg" alt="" width="390" height="844" loading="lazy"></a>
+<div class="desc"><p>Tiroler Lodenstoff auf Luxusniveau. Das Blatt ist aus fast 500 Fäden gestickt, die Firmen sind Aufnäher und Etiketten.</p><p><strong>Bewegung:</strong> Die Stiche nähen sich beim Scrollen selbst, beim Überfahren zieht sich der Faden straff.</p></div>
+</li>
+</ol>
+
+<footer>Entwürfe ohne echte Fotos: das Porträt ist überall eine beschriftete Fläche. Schriften kommen im Entwurf von Google Fonts und werden für die echte Seite selbst gehostet. E-Mail-Links funktionieren in dieser Vorschau nicht immer zuverlässig. Die Adresse ist office@tenverde.at.</footer>
+</div>

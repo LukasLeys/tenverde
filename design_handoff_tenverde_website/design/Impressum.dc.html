@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><title>Impressum und Datenschutz · tenverde GmbH</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet"><style>html{scroll-behavior:smooth}body{margin:0;background:#EDF0E8;color:#10251A;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}a{color:#1E7A46}a:hover{color:#10251A}</style></helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+<header style="padding:22px clamp(20px,5vw,72px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 32px">
+<a href="tenverde Website.dc.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#10251A"><dc-import name="Leaf" variant="{{ logo }}" style="width:34px;height:34px" hint-size="34px,34px"></dc-import><span style="font-family:Newsreader,serif;font-size:28px;font-weight:500;letter-spacing:-0.01em">tenverde</span></a>
+<nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-size:17px">
+<a href="tenverde Website.dc.html" style="color:#10251A;text-decoration:none;white-space:nowrap" style-hover="color:#1E7A46"><sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">Zur Startseite</sc-if><sc-if value="{{ en }}">Back to home</sc-if></a>
+<div style="display:flex;border:1.5px solid #10251A;border-radius:999px;overflow:hidden;font-size:15px;font-weight:600">
+<button onClick="{{ setDe }}" style="border:0;padding:6px 12px;cursor:pointer;font:inherit;background:{{ deBg }};color:{{ deFg }}">DE</button>
+<button onClick="{{ setEn }}" style="border:0;padding:6px 12px;cursor:pointer;font:inherit;background:{{ enBg }};color:{{ enFg }}">EN</button>
+</div>
+</nav>
+</header>
+
+<main style="padding:clamp(40px,7vw,96px) clamp(20px,5vw,72px) clamp(64px,9vw,128px)">
+<div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:20px;font-size:18px;line-height:1.6">
+
+<sc-if value="{{ de }}" hint-placeholder-val="{{ true }}">
+<div style="display:flex;flex-direction:column;gap:20px">
+<h1 style="margin:0 0 12px;font-family:Newsreader,serif;font-weight:400;font-size:clamp(44px,6vw,72px);line-height:1;letter-spacing:-0.02em">Impressum</h1>
+<p style="margin:0">Informationspflicht nach § 5 ECG, § 14 UGB, § 63 GewO und Offenlegung nach § 25 MedienG</p>
+<p style="margin:0"><strong>tenverde GmbH</strong><br>Kirschentalgasse 14/D21<br>6020 Innsbruck, Österreich</p>
+<p style="margin:0">Geschäftsführer: Lukas Leys<br>Unternehmensgegenstand: Beteiligungen, Softwareentwicklung, Immobilien <span style="background:#F2E29B;padding:0 4px">prüfen</span><br>Firmenbuchnummer: <span style="background:#F2E29B;padding:0 4px">FN ergänzen</span><br>Firmenbuchgericht: Landesgericht Innsbruck<br>UID-Nummer: <span style="background:#F2E29B;padding:0 4px">ATU ergänzen</span></p>
+<p style="margin:0">E-Mail: <a href="mailto:office@tenverde.at">office@tenverde.at</a> <span style="background:#F2E29B;padding:0 4px">prüfen</span></p>
+<p style="margin:0">Mitglied der Wirtschaftskammer Tirol <span style="background:#F2E29B;padding:0 4px">prüfen</span><br>Aufsichtsbehörde: Stadtmagistrat Innsbruck<br>Anwendbare Rechtsvorschriften: Gewerbeordnung, abrufbar unter <a href="https://www.ris.bka.gv.at" target="_blank" rel="noopener">ris.bka.gv.at</a></p>
+<p style="margin:0">Medieninhaber und Herausgeber: tenverde GmbH. Grundlegende Richtung: Information über die Tätigkeiten der Gesellschaft.</p>
+
+<h2 id="datenschutz" style="margin:48px 0 4px;font-family:Newsreader,serif;font-weight:400;font-size:clamp(36px,5vw,56px);line-height:1.05;letter-spacing:-0.015em;scroll-margin-top:24px">Datenschutz</h2>
+<p style="margin:0">Verantwortlich für die Verarbeitung personenbezogener Daten auf dieser Website ist die tenverde GmbH, Kirschentalgasse 14/D21, 6020 Innsbruck, <a href="mailto:office@tenverde.at">office@tenverde.at</a>.</p>
+<h3 style="margin:16px 0 0;font-size:20px;font-weight:600">Besuch der Website</h3>
+<p style="margin:0">Diese Website setzt keine Cookies und verwendet keine Analyse- oder Trackingdienste. Beim Aufruf speichert der Hosting-Anbieter <span style="background:#F2E29B;padding:0 4px">Hoster ergänzen</span> technisch notwendige Server-Logdaten wie IP-Adresse, Datum, Uhrzeit und aufgerufene Seite. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren Betrieb (Art. 6 Abs. 1 lit. f DSGVO). Die Daten werden nach <span style="background:#F2E29B;padding:0 4px">14 Tagen</span> gelöscht.</p>
+<h3 style="margin:16px 0 0;font-size:20px;font-weight:600">Schriftarten</h3>
+<p style="margin:0">Die Schriften Newsreader und Hanken Grotesk werden <span style="background:#F2E29B;padding:0 4px">vor Veröffentlichung lokal einbinden</span>, damit keine Daten an Google übertragen werden.</p>
+<h3 style="margin:16px 0 0;font-size:20px;font-weight:600">Kontakt per E-Mail</h3>
+<p style="margin:0">Wenn Sie uns schreiben, verarbeiten wir Ihre Angaben und mitgesendete Unterlagen wie Pitch Decks oder Exposés, um Ihre Anfrage zu bearbeiten (Art. 6 Abs. 1 lit. b und f DSGVO). Wir geben diese Daten nicht ohne Ihre Zustimmung weiter und löschen sie, sobald sie für die Bearbeitung nicht mehr nötig sind und keine gesetzlichen Aufbewahrungspflichten bestehen.</p>
+<h3 style="margin:16px 0 0;font-size:20px;font-weight:600">Ihre Rechte</h3>
+<p style="margin:0">Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Eine Nachricht an <a href="mailto:office@tenverde.at">office@tenverde.at</a> genügt. Beschwerden können Sie bei der Österreichischen Datenschutzbehörde einbringen, Barichgasse 40-42, 1030 Wien, <a href="https://www.dsb.gv.at" target="_blank" rel="noopener">dsb.gv.at</a>.</p>
+</div>
+</sc-if>
+
+<sc-if value="{{ en }}">
+<div style="display:flex;flex-direction:column;gap:20px">
+<h1 style="margin:0 0 12px;font-family:Newsreader,serif;font-weight:400;font-size:clamp(44px,6vw,72px);line-height:1;letter-spacing:-0.02em">Legal notice</h1>
+<p style="margin:0">Information pursuant to § 5 ECG, § 14 UGB, § 63 GewO and disclosure pursuant to § 25 MedienG (Austria)</p>
+<p style="margin:0"><strong>tenverde GmbH</strong><br>Kirschentalgasse 14/D21<br>6020 Innsbruck, Austria</p>
+<p style="margin:0">Managing director: Lukas Leys<br>Business purpose: investments, software development, real estate <span style="background:#F2E29B;padding:0 4px">check</span><br>Company register number: <span style="background:#F2E29B;padding:0 4px">FN to add</span><br>Register court: Regional Court of Innsbruck<br>VAT ID: <span style="background:#F2E29B;padding:0 4px">ATU to add</span></p>
+<p style="margin:0">Email: <a href="mailto:office@tenverde.at">office@tenverde.at</a> <span style="background:#F2E29B;padding:0 4px">check</span></p>
+<p style="margin:0">Member of the Tyrolean Chamber of Commerce <span style="background:#F2E29B;padding:0 4px">check</span><br>Supervisory authority: City of Innsbruck<br>Applicable regulations: Austrian Trade Regulation Act, available at <a href="https://www.ris.bka.gv.at" target="_blank" rel="noopener">ris.bka.gv.at</a></p>
+<p style="margin:0">Media owner and publisher: tenverde GmbH. Purpose: information about the company's activities.</p>
+
+<h2 id="datenschutz" style="margin:48px 0 4px;font-family:Newsreader,serif;font-weight:400;font-size:clamp(36px,5vw,56px);line-height:1.05;letter-spacing:-0.015em;scroll-margin-top:24px">Privacy</h2>
+<p style="margin:0">The controller for personal data processed on this website is tenverde GmbH, Kirschentalgasse 14/D21, 6020 Innsbruck, Austria, <a href="mailto:office@tenverde.at">office@tenverde.at</a>.</p>
+<h3 style="margin:16px 0 0;font-size:20px;font-weight:600">Visiting this website</h3>
+<p style="margin:0">This website sets no cookies and uses no analytics or tracking services. When you visit, the hosting provider <span style="background:#F2E29B;padding:0 4px">host to add</span> stores technically necessary server logs such as IP address, date, time and the page requested. The legal basis is our legitimate interest in secure operation (Art. 6(1)(f) GDPR). Logs are deleted after <span style="background:#F2E29B;padding:0 4px">14 days</span>.</p>
+<h3 style="margin:16px 0 0;font-size:20px;font-weight:600">Fonts</h3>
+<p style="margin:0">The fonts Newsreader and Hanken Grotesk are <span style="background:#F2E29B;padding:0 4px">to be self-hosted before launch</span> so that no data is sent to Google.</p>
+<h3 style="margin:16px 0 0;font-size:20px;font-weight:600">Contact by email</h3>
+<p style="margin:0">When you write to us, we process your details and any documents you send, such as pitch decks or exposés, to handle your enquiry (Art. 6(1)(b) and (f) GDPR). We do not pass this data on without your consent and delete it once it is no longer needed and no statutory retention period applies.</p>
+<h3 style="margin:16px 0 0;font-size:20px;font-weight:600">Your rights</h3>
+<p style="margin:0">You have the right of access, rectification, erasure, restriction of processing, data portability and objection. A message to <a href="mailto:office@tenverde.at">office@tenverde.at</a> is enough. You can lodge a complaint with the Austrian Data Protection Authority, Barichgasse 40-42, 1030 Vienna, <a href="https://www.dsb.gv.at" target="_blank" rel="noopener">dsb.gv.at</a>.</p>
+</div>
+</sc-if>
+
+</div>
+</main>
+
+<footer style="margin-top:auto;padding:28px clamp(20px,5vw,72px) 36px;display:flex;align-items:center;gap:10px;font-size:16px;color:#3E5546"><dc-import name="Leaf" variant="{{ logo }}" style="width:20px;height:20px" hint-size="20px,20px"></dc-import>© 2026 tenverde GmbH</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;logo&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;],&quot;default&quot;:&quot;1&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { lang: 'de' };
+  componentDidMount() {
+    try {
+      const q = new URLSearchParams(location.search).get('lang');
+      const s = q || localStorage.getItem('tenverde-lang');
+      if (s === 'en' || s === 'de') this.setLang(s);
+    } catch (e) {}
+  }
+  setLang(l) {
+    this.setState({ lang: l });
+    try { localStorage.setItem('tenverde-lang', l); } catch (e) {}
+    document.documentElement.lang = l;
+  }
+  renderVals() {
+    const en = this.state.lang === 'en';
+    const on = '#10251A', off = 'transparent';
+    return {
+      de: !en, en,
+      logo: String(this.props.logo ?? '1'),
+      setDe: () => this.setLang('de'), setEn: () => this.setLang('en'),
+      deBg: en ? off : on, deFg: en ? on : '#EDF0E8',
+      enBg: en ? on : off, enFg: en ? '#EDF0E8' : on,
+    };
+  }
+}
+</script>
+</body>
+</html>

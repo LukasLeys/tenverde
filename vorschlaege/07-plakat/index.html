@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="de" data-season="summer">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tenverde · Beteiligungsgesellschaft in Innsbruck</title>
+<meta name="description" content="tenverde ist meine Beteiligungsgesellschaft mit Sitz in Innsbruck. Hier liegen meine Softwareunternehmen, meine Beteiligungen an Startups und meine Immobilien.">
+<meta name="theme-color" content="#F2E9D5">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="plakat.css">
+</head>
+<body>
+<a class="skip" href="#inhalt" data-i18n="skip">Zum Inhalt</a>
+
+<!-- Gemeinsame Formen der Plakatserie -->
+<svg width="0" height="0" class="defs" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="pine" viewBox="0 0 20 60"><path d="M10 0L14 12H12L17 24H14L20 40H12V52H8V40H0L6 24H3L8 12H6Z"/></symbol>
+    <symbol id="star" viewBox="-6 -6 12 12"><path d="M0-6L1.4-1.4 6 0 1.4 1.4 0 6-1.4 1.4-6 0-1.4-1.4Z"/></symbol>
+    <symbol id="leaf" viewBox="0 0 64 64"><g transform="rotate(35 32 32)"><path fill-rule="evenodd" d="M32 58C14 46 12 22 32 6C52 22 50 46 32 58ZM30.4 52L32 14L33.6 52Z"/></g></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M3 12h16M13 5.5l6.5 6.5-6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></symbol>
+    <symbol id="out" viewBox="0 0 24 24"><path d="M6 18L17.5 6.5M8.5 6H18v9.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><path d="M3 5.5h18v13H3zM3.5 6l8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<!-- Die Bühne: fünf Druckebenen der Nordkette, fest hinter der Seite -->
+<div class="stage" id="stage" role="img" aria-label="Gezeichnete Plakatlandschaft: die Nordkette über Innsbruck, davor Wälder und das Inntal, darüber die Bildmarke von tenverde als Sonne" data-i18n-aria="stage">
+  <div class="sky">
+    <svg class="rays" viewBox="-100 -100 200 200" aria-hidden="true" focusable="false">
+      <g class="f-rays">
+        <path d="M0 0L100-8.7V8.7Z"/><path d="M0 0L86.6 41.9 77.9 56.6Z" /><path d="M0 0L50 86.6 33.6 94.2Z"/>
+        <path d="M0 0L0 100-17.4 98.5Z"/><path d="M0 0L-50 86.6-64.3 76.6Z"/><path d="M0 0L-86.6 50-94 34.2Z"/>
+        <path d="M0 0L-100 0-98.5-17.4Z"/><path d="M0 0L-86.6-50-76.6-64.3Z"/><path d="M0 0L-50-86.6-34.2-94Z"/>
+        <path d="M0 0L0-100 17.4-98.5Z"/><path d="M0 0L50-86.6 64.3-76.6Z"/><path d="M0 0L86.6-50 94-34.2Z"/>
+      </g>
+    </svg>
+    <svg class="stars" viewBox="0 0 1600 600" preserveAspectRatio="xMidYMin slice" aria-hidden="true" focusable="false">
+      <g class="f-snow">
+        <use href="#star" x="140" y="70" width="14" height="14"/><use href="#star" x="330" y="160" width="9" height="9"/>
+        <use href="#star" x="520" y="60" width="12" height="12"/><use href="#star" x="690" y="190" width="8" height="8"/>
+        <use href="#star" x="900" y="90" width="10" height="10"/><use href="#star" x="1080" y="40" width="14" height="14"/>
+        <use href="#star" x="1260" y="150" width="9" height="9"/><use href="#star" x="1440" y="80" width="12" height="12"/>
+        <use href="#star" x="60" y="230" width="8" height="8"/><use href="#star" x="1530" y="250" width="8" height="8"/>
+        <use href="#star" x="780" y="300" width="7" height="7"/><use href="#star" x="420" y="280" width="7" height="7"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="layer sunwrap" data-l="sun">
+    <svg class="sun" viewBox="0 0 64 64" overflow="visible" aria-hidden="true" focusable="false">
+      <circle class="f-paper reg" cx="30.4" cy="30.6" r="31"/>
+      <circle class="f-sun" cx="32" cy="32" r="31"/>
+      <use class="f-sky" href="#leaf" x="9" y="9" width="46" height="46"/>
+    </svg>
+  </div>
+
+  <div class="layer plane far" data-l="far">
+    <svg viewBox="0 0 2400 500" aria-hidden="true" focusable="false">
+      <path class="f-paper reg" transform="translate(-4 -6)" d="M0 420L180 380L320 350L420 300L520 270L600 290L680 250L760 225L840 180L900 140L950 175L1010 150L1080 110L1140 80L1200 52L1245 92L1290 78L1350 128L1410 108L1490 116L1545 150L1610 168L1690 205L1760 186L1830 222L1910 258L2000 282L2100 316L2250 350L2400 380V500H0Z"/>
+      <path class="f-far" d="M0 420L180 380L320 350L420 300L520 270L600 290L680 250L760 225L840 180L900 140L950 175L1010 150L1080 110L1140 80L1200 52L1245 92L1290 78L1350 128L1410 108L1490 116L1545 150L1610 168L1690 205L1760 186L1830 222L1910 258L2000 282L2100 316L2250 350L2400 380V501H0Z"/>
+      <g class="f-shade">
+        <path d="M1200 52L1140 80L1080 110L1052 176L1104 268L1146 176L1182 112Z"/>
+        <path d="M900 140L840 180L790 244L842 306L872 222Z"/>
+        <path d="M1290 78L1245 92L1228 152L1266 214L1280 140Z"/>
+        <path d="M1410 108L1350 128L1334 190L1380 252L1400 170Z"/>
+        <path d="M1760 186L1690 205L1668 262L1722 304L1746 240Z"/>
+        <path d="M520 270L420 300L408 340L470 362L502 320Z"/>
+        <path d="M2400 380L2250 350L2100 316L2140 420L2400 450Z"/>
+      </g>
+      <g class="f-snow">
+        <path d="M1200 52L1245 92L1290 78L1330 112L1302 120L1282 150L1256 126L1236 160L1216 120L1196 142L1180 112L1160 126L1140 80Z"/>
+        <path d="M900 140L950 175L1010 150L1036 168L1006 185L986 210L960 190L936 215L916 185L896 200L880 170L860 167Z"/>
+        <path d="M1350 128L1410 108L1490 116L1520 135L1490 140L1470 165L1446 145L1426 175L1406 150L1380 165L1366 145Z"/>
+        <path d="M1690 205L1760 186L1800 207L1780 214L1764 236L1744 218L1724 240L1708 220Z"/>
+      </g>
+    </svg>
+    <i class="ext f-far-bg"></i>
+  </div>
+
+  <div class="layer plane mid" data-l="mid">
+    <svg viewBox="0 0 2400 300" aria-hidden="true" focusable="false">
+      <g class="f-mid">
+        <path d="M0 150C140 120 260 96 380 104C500 112 560 140 680 132C800 124 880 84 1000 78C1120 72 1180 108 1300 104C1420 100 1500 70 1640 74C1780 78 1860 118 1980 116C2100 114 2220 96 2400 104V301H0Z"/>
+        <use href="#pine" x="300" y="70" width="18" height="54"/><use href="#pine" x="330" y="62" width="22" height="66"/><use href="#pine" x="362" y="72" width="16" height="48"/>
+        <use href="#pine" x="930" y="42" width="20" height="60"/><use href="#pine" x="962" y="36" width="24" height="72"/><use href="#pine" x="996" y="46" width="18" height="54"/><use href="#pine" x="1026" y="44" width="20" height="60"/>
+        <use href="#pine" x="1580" y="38" width="22" height="66"/><use href="#pine" x="1612" y="32" width="24" height="72"/><use href="#pine" x="1648" y="42" width="18" height="54"/>
+        <use href="#pine" x="2040" y="76" width="18" height="54"/><use href="#pine" x="2068" y="70" width="22" height="66"/>
+      </g>
+    </svg>
+    <i class="ext f-mid-bg"></i>
+  </div>
+
+  <div class="layer plane valley" data-l="valley">
+    <svg viewBox="0 0 1600 700" aria-hidden="true" focusable="false">
+      <g class="f-town">
+        <path d="M612 72V48L626 36L640 48V72Z"/><path d="M644 72V40L662 26L680 40V72Z"/>
+        <path d="M688 72V52L700 42L712 52V72Z"/>
+        <path d="M745 72V30H767V72Z"/><path d="M756 4C756 11 767 15 767 22C767 27.5 762 31 756 31C750 31 745 27.5 745 22C745 15 756 11 756 4Z"/><path d="M755 -10H757V6H755Z"/>
+        <path d="M774 72V46L800 30L826 46V72Z"/><path d="M832 72V54L846 44L860 54V72Z"/>
+        <path d="M904 72V44L920 32L936 44V72Z"/><path d="M944 72V56L956 48L968 56V72Z"/>
+        <path d="M980 72V38L996 26L1012 38V72Z"/>
+      </g>
+      <path class="f-valley" d="M0 70C200 62 400 76 600 68S1000 60 1200 70S1500 76 1600 66V701H0Z"/>
+      <path class="f-field" d="M0 210C260 190 520 230 800 214S1300 190 1600 220V300C1300 270 1060 300 800 292S300 270 0 290Z"/>
+      <path class="f-river" d="M0 128C300 98 520 168 800 138S1300 88 1600 148V172C1300 114 1100 170 800 166S300 122 0 156Z"/>
+      <path class="f-field" d="M0 420C320 400 640 440 960 420S1400 400 1600 430V520C1340 490 1100 520 800 512S260 490 0 510Z"/>
+    </svg>
+    <i class="ext f-valley-bg"></i>
+  </div>
+
+  <div class="layer plane nearL" data-l="nearL">
+    <svg viewBox="0 0 1000 500" aria-hidden="true" focusable="false">
+      <path class="f-paper reg" transform="translate(3 -6)" d="M0 60C120 40 240 70 380 120C520 170 640 230 760 300C860 360 940 430 1000 500V500H0Z"/>
+      <g class="f-nearL">
+        <path d="M0 60C120 40 240 70 380 120C520 170 640 230 760 300C860 360 940 430 1000 500V501H0Z"/>
+        <use href="#pine" x="30" y="-12" width="24" height="72"/><use href="#pine" x="62" y="-22" width="30" height="90"/>
+        <use href="#pine" x="104" y="-6" width="22" height="66"/><use href="#pine" x="150" y="-10" width="26" height="78"/>
+        <use href="#pine" x="196" y="4" width="22" height="66"/><use href="#pine" x="232" y="10" width="28" height="84"/>
+        <use href="#pine" x="282" y="34" width="22" height="66"/><use href="#pine" x="330" y="46" width="26" height="78"/>
+        <use href="#pine" x="388" y="74" width="22" height="66"/><use href="#pine" x="438" y="94" width="24" height="72"/>
+        <use href="#pine" x="500" y="120" width="22" height="66"/><use href="#pine" x="560" y="150" width="24" height="72"/>
+        <use href="#pine" x="640" y="196" width="20" height="60"/><use href="#pine" x="720" y="236" width="22" height="66"/>
+      </g>
+    </svg>
+    <i class="ext f-nearL-bg"></i>
+  </div>
+
+  <div class="layer plane nearR" data-l="nearR">
+    <svg viewBox="0 0 1000 500" aria-hidden="true" focusable="false">
+      <path class="f-paper reg" transform="translate(-3 -6)" d="M0 500C80 440 200 330 400 240C540 180 680 120 820 92C900 76 960 70 1000 70V500H0Z"/>
+      <g class="f-chapel">
+        <path d="M690 112V86L712 70L734 86V112Z"/>
+        <path d="M736 112V60L742 50L748 60V112Z"/>
+      </g>
+      <g class="f-nearR">
+        <path d="M0 500C80 440 200 330 400 240C540 180 680 120 820 92C900 76 960 70 1000 70V501H0Z"/>
+        <use href="#pine" x="300" y="236" width="22" height="66"/><use href="#pine" x="380" y="196" width="24" height="72"/>
+        <use href="#pine" x="450" y="160" width="22" height="66"/><use href="#pine" x="512" y="128" width="28" height="84"/>
+        <use href="#pine" x="572" y="110" width="22" height="66"/><use href="#pine" x="612" y="92" width="26" height="78"/>
+        <use href="#pine" x="780" y="44" width="24" height="72"/><use href="#pine" x="830" y="30" width="30" height="90"/>
+        <use href="#pine" x="884" y="22" width="22" height="66"/><use href="#pine" x="924" y="10" width="28" height="84"/>
+        <use href="#pine" x="966" y="18" width="24" height="72"/>
+      </g>
+    </svg>
+    <i class="ext f-nearR-bg"></i>
+  </div>
+
+  <div class="layer plane foreL" data-l="foreL">
+    <svg viewBox="0 0 400 1000" aria-hidden="true" focusable="false">
+      <g class="f-fore">
+        <use href="#pine" x="-60" y="60" width="260" height="780"/>
+        <use href="#pine" x="120" y="240" width="190" height="570"/>
+        <use href="#pine" x="250" y="420" width="140" height="420"/>
+        <path d="M0 760C120 740 260 770 400 840V1001H0Z"/>
+      </g>
+    </svg>
+    <i class="ext f-fore-bg"></i>
+  </div>
+
+  <div class="layer plane foreR" data-l="foreR">
+    <svg viewBox="0 0 400 1000" aria-hidden="true" focusable="false">
+      <g class="f-fore">
+        <use href="#pine" x="200" y="120" width="240" height="720"/>
+        <use href="#pine" x="70" y="330" width="160" height="480"/>
+        <use href="#pine" x="0" y="520" width="110" height="330"/>
+        <path d="M0 860C140 790 280 760 400 770V1001H0Z"/>
+      </g>
+    </svg>
+    <i class="ext f-fore-bg"></i>
+  </div>
+</div>
+
+<div class="mat" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="top" id="kopf">
+  <a class="brand" href="#top" aria-label="tenverde, zum Anfang" data-i18n-aria="brand">
+    <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#leaf"/></svg>
+    <span class="brand-word">tenverde</span>
+  </a>
+  <nav class="nav" aria-label="Hauptnavigation" data-i18n-aria="navLabel">
+    <ul>
+      <li><a href="#unternehmen" data-i18n="nav1">Unternehmen</a></li>
+      <li><a href="#gesucht" data-i18n="nav2">Gesucht</a></li>
+      <li><a href="#ueber-mich" data-i18n="nav3">Über mich</a></li>
+      <li><a href="#kontakt" data-i18n="nav4">Kontakt</a></li>
+    </ul>
+  </nav>
+  <div class="lang" role="group" aria-label="Sprache" data-i18n-aria="langLabel">
+    <button type="button" data-lang="de" aria-pressed="true" lang="de"><span class="sr" data-i18n="langDe">Deutsch</span><span aria-hidden="true">DE</span></button>
+    <button type="button" data-lang="en" aria-pressed="false" lang="en"><span class="sr" data-i18n="langEn">Englisch</span><span aria-hidden="true">EN</span></button>
+  </div>
+</header>
+
+<main id="inhalt">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero-scene"></div>
+    <div class="caption">
+      <div class="caption-in">
+        <h1 id="hero-title" data-i18n="heroTitle">Wir investieren in Dinge, die wachsen.</h1>
+        <div class="caption-side">
+          <p class="lead" data-i18n="heroLead">tenverde ist meine Beteiligungsgesellschaft mit Sitz in Innsbruck. Hier liegen meine Softwareunternehmen, meine Beteiligungen an Startups und meine Immobilien.</p>
+          <div class="actions">
+            <a class="btn btn-sun" href="#gesucht"><span data-i18n="heroCta1">Was ich suche</span><svg aria-hidden="true" focusable="false"><use href="#arrow"/></svg></a>
+            <a class="btn btn-line" href="#kontakt"><span data-i18n="heroCta2">Kontakt aufnehmen</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-co" id="unternehmen" aria-labelledby="co-title" data-season="autumn">
+    <div class="wrap">
+      <div class="plate">
+        <h2 id="co-title" data-i18n="coTitle">Unternehmen, die ich selbst aufbaue</h2>
+      </div>
+      <div class="series">
+        <a class="poster ps-1" href="https://neojuris.ai" target="_blank" rel="noopener">
+          <div class="poster-scene">
+            <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+              <rect width="400" height="260" fill="#1D4A66"/>
+              <circle class="ms-sun" cx="318" cy="66" r="30" fill="#E4A23C"/>
+              <g class="ms-back">
+                <path d="M0 261V178L70 150L120 162L170 120L196 74L218 46L240 70L262 94L300 104L340 136L400 160V261Z" fill="#8DA9B8"/>
+                <path d="M218 46L196 74L170 120L150 180L190 261L210 150L214 90Z" fill="#6E8DA0"/>
+                <path d="M218 46L240 70L262 94L280 99L262 108L250 128L238 110L226 134L220 104L206 112L210 82L196 74Z" fill="#F2E9D5"/>
+                <path d="M216.5 16h3v32h-3zM210 23h16v3h-16z" fill="#142129"/>
+              </g>
+              <g class="ms-front" fill="#1E4434">
+                <path d="M0 261V212C70 198 130 212 190 238C210 247 224 255 232 261Z"/>
+                <use href="#pine" x="18" y="170" width="16" height="48"/><use href="#pine" x="44" y="160" width="20" height="60"/><use href="#pine" x="76" y="176" width="14" height="42"/>
+              </g>
+            </svg>
+          </div>
+          <div class="poster-cap cap-pine">
+            <h3 class="poster-name">neojuris.ai</h3>
+            <p data-i18n="co1">KI-Software für juristische Arbeit. Recherche, Entwürfe und Prüfung von Dokumenten für Kanzleien und Rechtsabteilungen.</p>
+            <span class="poster-go">neojuris.ai<svg aria-hidden="true" focusable="false"><use href="#out"/></svg><span class="sr" data-i18n="newTab">(öffnet in neuem Tab)</span></span>
+          </div>
+        </a>
+
+        <a class="poster ps-2" href="https://immobily.io" target="_blank" rel="noopener">
+          <div class="poster-scene">
+            <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+              <rect width="400" height="300" fill="#E4A23C"/>
+              <g class="ms-back">
+                <path d="M0 301V120L50 96L95 110L150 64L190 88L240 52L300 92L350 78L400 100V301Z" fill="#A9482A"/>
+                <path d="M150 64L122 92L110 150L150 170L146 112Z M240 52L214 76L204 140L246 160L240 100Z" fill="#87381F"/>
+                <path d="M240 52L264 70L252 74L244 66L236 80L228 66Z" fill="#F2E9D5"/>
+              </g>
+              <g class="ms-front">
+                <path d="M0 301V200C90 186 220 184 400 196V301Z" fill="#2E5D44"/>
+                <path d="M0 301V250C120 240 260 242 400 254V301Z" fill="#244B37"/>
+                <path d="M60 186h70v44H60z" fill="#F2E9D5"/><path d="M46 190L95 160L144 190Z" fill="#142129"/>
+                <path d="M60 204h70v5H60zM72 214h10v10H72zM108 214h10v10h-10z" fill="#142129"/>
+                <path d="M190 150h20v74h-20z" fill="#F2E9D5"/>
+                <path d="M200 122C200 130 212 134 212 142C212 148 206 151 200 151C194 151 188 148 188 142C188 134 200 130 200 122Z M199 108h2v16h-2z" fill="#142129"/>
+                <path d="M210 186h54v38h-54z" fill="#F2E9D5"/><path d="M206 189L237 170L268 189Z" fill="#142129"/>
+                <path d="M292 192h62v40h-62z" fill="#F2E9D5"/><path d="M280 196L323 170L366 196Z" fill="#142129"/>
+                <path d="M292 208h62v5h-62zM304 218h9v9h-9zM334 218h9v9h-9z" fill="#142129"/>
+              </g>
+            </svg>
+          </div>
+          <div class="poster-cap cap-rust">
+            <h3 class="poster-name">immobily.io</h3>
+            <p data-i18n="co2">Software für Immobilien. Digitale Werkzeuge für Eigentümer, Verwalter und Makler.</p>
+            <span class="poster-go">immobily.io<svg aria-hidden="true" focusable="false"><use href="#out"/></svg><span class="sr" data-i18n="newTab">(öffnet in neuem Tab)</span></span>
+          </div>
+        </a>
+
+        <a class="poster ps-3" href="https://beamswerk.ai" target="_blank" rel="noopener">
+          <div class="poster-scene">
+            <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+              <rect width="400" height="300" fill="#2C6A8A"/>
+              <g fill="#3A7DA0"><path d="M70 60L400-40V40Z"/><path d="M70 60L400 110V190Z"/><path d="M70 60L330 301H230Z"/><path d="M70 60L120 301H40Z"/></g>
+              <circle class="ms-sun" cx="70" cy="60" r="28" fill="#E4A23C"/>
+              <g class="ms-back">
+                <path d="M0 301V210L80 180L150 196L230 140L262 118L300 140L360 160L400 150V301Z" fill="#8DA9B8"/>
+                <path d="M262 118L230 140L214 200L250 240L256 170Z" fill="#6E8DA0"/>
+                <path d="M262 118L300 140L318 146L298 152L284 170L272 150L262 166L256 140L244 148L246 132Z" fill="#F2E9D5"/>
+              </g>
+              <g class="ms-front">
+                <path d="M-10 70L410 210" stroke="#142129" stroke-width="2.5"/>
+                <path d="M250 157v19" stroke="#142129" stroke-width="2.5"/>
+                <path d="M238 172h24v5h-24z" fill="#142129"/>
+                <rect x="232" y="176" width="36" height="30" rx="3" fill="#E4A23C"/>
+                <path d="M236 182h28v10h-28z" fill="#142129"/>
+                <path d="M0 301V262C80 254 160 262 220 301Z" fill="#173528"/>
+              </g>
+            </svg>
+          </div>
+          <div class="poster-cap cap-ink">
+            <h3 class="poster-name">beamswerk.ai</h3>
+            <p data-i18n="co3">KI-Anwendungen für Unternehmen. Automatisierung von Abläufen, die heute noch von Hand laufen.</p>
+            <span class="poster-go">beamswerk.ai<svg aria-hidden="true" focusable="false"><use href="#out"/></svg><span class="sr" data-i18n="newTab">(öffnet in neuem Tab)</span></span>
+          </div>
+        </a>
+
+        <a class="poster ps-4" href="https://diekryptologen.com/" target="_blank" rel="noopener">
+          <div class="poster-scene">
+            <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+              <rect width="400" height="220" fill="#0F1E33"/>
+              <g fill="#F2E9D5">
+                <use href="#star" x="40" y="30" width="10" height="10"/><use href="#star" x="120" y="58" width="7" height="7"/>
+                <use href="#star" x="180" y="22" width="9" height="9"/><use href="#star" x="246" y="64" width="6" height="6"/>
+                <use href="#star" x="372" y="96" width="7" height="7"/><use href="#star" x="80" y="92" width="6" height="6"/>
+              </g>
+              <g class="ms-sun"><circle cx="318" cy="56" r="24" fill="#F2E9D5"/><circle cx="329" cy="48" r="21" fill="#0F1E33"/></g>
+              <g class="ms-back">
+                <path d="M0 221V150L60 128L120 140L190 96L230 120L280 104L340 136L400 124V221Z" fill="#2B4060"/>
+                <path d="M190 96L212 110L204 114L196 106L186 118L180 106Z" fill="#9FB2C8"/>
+              </g>
+              <g class="ms-front" fill="#0A1620">
+                <path d="M0 221V186C100 172 220 178 400 196V221Z"/>
+                <path d="M92 164h34v20H92z"/><path d="M86 166L109 148L132 166Z"/>
+                <use href="#pine" x="300" y="142" width="16" height="48"/><use href="#pine" x="322" y="132" width="20" height="60"/>
+              </g>
+              <path d="M104 170h8v8h-8z" fill="#E4A23C"/>
+            </svg>
+          </div>
+          <div class="poster-cap cap-enzian">
+            <h3 class="poster-name">Die Kryptologen</h3>
+            <p data-i18n="co4">Der Krypto-Podcast aus Wien. Bitcoin, Blockchain und Kryptoökonomie verständlich eingeordnet.</p>
+            <span class="poster-go">diekryptologen.com<svg aria-hidden="true" focusable="false"><use href="#out"/></svg><span class="sr" data-i18n="newTab">(öffnet in neuem Tab)</span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-se" id="gesucht" aria-labelledby="se-title" data-season="winter">
+    <div class="wrap">
+      <div class="plate plate-wide">
+        <h2 id="se-title" data-i18n="seTitle">Ich suche Startups und Immobilien.</h2>
+        <p class="plate-lead" data-i18n="seLead">tenverde investiert eigenes Kapital und hält langfristig. Ich entscheide selbst und schnell, ohne Fonds und ohne Komitee.</p>
+      </div>
+      <div class="wanted">
+        <article class="bill bill-start" aria-labelledby="st-title">
+          <div class="bill-scene">
+            <svg viewBox="0 0 600 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+              <rect width="600" height="240" fill="#1B3A57"/>
+              <circle cx="500" cy="70" r="30" fill="#E4A23C"/>
+              <path d="M0 241V170C140 140 300 150 420 176C500 192 560 186 600 176V241Z" fill="#C9D7DE"/>
+              <g fill="#E4A23C" stroke="#E4A23C" transform="translate(240 58) scale(1.9)">
+                <path d="M32 61V35" fill="none" stroke-width="3.6" stroke-linecap="round"/>
+                <path d="M31 39C20 41 9 34 7 20C21 18 30 26 31 39Z" stroke="none"/>
+                <path d="M33 34C33 19 43 8 58 7C59 22 48 34 33 34Z" stroke="none"/>
+              </g>
+              <path d="M0 241V206C150 190 330 196 600 220V241Z" fill="#F2E9D5"/>
+              <g fill="#102A22"><use href="#pine" x="20" y="120" width="30" height="90"/><use href="#pine" x="54" y="140" width="22" height="66"/><use href="#pine" x="540" y="128" width="26" height="78"/></g>
+            </svg>
+          </div>
+          <div class="bill-cap cap-pine">
+            <h3 id="st-title" data-i18n="stTitle">Startup-Beteiligungen</h3>
+            <dl class="crit">
+              <div><dt data-i18n="stK1">Phase</dt><dd>Pre-Seed, Seed</dd></div>
+              <div><dt data-i18n="stK2">Branchen</dt><dd data-i18n="stV2">Software, KI, LegalTech, PropTech</dd></div>
+              <div><dt data-i18n="stK3">Region</dt><dd data-i18n="stV3">Österreich, Deutschland, Schweiz</dd></div>
+              <div><dt data-i18n="stK4">Ticket</dt><dd data-i18n="stV4">nach Absprache</dd></div>
+              <div><dt data-i18n="stK5">Dazu</dt><dd data-i18n="stV5">Erfahrung aus Gründung, Produkt und Recht. Kontakte zu Kanzleien und in die Immobilienbranche.</dd></div>
+            </dl>
+            <a class="btn btn-sun" href="mailto:office@tenverde.at?subject=Pitch%20Deck"><svg aria-hidden="true" focusable="false"><use href="#mail"/></svg><span data-i18n="stCta">Pitch Deck senden</span></a>
+          </div>
+        </article>
+
+        <article class="bill bill-home" aria-labelledby="re-title">
+          <div class="bill-scene">
+            <svg viewBox="0 0 600 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+              <rect width="600" height="240" fill="#1B3A57"/>
+              <path d="M0 241V120L90 90L160 104L250 50L300 80L360 66L450 100L530 84L600 110V241Z" fill="#A9BECA"/>
+              <path d="M250 50L272 66L300 80L286 86L272 106L260 88L246 110L236 84L224 92L232 66Z M360 66L388 78L374 86L364 100L352 84Z" fill="#F2E9D5"/>
+              <path d="M230 130h150v90H230z" fill="#E8DCC2"/>
+              <path d="M208 138L305 90L402 138Z" fill="#A9482A"/>
+              <path d="M214 134L305 91L396 134L386 137L305 100L224 137Z" fill="#F2E9D5"/>
+              <path d="M230 162h150v8H230zM240 170h4v14h-4zM270 170h4v14h-4zM300 170h4v14h-4zM330 170h4v14h-4zM360 170h4v14h-4z" fill="#5A3A22"/>
+              <path d="M246 140h16v14h-16zM290 140h16v14h-16zM334 140h16v14h-16zM246 190h16v16h-16zM334 190h16v16h-16zM292 188h22v32h-22z" fill="#142129"/>
+              <path d="M0 241V214C200 204 400 206 600 216V241Z" fill="#F2E9D5"/>
+              <g fill="#102A22"><use href="#pine" x="110" y="128" width="30" height="90"/><use href="#pine" x="146" y="150" width="22" height="66"/><use href="#pine" x="470" y="134" width="28" height="84"/><use href="#pine" x="504" y="152" width="20" height="60"/></g>
+            </svg>
+          </div>
+          <div class="bill-cap cap-enzian">
+            <h3 id="re-title" data-i18n="reTitle">Immobilien</h3>
+            <dl class="crit">
+              <div><dt data-i18n="reK1">Objekte</dt><dd data-i18n="reV1">Wohnhäuser, Zinshäuser, Grundstücke mit Widmung</dd></div>
+              <div><dt data-i18n="reK2">Region</dt><dd data-i18n="reV2">Tirol und Westösterreich</dd></div>
+              <div><dt data-i18n="reK3">Zustand</dt><dd data-i18n="reV3">Bestand, gern mit Sanierungs- oder Entwicklungsbedarf</dd></div>
+              <div><dt data-i18n="reK4">Ankauf</dt><dd data-i18n="reV4">direkt von Eigentümern oder über Makler, auch off-market</dd></div>
+            </dl>
+            <a class="btn btn-sun" href="mailto:office@tenverde.at?subject=Immobilie"><svg aria-hidden="true" focusable="false"><use href="#mail"/></svg><span data-i18n="reCta">Exposé senden</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-ab" id="ueber-mich" aria-label="Über mich" data-i18n-aria="nav3" data-season="spring">
+    <div class="wrap about">
+      <figure class="portrait">
+        <div class="portrait-art" role="img" aria-label="Platzhalter: Porträt Lukas Leys folgt" data-i18n-aria="portraitAlt">
+          <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <rect width="400" height="500" fill="#1D4A66"/>
+            <g fill="#245676"><path d="M200 170L400 110V230Z"/><path d="M200 170L330 500H250Z"/><path d="M200 170L0 230V110Z"/><path d="M200 170L150 500H70Z"/><path d="M200 170L120 0H200Z"/><path d="M200 170L330 0H400V40Z"/></g>
+            <circle cx="200" cy="170" r="74" fill="#E4A23C"/>
+            <use href="#leaf" x="146" y="116" width="108" height="108" fill="#1D4A66"/>
+            <path d="M0 501V352L80 324L140 338L200 284L250 314L320 294L400 330V501Z" fill="#8DA9B8"/>
+            <path d="M200 284L250 314L268 320L248 326L236 344L222 326L210 342L204 318L190 324L196 300Z" fill="#F2E9D5"/>
+            <path d="M0 501V414C120 396 260 404 400 434V501Z" fill="#1E4434"/>
+          </svg>
+        </div>
+        <figcaption class="portrait-label" data-i18n="portrait">Porträt Lukas Leys folgt</figcaption>
+      </figure>
+      <div class="about-text">
+        <h2 id="ab-title">Lukas Leys</h2>
+        <p class="role" data-i18n="role">Gründer und Geschäftsführer der tenverde GmbH</p>
+        <p class="about-body" data-i18n="about">Ich gründe Softwareunternehmen und investiere in junge Firmen und in Immobilien. tenverde bündelt das unter einem Dach. Was ich aufbaue, will ich lange halten und in Ruhe wachsen lassen.</p>
+        <a class="btn btn-ink" href="https://www.linkedin.com/in/lukasleys/" target="_blank" rel="noopener"><span data-i18n="linkedin">Profil auf LinkedIn</span><svg aria-hidden="true" focusable="false"><use href="#out"/></svg><span class="sr" data-i18n="newTab">(öffnet in neuem Tab)</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-ko" id="kontakt" aria-labelledby="ko-title" data-season="night">
+    <div class="wrap">
+      <div class="final">
+        <h2 id="ko-title" data-i18n="koTitle">Schreiben Sie mir.</h2>
+        <a class="mail-big" href="mailto:office@tenverde.at">office@tenverde.at</a>
+        <address>
+          tenverde GmbH<br>
+          Kirschentalgasse 14/D21<br>
+          6020 Innsbruck<br>
+          <span data-i18n="country">Österreich</span>
+        </address>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <p>© 2026 tenverde GmbH</p>
+    <ul>
+      <li><a href="../impressum.html" data-i18n="imprint">Impressum</a></li>
+      <li><a href="../impressum.html#datenschutz" data-i18n="privacy">Datenschutz</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="plakat.js"></script>
+</body>
+</html>

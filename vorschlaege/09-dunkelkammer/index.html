@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tenverde GmbH · Innsbruck</title>
+<meta name="description" content="tenverde ist die Beteiligungsgesellschaft von Lukas Leys in Innsbruck: Softwareunternehmen, Beteiligungen an Startups und Immobilien.">
+<meta name="theme-color" content="#120804">
+<link rel="icon" href="leaf.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Gochi+Hand&display=swap">
+<link rel="stylesheet" href="dunkelkammer.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="leaf" viewBox="0 0 64 64"><g transform="rotate(35 32 32)"><path fill-rule="evenodd" d="M32 58C14 46 12 22 32 6C52 22 50 46 32 58ZM30.4 52L32 14L33.6 52Z"/></g></symbol>
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="mail" viewBox="0 0 24 24"><path d="M3.5 6.5h17v11h-17zM4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+  <symbol id="peg" viewBox="0 0 28 72">
+    <rect x="3" y="0" width="10" height="70" rx="4" fill="var(--wood)"/>
+    <rect x="15" y="0" width="10" height="70" rx="4" fill="var(--wood-2)"/>
+    <path d="M13 14v10" stroke="var(--wood-3)" stroke-width="2"/>
+    <circle cx="14" cy="30" r="6.5" fill="none" stroke="var(--spring)" stroke-width="2.6"/>
+    <path d="M7 30h14" stroke="var(--spring)" stroke-width="2.6" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<a class="skip" href="#inhalt" data-i18n="skip">Zum Inhalt springen</a>
+
+<header class="wall" id="top">
+  <a class="brand" href="#hero" aria-label="tenverde, zum Seitenanfang" data-i18n-aria="brandAria">
+    <svg class="brand-leaf" aria-hidden="true"><use href="#leaf"/></svg>
+    <span class="brand-word">tenverde</span>
+  </a>
+  <nav class="stations" aria-label="Hauptnavigation" data-i18n-aria="navAria">
+    <ul>
+      <li><a href="#unternehmen" data-spy="unternehmen"><span class="lamp" aria-hidden="true"></span><span data-i18n="navCompanies">Unternehmen</span></a></li>
+      <li><a href="#gesucht" data-spy="gesucht"><span class="lamp" aria-hidden="true"></span><span data-i18n="navLooking">Gesucht</span></a></li>
+      <li><a href="#ueber-mich" data-spy="ueber-mich"><span class="lamp" aria-hidden="true"></span><span data-i18n="navAbout">Über mich</span></a></li>
+      <li><a href="#kontakt" data-spy="kontakt"><span class="lamp" aria-hidden="true"></span><span data-i18n="navContact">Kontakt</span></a></li>
+    </ul>
+  </nav>
+  <div class="lang" role="group" aria-label="Sprache wählen" data-i18n-aria="langAria">
+    <button type="button" data-lang="de" aria-pressed="true" lang="de">DE</button>
+    <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+  </div>
+</header>
+
+<main id="inhalt">
+
+  <!-- Erster Bildschirm: Entwicklerschale von oben -->
+  <section class="hero" id="hero" aria-labelledby="hero-title">
+    <div class="hero-tray tray">
+      <span class="tape tape--tray hand" aria-hidden="true" data-i18n="trayDev">Entwickler</span>
+      <div class="liquid">
+        <div class="print print--hero" data-develop="hero">
+          <svg class="hero-leaf" role="img" aria-label="tenverde Bildmarke, ein Blatt" data-i18n-aria="leafAlt"><use href="#leaf"/></svg>
+          <h1 id="hero-title" data-i18n="heroTitle">Wir investieren in Dinge, die wachsen.</h1>
+        </div>
+        <span class="agitate" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <div class="hero-copy">
+      <p class="lead" data-i18n="heroLead">tenverde ist meine Beteiligungsgesellschaft mit Sitz in Innsbruck. Hier liegen meine Softwareunternehmen, meine Beteiligungen an Startups und meine Immobilien.</p>
+      <div class="actions">
+        <a class="btn-print" href="#gesucht"><span data-i18n="ctaLooking">Was ich suche</span></a>
+        <a class="link-quiet" href="#kontakt"><span data-i18n="ctaContact">Kontakt aufnehmen</span><svg aria-hidden="true"><use href="#arrow"/></svg></a>
+      </div>
+
+      <div class="instruments">
+        <div class="timer">
+          <span class="tape tape--timer hand" aria-hidden="true" data-i18n="timerTape">Zeit</span>
+          <div class="timer-face">
+            <div class="timer-digits" aria-hidden="true"></div>
+            <span class="timer-text" role="timer" aria-label="Entwicklungszeit" data-i18n-aria="timerAria">00:00</span>
+          </div>
+          <button type="button" class="timer-btn" data-i18n="timerBtn">Neu entwickeln</button>
+        </div>
+
+        <div class="teststrip">
+          <span class="hand teststrip-label" id="strip-label" data-i18n="stripLabel">Probestreifen</span>
+          <div class="strip" role="group" aria-labelledby="strip-label">
+            <button type="button" class="step" style="--i:0" data-level="0.16" aria-label="Belichtungsstufe 1 von 6 am Abzug zeigen" data-i18n-aria="step1"><svg aria-hidden="true"><use href="#leaf"/></svg></button>
+            <button type="button" class="step" style="--i:1" data-level="0.3" aria-label="Belichtungsstufe 2 von 6 am Abzug zeigen" data-i18n-aria="step2"><svg aria-hidden="true"><use href="#leaf"/></svg></button>
+            <button type="button" class="step" style="--i:2" data-level="0.45" aria-label="Belichtungsstufe 3 von 6 am Abzug zeigen" data-i18n-aria="step3"><svg aria-hidden="true"><use href="#leaf"/></svg></button>
+            <button type="button" class="step" style="--i:3" data-level="0.6" aria-label="Belichtungsstufe 4 von 6 am Abzug zeigen" data-i18n-aria="step4"><svg aria-hidden="true"><use href="#leaf"/></svg></button>
+            <button type="button" class="step" style="--i:4" data-level="0.78" aria-label="Belichtungsstufe 5 von 6 am Abzug zeigen" data-i18n-aria="step5"><svg aria-hidden="true"><use href="#leaf"/></svg></button>
+            <button type="button" class="step" style="--i:5" data-level="1" aria-label="Belichtungsstufe 6 von 6 am Abzug zeigen" data-i18n-aria="step6"><svg aria-hidden="true"><use href="#leaf"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Unternehmen: Abzüge an der Trockenleine -->
+  <section class="companies" id="unternehmen" aria-labelledby="companies-title">
+    <div class="section-head">
+      <h2 id="companies-title" data-i18n="companiesTitle">Unternehmen, die ich selbst aufbaue</h2>
+    </div>
+    <ul class="drying" role="list">
+      <li class="hang" style="--r:-1.4deg">
+        <svg class="peg" aria-hidden="true"><use href="#peg"/></svg>
+        <article class="print print--dark print--a" data-develop>
+          <div class="img">
+            <h3 class="co-name">neojuris.ai</h3>
+            <p data-i18n="coNeojuris">KI-Software für juristische Arbeit. Recherche, Entwürfe und Prüfung von Dokumenten für Kanzleien und Rechtsabteilungen.</p>
+            <a class="co-link" href="https://neojuris.ai" target="_blank" rel="noopener">neojuris.ai<svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh" data-i18n="newTab">(öffnet in neuem Tab)</span></a>
+          </div>
+        </article>
+      </li>
+      <li class="hang" style="--r:1.1deg">
+        <svg class="peg" aria-hidden="true"><use href="#peg"/></svg>
+        <article class="print print--light print--b" data-develop>
+          <div class="img">
+            <p data-i18n="coImmobily">Software für Immobilien. Digitale Werkzeuge für Eigentümer, Verwalter und Makler.</p>
+            <h3 class="co-name">immobily.io</h3>
+            <a class="co-link" href="https://immobily.io" target="_blank" rel="noopener">immobily.io<svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh" data-i18n="newTab">(öffnet in neuem Tab)</span></a>
+          </div>
+        </article>
+      </li>
+      <li class="hang" style="--r:-0.7deg">
+        <svg class="peg" aria-hidden="true"><use href="#peg"/></svg>
+        <article class="print print--sepia print--c" data-develop>
+          <div class="img">
+            <h3 class="co-name">beamswerk.ai</h3>
+            <p data-i18n="coBeamswerk">KI-Anwendungen für Unternehmen. Automatisierung von Abläufen, die heute noch von Hand laufen.</p>
+            <a class="co-link" href="https://beamswerk.ai" target="_blank" rel="noopener">beamswerk.ai<svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh" data-i18n="newTab">(öffnet in neuem Tab)</span></a>
+          </div>
+        </article>
+      </li>
+      <li class="hang" style="--r:1.7deg">
+        <svg class="peg" aria-hidden="true"><use href="#peg"/></svg>
+        <article class="print print--light print--d" data-develop>
+          <div class="img">
+            <h3 class="co-name"><span>Die</span> <span>Kryptologen</span></h3>
+            <p data-i18n="coKryptologen">Der Krypto-Podcast aus Wien. Bitcoin, Blockchain und Kryptoökonomie verständlich eingeordnet.</p>
+            <a class="co-link" href="https://diekryptologen.com/" target="_blank" rel="noopener">diekryptologen.com<svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh" data-i18n="newTab">(öffnet in neuem Tab)</span></a>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Gesucht: zwei Schalen mit Probestreifen -->
+  <section class="looking" id="gesucht" aria-labelledby="looking-title">
+    <div class="section-head section-head--split">
+      <h2 id="looking-title" data-i18n="lookingTitle">Ich suche Startups und Immobilien.</h2>
+      <p class="section-lead" data-i18n="lookingLead">tenverde investiert eigenes Kapital und hält langfristig. Ich entscheide selbst und schnell, ohne Fonds und ohne Komitee.</p>
+    </div>
+
+    <div class="trays">
+      <div class="tray tray--strip">
+        <span class="tape tape--tray hand" aria-hidden="true" data-i18n="tapeStartups">Startups</span>
+        <div class="liquid">
+          <article class="print strip-print" data-develop aria-labelledby="startups-title">
+            <h3 id="startups-title" class="band band--0" data-i18n="startupsTitle">Startup-Beteiligungen</h3>
+            <dl class="criteria">
+              <div class="band band--1"><dt data-i18n="sPhaseL">Phase</dt><dd>Pre-Seed, Seed</dd></div>
+              <div class="band band--2"><dt data-i18n="sSectorL">Branchen</dt><dd data-i18n="sSector">Software, KI, LegalTech, PropTech</dd></div>
+              <div class="band band--3"><dt data-i18n="sRegionL">Region</dt><dd data-i18n="sRegion">Österreich, Deutschland, Schweiz</dd></div>
+              <div class="band band--4"><dt data-i18n="sTicketL">Ticket</dt><dd data-i18n="sTicket">nach Absprache</dd></div>
+              <div class="band band--5"><dt data-i18n="sPlusL">Dazu</dt><dd data-i18n="sPlus">Erfahrung aus Gründung, Produkt und Recht. Kontakte zu Kanzleien und in die Immobilienbranche.</dd></div>
+            </dl>
+            <div class="band band--ink">
+              <a class="btn-send" href="mailto:office@tenverde.at?subject=Pitch%20Deck"><svg aria-hidden="true"><use href="#mail"/></svg><span data-i18n="sCta">Pitch Deck senden</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="tray tray--strip">
+        <span class="tape tape--tray hand" aria-hidden="true" data-i18n="tapeEstate">Immobilien</span>
+        <div class="liquid">
+          <article class="print strip-print" data-develop aria-labelledby="estate-title">
+            <h3 id="estate-title" class="band band--0" data-i18n="estateTitle">Immobilien</h3>
+            <dl class="criteria">
+              <div class="band band--1"><dt data-i18n="eAssetsL">Objekte</dt><dd data-i18n="eAssets">Wohnhäuser, Zinshäuser, Grundstücke mit Widmung</dd></div>
+              <div class="band band--2"><dt data-i18n="eRegionL">Region</dt><dd data-i18n="eRegion">Tirol und Westösterreich</dd></div>
+              <div class="band band--3"><dt data-i18n="eCondL">Zustand</dt><dd data-i18n="eCond">Bestand, gern mit Sanierungs- oder Entwicklungsbedarf</dd></div>
+              <div class="band band--5"><dt data-i18n="eDealL">Ankauf</dt><dd data-i18n="eDeal">direkt von Eigentümern oder über Makler, auch off-market</dd></div>
+            </dl>
+            <div class="band band--ink">
+              <a class="btn-send" href="mailto:office@tenverde.at?subject=Immobilie"><svg aria-hidden="true"><use href="#mail"/></svg><span data-i18n="eCta">Exposé senden</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Über mich: unentwickelter Abzug im Vergrößerungsrahmen -->
+  <section class="about" id="ueber-mich" aria-labelledby="about-title">
+    <div class="easel-wrap">
+      <span class="beam" aria-hidden="true"></span>
+      <div class="easel">
+        <div class="portrait" role="img" aria-label="Platzhalter: Porträt Lukas Leys folgt" data-i18n-aria="portraitAria">
+          <svg class="portrait-leaf" aria-hidden="true"><use href="#leaf"/></svg>
+          <span class="portrait-label hand" aria-hidden="true" data-i18n="portraitLabel">Porträt Lukas Leys folgt</span>
+        </div>
+        <span class="blade blade--top" aria-hidden="true"></span>
+        <span class="blade blade--side" aria-hidden="true"></span>
+      </div>
+    </div>
+    <div class="about-copy">
+      <h2 id="about-title">Lukas Leys</h2>
+      <p class="role" data-i18n="aboutRole">Gründer und Geschäftsführer der tenverde GmbH</p>
+      <p class="about-text" data-i18n="aboutText">Ich gründe Softwareunternehmen und investiere in junge Firmen und in Immobilien. tenverde bündelt das unter einem Dach. Was ich aufbaue, will ich lange halten und in Ruhe wachsen lassen.</p>
+      <a class="link-quiet link-quiet--big" href="https://www.linkedin.com/in/lukasleys/" target="_blank" rel="noopener"><span data-i18n="aboutLink">Profil auf LinkedIn</span><svg aria-hidden="true"><use href="#arrow"/></svg><span class="vh" data-i18n="newTab">(öffnet in neuem Tab)</span></a>
+    </div>
+  </section>
+
+  <!-- Kontakt: das Licht geht an -->
+  <section class="lights" id="kontakt" aria-labelledby="contact-title" data-lights="on">
+    <span class="tube" aria-hidden="true"></span>
+    <div class="contact-inner">
+      <svg class="contact-leaf" aria-hidden="true"><use href="#leaf"/></svg>
+      <h2 id="contact-title" data-i18n="contactTitle">Schreiben Sie mir.</h2>
+      <a class="mail-big" href="mailto:office@tenverde.at">office@tenverde.at</a>
+      <address>
+        tenverde GmbH<br>
+        Kirschentalgasse 14/D21<br>
+        6020 Innsbruck<br>
+        <span data-i18n="country">Österreich</span>
+      </address>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>© 2026 tenverde GmbH</p>
+  <ul role="list">
+    <li><a href="../impressum.html" data-i18n="imprint">Impressum</a></li>
+    <li><a href="../impressum.html#datenschutz" data-i18n="privacy">Datenschutz</a></li>
+  </ul>
+</footer>
+
+<script>
+(() => {
+  'use strict';
+  const root = document.documentElement;
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Sprache ---------- */
+  const EN = {
+    skip: 'Skip to content', brandAria: 'tenverde, back to top', navAria: 'Main navigation', langAria: 'Choose language',
+    navCompanies: 'Companies', navLooking: 'Looking for', navAbout: 'About', navContact: 'Contact',
+    trayDev: 'Developer', leafAlt: 'tenverde mark, a leaf',
+    heroTitle: 'We invest in things that grow.',
+    heroLead: 'tenverde is my holding company, based in Innsbruck. It holds my software companies, my stakes in startups and my real estate.',
+    ctaLooking: 'What I look for', ctaContact: 'Get in touch',
+    timerTape: 'Time', timerAria: 'Development time', timerBtn: 'Develop again', stripLabel: 'Test strip',
+    step1: 'Show exposure step 1 of 6 on the print', step2: 'Show exposure step 2 of 6 on the print', step3: 'Show exposure step 3 of 6 on the print',
+    step4: 'Show exposure step 4 of 6 on the print', step5: 'Show exposure step 5 of 6 on the print', step6: 'Show exposure step 6 of 6 on the print',
+    companiesTitle: 'Companies I am building',
+    coNeojuris: 'AI software for legal work. Research, drafting and document review for law firms and in-house teams.',
+    coImmobily: 'Software for real estate. Digital tools for owners, property managers and agents.',
+    coBeamswerk: 'AI applications for businesses. Automating workflows that still run by hand today.',
+    coKryptologen: 'The crypto podcast from Vienna. Bitcoin, blockchain and the crypto economy explained clearly.',
+    newTab: '(opens in a new tab)',
+    lookingTitle: 'I am looking for startups and real estate.',
+    lookingLead: 'tenverde invests its own capital and holds for the long term. I decide myself and quickly, with no fund and no committee.',
+    tapeStartups: 'Startups', tapeEstate: 'Real estate',
+    startupsTitle: 'Startup investments', sPhaseL: 'Stage', sSectorL: 'Sectors', sSector: 'Software, AI, LegalTech, PropTech',
+    sRegionL: 'Region', sRegion: 'Austria, Germany, Switzerland', sTicketL: 'Ticket', sTicket: 'by arrangement',
+    sPlusL: 'Plus', sPlus: 'Experience in founding, product and law. Contacts to law firms and the real estate industry.', sCta: 'Send pitch deck',
+    estateTitle: 'Real estate', eAssetsL: 'Assets', eAssets: 'Residential and multi-family buildings, zoned plots',
+    eRegionL: 'Region', eRegion: 'Tyrol and western Austria', eCondL: 'Condition', eCond: 'Existing stock, ideally in need of renovation or development',
+    eDealL: 'Deals', eDeal: 'directly from owners or through agents, off-market welcome', eCta: 'Send exposé',
+    portraitAria: 'Placeholder: portrait of Lukas Leys to follow', portraitLabel: 'Portrait of Lukas Leys to follow',
+    aboutRole: 'Founder and managing director of tenverde GmbH',
+    aboutText: 'I found software companies and invest in young businesses and in real estate. tenverde brings all of it under one roof. What I build, I intend to hold for a long time and let grow at its own pace.',
+    aboutLink: 'Profile on LinkedIn',
+    contactTitle: 'Write to me.', country: 'Austria', imprint: 'Legal notice', privacy: 'Privacy',
+    _title: 'tenverde GmbH · Innsbruck',
+    _desc: 'tenverde is the holding company of Lukas Leys in Innsbruck: software companies, startup investments and real estate.'
+  };
+  const DE = {};
+  const textEls = document.querySelectorAll('[data-i18n]');
+  const ariaEls = document.querySelectorAll('[data-i18n-aria]');
+  textEls.forEach(el => { DE[el.dataset.i18n] = el.textContent; });
+  ariaEls.forEach(el => { DE[el.dataset.i18nAria] = el.getAttribute('aria-label'); });
+  const metaDesc = document.querySelector('meta[name="description"]');
+  DE._title = document.title; DE._desc = metaDesc.content;
+
+  function setLang(lang, store) {
+    const d = lang === 'en' ? EN : DE;
+    root.lang = lang;
+    textEls.forEach(el => { const v = d[el.dataset.i18n]; if (v != null) el.textContent = v; });
+    ariaEls.forEach(el => { const v = d[el.dataset.i18nAria]; if (v != null) el.setAttribute('aria-label', v); });
+    document.title = d._title; metaDesc.content = d._desc;
+    document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+    if (store) { try { localStorage.setItem('tenverde-lang', lang); } catch (e) { /* Speicher gesperrt */ } }
+  }
+  let initial = 'de';
+  try { const s = localStorage.getItem('tenverde-lang'); if (s === 'en' || s === 'de') initial = s; } catch (e) { /* ohne Speicher */ }
+  try { const q = new URLSearchParams(location.search).get('lang'); if (q === 'en' || q === 'de') initial = q; } catch (e) { /* ohne Parameter */ }
+  if (initial !== 'de') setLang(initial, false);
+  document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang, true)));
+
+  /* ---------- Entwicklungskurve ---------- */
+  // Wie ein echter Abzug: Induktionszeit, dann schnelles Schwärzen, dann Ausklingen.
+  const sig = x => 1 / (1 + Math.exp(-11 * (x - 0.42)));
+  const S0 = sig(0), S1 = sig(1);
+  const curve = s => (sig(Math.min(1, Math.max(0, s))) - S0) / (S1 - S0);
+
+  /* Ein Deckblatt aus Papierfarbe mit Silberkorn liegt über dem Abzug und löst sich Pixel für Pixel auf. */
+  class Cover {
+    constructor(el) { this.el = el; this.canvas = null; this.d = 1; }
+    ensure() {
+      const r = this.el.getBoundingClientRect();
+      const w = Math.max(8, Math.round(r.width / 2)), h = Math.max(8, Math.round(r.height / 2));
+      if (this.canvas && this.w === w && this.h === h) return;
+      if (!this.canvas) {
+        this.canvas = document.createElement('canvas');
+        this.canvas.className = 'cover';
+        this.canvas.setAttribute('aria-hidden', 'true');
+        this.el.appendChild(this.canvas);
+        this.ctx = this.canvas.getContext('2d');
+      }
+      this.w = w; this.h = h;
+      this.canvas.width = w; this.canvas.height = h;
+      const m = getComputedStyle(this.el).backgroundColor.match(/\d+(\.\d+)?/g) || [241, 211, 168];
+      this.rgb = m.slice(0, 3).map(Number);
+      // Schwelle pro Bildpunkt: ungleichmäßige Bewegung des Entwicklers plus feines Korn.
+      const G = 7, grid = new Float32Array((G + 1) * (G + 1)).map(() => Math.random());
+      this.t = new Float32Array(w * h);
+      for (let y = 0; y < h; y++) {
+        const gy = y / h * G, y0 = gy | 0, fy = gy - y0;
+        for (let x = 0; x < w; x++) {
+          const gx = x / w * G, x0 = gx | 0, fx = gx - x0;
+          const a = grid[y0 * (G + 1) + x0], b = grid[y0 * (G + 1) + x0 + 1];
+          const c = grid[(y0 + 1) * (G + 1) + x0], dd = grid[(y0 + 1) * (G + 1) + x0 + 1];
+          const low = (a * (1 - fx) + b * fx) * (1 - fy) + (c * (1 - fx) + dd * fx) * fy;
+          this.t[y * w + x] = 0.5 * low + 0.5 * Math.random();
+        }
+      }
+      this.img = this.ctx.createImageData(w, h);
+      const px = this.img.data;
+      for (let i = 0; i < w * h; i++) { px[i * 4] = this.rgb[0]; px[i * 4 + 1] = this.rgb[1]; px[i * 4 + 2] = this.rgb[2]; }
+      this.draw(this.d);
+    }
+    draw(d) {
+      this.d = d;
+      if (d >= 1) { this.remove(); return; }
+      if (!this.canvas) this.ensure();
+      const px = this.img.data, t = this.t, n = this.w * this.h, k = d * 1.6;
+      for (let i = 0; i < n; i++) {
+        let v = (k - t[i]) / 0.6;
+        v = v < 0 ? 0 : v > 1 ? 1 : v;
+        px[i * 4 + 3] = (1 - v * v * (3 - 2 * v)) * 255;
+      }
+      this.ctx.putImageData(this.img, 0, 0);
+    }
+    remove() { if (this.canvas) { this.canvas.remove(); this.canvas = null; } this.d = 1; }
+  }
+
+  /* Gemeinsame Animationsschleife, läuft nur solange etwas entwickelt wird. */
+  const runs = new Map();
+  let raf = 0;
+  function tick(now) {
+    raf = 0;
+    if (document.hidden) return;
+    runs.forEach((run, cover) => {
+      if (run.t0 == null) run.t0 = now - run.elapsed;
+      run.elapsed = now - run.t0;
+      const s = run.elapsed / run.dur;
+      cover.draw(run.from + (run.to - run.from) * curve(s));
+      if (run.onTick) run.onTick(run.elapsed);
+      if (s >= 1) { runs.delete(cover); cover.draw(1); if (run.onDone) run.onDone(run.elapsed); }
+    });
+    if (runs.size) raf = requestAnimationFrame(tick);
+  }
+  function develop(cover, dur, opts = {}) {
+    const from = opts.from != null ? opts.from : 0;
+    if (reduced) { cover.draw(1); if (opts.onDone) opts.onDone(0); return; }
+    cover.ensure(); cover.draw(from);
+    runs.set(cover, { from, to: 1, dur, elapsed: 0, t0: null, onTick: opts.onTick, onDone: opts.onDone });
+    if (!raf) raf = requestAnimationFrame(tick);
+  }
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) { runs.forEach(r => { r.t0 = null; }); }
+    else if (runs.size && !raf) raf = requestAnimationFrame(tick);
+  });
+  const resizeObs = 'ResizeObserver' in window ? new ResizeObserver(es => es.forEach(e => { const c = e.target._cover; if (c && c.canvas) c.ensure(); })) : null;
+  function coverFor(el) { if (!el._cover) { el._cover = new Cover(el); if (resizeObs) resizeObs.observe(el); } return el._cover; }
+
+  /* ---------- Zeitschaltuhr mit Siebensegmentanzeige ---------- */
+  const digitsEl = document.querySelector('.timer-digits');
+  const timerText = document.querySelector('.timer-text');
+  const SEG = {
+    a: 'M6.5 4L9.5 1H30.5L33.5 4L30.5 7H9.5Z', g: 'M6.5 35L9.5 32H30.5L33.5 35L30.5 38H9.5Z', d: 'M6.5 66L9.5 63H30.5L33.5 66L30.5 69H9.5Z',
+    f: 'M4 6.5L7 9.5V30.5L4 33.5L1 30.5V9.5Z', b: 'M36 6.5L39 9.5V30.5L36 33.5L33 30.5V9.5Z',
+    e: 'M4 37.5L7 40.5V61.5L4 64.5L1 61.5V40.5Z', c: 'M36 37.5L39 40.5V61.5L36 64.5L33 61.5V40.5Z'
+  };
+  const MAP = ['abcdef', 'bc', 'abged', 'abgcd', 'fgbc', 'afgcd', 'afgedc', 'abc', 'abcdefg', 'abcdfg'];
+  const NS = 'http://www.w3.org/2000/svg';
+  const digitNodes = [];
+  function makeDigit(small) {
+    const svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 40 70');
+    svg.setAttribute('class', small ? 'dg dg--small' : 'dg');
+    const segs = {};
+    for (const k in SEG) { const p = document.createElementNS(NS, 'path'); p.setAttribute('d', SEG[k]); svg.appendChild(p); segs[k] = p; }
+    digitsEl.appendChild(svg);
+    digitNodes.push(segs);
+  }
+  function makeSep(cls) { const s = document.createElement('span'); s.className = cls; digitsEl.appendChild(s); return s; }
+  makeDigit(); makeDigit(); const colon = makeSep('colon'); makeDigit(); makeDigit(); makeSep('dot'); makeDigit(true);
+  function showTime(ms, running) {
+    const tenths = Math.floor(ms / 100) % 10, secs = Math.floor(ms / 1000);
+    const mm = Math.floor(secs / 60) % 100, ss = secs % 60;
+    const vals = [Math.floor(mm / 10), mm % 10, Math.floor(ss / 10), ss % 10, tenths];
+    vals.forEach((v, i) => { const on = MAP[v]; const segs = digitNodes[i]; for (const k in segs) segs[k].classList.toggle('on', on.includes(k)); });
+    colon.classList.toggle('blink', !!running);
+    timerText.textContent = String(mm).padStart(2, '0') + ':' + String(ss).padStart(2, '0');
+  }
+  showTime(0, false);
+  root.classList.add('has-timer');
+
+  /* ---------- Erster Bildschirm ---------- */
+  const heroPrint = document.querySelector('[data-develop="hero"]');
+  const heroCover = coverFor(heroPrint);
+  const HERO_MS = 5600;
+  function developHero(from) {
+    develop(heroCover, from != null ? HERO_MS * 0.45 : HERO_MS, {
+      from: from || 0,
+      onTick: from != null ? null : ms => showTime(ms, true),
+      onDone: from != null ? null : ms => showTime(Math.min(ms, HERO_MS), false)
+    });
+  }
+  if (!reduced) developHero(); else showTime(0, false);
+  const timerBtn = document.querySelector('.timer-btn');
+  if (reduced) timerBtn.hidden = true;
+  timerBtn.addEventListener('click', () => { runs.delete(heroCover); heroCover.d = 0; developHero(); });
+
+  // Probestreifen: jede Stufe zeigt den Abzug mit dieser Belichtung.
+  const strip = document.querySelector('.strip');
+  let previewing = false;
+  function preview(level) {
+    runs.delete(heroCover); previewing = true;
+    heroCover.ensure(); heroCover.draw(level);
+    strip.querySelectorAll('.step').forEach(s => s.classList.toggle('is-on', Number(s.dataset.level) === level));
+  }
+  function endPreview() {
+    if (!previewing) return; previewing = false;
+    strip.querySelectorAll('.step').forEach(s => s.classList.remove('is-on'));
+    if (heroCover.d < 1) developHero(heroCover.d);
+  }
+  strip.querySelectorAll('.step').forEach(step => {
+    const lv = Number(step.dataset.level);
+    step.addEventListener('pointerenter', () => preview(lv));
+    step.addEventListener('focus', () => preview(lv));
+    step.addEventListener('click', () => preview(lv));
+  });
+  strip.addEventListener('pointerleave', () => { if (!strip.querySelector(':focus-visible')) { if (strip.contains(document.activeElement)) document.activeElement.blur(); endPreview(); } });
+  strip.addEventListener('focusout', e => { if (!strip.contains(e.relatedTarget)) endPreview(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && previewing) { document.activeElement.blur(); endPreview(); } });
+
+  /* ---------- Weitere Abzüge und das Licht ---------- */
+  // Abzüge werden nur dann abgedeckt, wenn der Besucher scrollt und sie noch unterhalb liegen.
+  // Ohne Script, bei reduzierter Bewegung und auf Bildschirmfotos bleibt alles entwickelt.
+  const prints = [...document.querySelectorAll('[data-develop]:not([data-develop="hero"])')];
+  const lights = document.querySelector('.lights');
+  const targets = [...prints, lights];
+  const state = new Map(targets.map(t => [t, 'idle']));
+  let scrolled = false;
+
+  function lightsOn() {
+    const seq = [['on', 70], ['off', 110], ['on', 45], ['off', 240], ['on', 0]];
+    let i = 0;
+    (function step() { const [v, ms] = seq[i++]; lights.dataset.lights = v; if (ms) setTimeout(step, ms); })();
+  }
+  const startIO = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting || state.get(e.target) !== 'armed') return;
+      state.set(e.target, 'done'); startIO.unobserve(e.target);
+      if (e.target === lights) lightsOn();
+      else develop(coverFor(e.target), 3000);
+    });
+  }, { rootMargin: '0px 0px -18% 0px' });
+  const armIO = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!scrolled || !e.isIntersecting || state.get(e.target) !== 'idle') return;
+      if (e.boundingClientRect.top < window.innerHeight) return; // schon sichtbar: bleibt entwickelt
+      state.set(e.target, 'armed'); armIO.unobserve(e.target);
+      if (e.target === lights) lights.dataset.lights = 'off';
+      else { const c = coverFor(e.target); c.ensure(); c.draw(0); }
+      startIO.observe(e.target);
+    });
+  }, { rootMargin: '0px 0px 45% 0px' });
+  if (!reduced) {
+    window.addEventListener('scroll', function onFirst() {
+      window.removeEventListener('scroll', onFirst);
+      scrolled = true;
+      targets.forEach(t => { if (state.get(t) === 'idle') { armIO.unobserve(t); armIO.observe(t); } });
+    }, { passive: true });
+    targets.forEach(t => armIO.observe(t));
+  }
+
+  /* ---------- Trockenleine: Abzüge schwingen mit dem Zeiger ---------- */
+  const hangs = [...document.querySelectorAll('.hang')].map(el => ({ el, th: 0, om: 0 }));
+  const drying = document.querySelector('.drying');
+  let swayRaf = 0, swayLast = 0, lastX = null;
+  function swayTick(now) {
+    const dt = Math.min(0.034, (now - (swayLast || now)) / 1000 || 0.016); swayLast = now;
+    let moving = false;
+    hangs.forEach(h => {
+      h.om += (-34 * h.th - 2.2 * h.om) * dt;
+      h.th = Math.max(-6, Math.min(6, h.th + h.om * dt));
+      if (Math.abs(h.th) > 0.01 || Math.abs(h.om) > 0.05) moving = true; else { h.th = 0; h.om = 0; }
+      h.el.style.setProperty('--sway', h.th.toFixed(3) + 'deg');
+    });
+    swayRaf = moving && !document.hidden ? requestAnimationFrame(swayTick) : 0;
+    if (!swayRaf) swayLast = 0;
+  }
+  if (!reduced && drying) {
+    drying.addEventListener('pointermove', e => {
+      if (lastX == null) { lastX = e.clientX; return; }
+      const dx = e.clientX - lastX; lastX = e.clientX;
+      hangs.forEach(h => {
+        const r = h.el.getBoundingClientRect();
+        if (e.clientX < r.left - 16 || e.clientX > r.right + 16 || e.clientY < r.top || e.clientY > r.bottom) return;
+        const mass = Math.max(0.7, (r.width * r.height) / 120000);
+        h.om = Math.max(-34, Math.min(34, h.om + dx * 0.55 / mass));
+      });
+      if (!swayRaf) swayRaf = requestAnimationFrame(swayTick);
+    });
+    drying.addEventListener('pointerleave', () => { lastX = null; });
+  }
+
+  /* ---------- Station im Kopf markieren ---------- */
+  const spyLinks = [...document.querySelectorAll('[data-spy]')];
+  const spyIO = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      spyLinks.forEach(a => { const here = a.dataset.spy === e.target.id; a.classList.toggle('is-here', here); if (here) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current'); });
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  ['hero', 'unternehmen', 'gesucht', 'ueber-mich', 'kontakt'].forEach(id => { const s = document.getElementById(id); if (s) spyIO.observe(s); });
+
+  // Bewegung der Schale nur, solange sie zu sehen ist.
+  const heroSec = document.getElementById('hero');
+  new IntersectionObserver(es => es.forEach(e => heroSec.classList.toggle('is-away', !e.isIntersecting))).observe(heroSec);
+})();
+</script>
+</body>
+</html>

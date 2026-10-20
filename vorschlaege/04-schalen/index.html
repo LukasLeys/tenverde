@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tenverde · Beteiligungsgesellschaft in Innsbruck</title>
+<meta name="description" content="tenverde ist die Beteiligungsgesellschaft von Lukas Leys in Innsbruck: Softwareunternehmen, Beteiligungen an Startups und Immobilien.">
+<meta name="theme-color" content="#0A1524">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg transform='rotate(35 32 32)'%3E%3Cpath fill-rule='evenodd' fill='%232FDA82' d='M32 58C14 46 12 22 32 6C52 22 50 46 32 58ZM30.4 52L32 14L33.6 52Z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;800;900&family=Red+Hat+Text:wght@400;500;600&display=swap">
+<style>
+:root{
+  --night:#0A1524; --night-2:#0F1F33; --shadow:#172C44; --shadow-2:#21405F;
+  --glacier:#F1F5F8; --ice:#DCE6EE; --ice-2:#C6D5E2;
+  --concrete-l:#D9DCDD; --concrete:#A9AEB1; --concrete-d:#50575D; --concrete-dd:#3B4248;
+  --ink:#0A1524; --ink-2:#344354;
+  --on-dark:#F1F5F8; --on-dark-2:#A8BBCD;
+  --signal:#2FDA82; --signal-deep:#0C6A39;
+  --focus:var(--signal);
+  --display:"Red Hat Display", "Segoe UI", system-ui, sans-serif;
+  --text:"Red Hat Text", "Segoe UI", system-ui, sans-serif;
+  --gutter:clamp(16px, 4.4vw, 72px);
+  --gutter-r:var(--gutter);
+  --ease:cubic-bezier(.16,1,.3,1);
+  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  color-scheme:dark light;
+}
+@media (min-width:860px){ :root{ --gutter-r:max(var(--gutter), 96px); } }
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; scrollbar-color:var(--concrete) var(--night); scrollbar-width:thin; }
+@media (prefers-reduced-motion:no-preference){ html{ scroll-behavior:smooth; } }
+body{ margin:0; background:var(--night); color:var(--on-dark); font-family:var(--text); font-size:1.0625rem; line-height:1.6; overflow-x:clip; text-rendering:optimizeLegibility; }
+::selection{ background:var(--signal); color:var(--night); }
+::-webkit-scrollbar{ width:12px; height:12px; }
+::-webkit-scrollbar-track{ background:var(--night); }
+::-webkit-scrollbar-thumb{ background:var(--concrete-d); border:3px solid var(--night); border-radius:8px; }
+::-webkit-scrollbar-thumb:hover{ background:var(--concrete); }
+img,svg{ display:block; max-width:100%; }
+a{ color:inherit; text-underline-offset:.22em; text-decoration-thickness:1px; }
+:focus-visible{ outline:3px solid var(--focus); outline-offset:3px; border-radius:4px; }
+.day{ --focus:var(--signal-deep); color:var(--ink); }
+h1,h2,h3{ font-family:var(--display); margin:0; text-wrap:balance; }
+p{ margin:0; text-wrap:pretty; }
+.sr{ position:absolute!important; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); clip-path:inset(50%); white-space:nowrap; }
+.skip{ position:absolute; left:16px; top:-80px; z-index:50; background:var(--signal); color:var(--night); padding:12px 18px; border-radius:999px; font-weight:600; text-decoration:none; }
+.skip:focus{ top:12px; }
+.ico{ width:1.1em; height:1.1em; flex:none; }
+
+/* ---------- header: station signage ---------- */
+.signage{ position:absolute; inset:0 0 auto 0; z-index:20; display:flex; align-items:center; gap:24px; padding:18px var(--gutter-r) 0 var(--gutter); }
+.brand{ display:inline-flex; align-items:center; gap:10px; text-decoration:none; font-family:var(--display); font-weight:700; font-size:1.5rem; letter-spacing:-.02em; min-height:44px; color:var(--on-dark); }
+.brand .leaf{ width:34px; height:34px; color:var(--signal); }
+.signs-nav{ margin-left:auto; }
+.signs{ display:flex; gap:4px; margin:0; padding:0; list-style:none; }
+.signs a{ display:inline-flex; align-items:center; gap:9px; min-height:44px; padding:0 14px; border-radius:999px; text-decoration:none; font-weight:500; font-size:.98rem; color:var(--on-dark); transition:background-color .25s var(--ease); }
+.signs a::before{ content:""; width:7px; height:7px; border-radius:50%; border:1.5px solid var(--on-dark-2); transition:background-color .25s, border-color .25s; }
+.signs a:hover{ background:rgba(241,245,248,.08); }
+.signs a:hover::before{ background:var(--signal); border-color:var(--signal); }
+.lang{ display:inline-flex; padding:3px; border-radius:999px; border:1px solid rgba(168,187,205,.35); }
+.lang button{ font:600 .9rem/1 var(--text); min-width:44px; min-height:38px; border:0; border-radius:999px; background:transparent; color:var(--on-dark-2); cursor:pointer; letter-spacing:.04em; }
+.lang button[aria-pressed="true"]{ background:var(--on-dark); color:var(--night); }
+.lang button:hover{ color:var(--on-dark); }
+.lang button[aria-pressed="true"]:hover{ color:var(--night); }
+
+/* ---------- buttons ---------- */
+.btn{ display:inline-flex; align-items:center; gap:10px; min-height:52px; padding:0 24px; border-radius:999px; font:600 1.02rem/1 var(--text); text-decoration:none; transition:transform .35s var(--ease), box-shadow .35s var(--ease), background-color .25s; }
+.btn--go{ background:var(--signal); color:var(--night); box-shadow:0 10px 26px -10px rgba(47,218,130,.55), 0 2px 4px rgba(4,10,18,.3); }
+.btn--go:hover{ transform:translateY(-2px); box-shadow:0 16px 32px -12px rgba(47,218,130,.6), 0 3px 6px rgba(4,10,18,.3); }
+.btn--ghost{ color:var(--on-dark); box-shadow:inset 0 0 0 1.5px rgba(241,245,248,.45); }
+.btn--ghost:hover{ box-shadow:inset 0 0 0 1.5px var(--on-dark); background:rgba(241,245,248,.06); }
+.day .btn--go{ box-shadow:0 12px 24px -12px rgba(10,21,36,.45), 0 2px 4px rgba(10,21,36,.18); }
+
+/* ---------- hero: Talstation ---------- */
+.hero{ position:relative; isolation:isolate; overflow:hidden; background:
+  radial-gradient(60% 50% at 14% 96%, rgba(140,180,214,.16), transparent 70%),
+  linear-gradient(180deg, #060E19 0%, #0A1626 46%, #0F2136 100%); }
+.ridge{ position:absolute; left:0; right:0; bottom:10%; width:100%; height:auto; z-index:0; pointer-events:none; }
+.stage{ position:relative; width:100%; aspect-ratio:1600/1000; min-height:620px; }
+.hero-shell{ position:absolute; inset:0; width:100%; height:100%; z-index:3; pointer-events:none; }
+.hero-shell--phone{ display:none; }
+.hero h1{ position:absolute; z-index:2; left:16.6%; top:42.6%; margin:0; font-weight:900; font-size:clamp(2.6rem, 6.5vw, 6rem); line-height:.98; letter-spacing:-.035em; max-width:min(8.3em, 47%); color:var(--on-dark); }
+.hero-aside{ position:absolute; z-index:4; left:65.5%; top:57%; width:min(30%, 470px); }
+.hero-aside p{ color:var(--on-dark-2); font-size:clamp(1rem, 1.15vw, 1.15rem); max-width:38ch; }
+.actions{ display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+.plinth{ background-color:var(--concrete-d); background-image:var(--noise), repeating-linear-gradient(180deg, transparent 0 31px, rgba(0,0,0,.16) 31px 32px), linear-gradient(180deg, #6A7177, #454B51); box-shadow:inset 0 2px 0 rgba(255,255,255,.18); }
+.hero-plinth{ position:absolute; left:0; right:0; bottom:0; height:12%; z-index:1; }
+.hero-base{ display:none; }
+@media (prefers-reduced-motion:no-preference){
+  .hero-shell{ animation:lower 1.4s var(--ease) both; transform-origin:50% 0; }
+  @keyframes lower{ from{ transform:translateY(-5%); opacity:.35; } to{ transform:none; opacity:1; } }
+}
+
+/* ---------- rail ---------- */
+.rail{ position:fixed; z-index:30; right:22px; top:50%; height:min(64vh, 540px); width:48px; transform:translateY(-50%); border-radius:999px; background:rgba(10,21,36,.62); backdrop-filter:blur(10px) saturate(1.2); -webkit-backdrop-filter:blur(10px) saturate(1.2); box-shadow:0 10px 30px -12px rgba(4,10,18,.55), inset 0 0 0 1px rgba(241,245,248,.12); }
+.rail-track{ position:absolute; left:50%; top:24px; bottom:24px; width:2px; margin-left:-1px; background:linear-gradient(180deg, rgba(241,245,248,.6), rgba(169,174,177,.5)); }
+.rail ol{ position:absolute; inset:24px 0; margin:0; padding:0; list-style:none; display:flex; flex-direction:column; justify-content:space-between; }
+.rail li{ position:relative; height:0; }
+.rail a{ position:absolute; left:0; right:0; top:-22px; height:44px; display:flex; align-items:center; justify-content:center; text-decoration:none; color:var(--on-dark); border-radius:999px; }
+.rail .dot{ width:10px; height:10px; border-radius:50%; background:var(--night); border:2px solid var(--on-dark-2); transition:background-color .3s, border-color .3s, transform .3s var(--ease); }
+.rail .lbl{ position:absolute; right:52px; white-space:nowrap; padding:7px 14px; border-radius:999px; background:rgba(10,21,36,.82); color:var(--on-dark); font:500 .9rem/1.2 var(--text); opacity:0; transform:translateX(6px); transition:opacity .3s var(--ease), transform .3s var(--ease); pointer-events:none; }
+.rail a:hover .lbl,.rail a:focus-visible .lbl,.rail li.is-here .lbl{ opacity:1; transform:none; }
+.rail li.is-here .dot{ background:var(--signal); border-color:var(--signal); transform:scale(1.15); }
+.rail li.is-passed .dot{ border-color:var(--on-dark); }
+.cabin{ position:absolute; left:50%; top:calc(24px + (1 - var(--p, 0)) * (100% - 48px)); width:26px; height:34px; margin:-17px 0 0 -13px; color:var(--on-dark); pointer-events:none; filter:drop-shadow(0 6px 8px rgba(4,10,18,.45)); }
+.cabin svg{ width:100%; height:100%; overflow:visible; }
+
+/* ---------- section scaffolding ---------- */
+.section{ position:relative; padding:clamp(88px, 11vw, 168px) var(--gutter-r) clamp(88px, 10vw, 150px) var(--gutter); }
+.wrap{ max-width:1320px; margin:0 auto; }
+.station-head{ display:flex; align-items:flex-end; gap:28px; margin-bottom:clamp(40px, 6vw, 88px); }
+.station-head h2{ font-weight:800; font-size:clamp(2.1rem, 4.6vw, 4.4rem); line-height:1.02; letter-spacing:-.03em; max-width:15em; }
+.station-head .platform-line{ flex:1; height:2px; margin-bottom:.9em; min-width:40px; background:currentColor; opacity:.18; transform-origin:left; transition:opacity .5s, background-color .5s; }
+.is-current .platform-line{ opacity:1; background:var(--signal); }
+.day .is-current .platform-line, .day.is-current .platform-line{ background:var(--signal-deep); }
+.intro{ max-width:58ch; font-size:clamp(1.05rem, 1.3vw, 1.25rem); margin-top:-24px; margin-bottom:clamp(48px, 6vw, 80px); }
+
+/* ---------- Unternehmen: four stations climbing the slope ---------- */
+.companies{ background:linear-gradient(180deg, #0F2136 0%, var(--night-2) 30%, var(--shadow) 100%); }
+.slope-box{ position:relative; }
+.slope{ position:relative; z-index:1; display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:clamp(20px, 2.6vw, 44px); margin:0; padding:0; list-style:none; align-items:start; }
+.track{ position:absolute; inset:0; width:100%; height:100%; pointer-events:none; overflow:visible; z-index:0; }
+.track path{ fill:none; stroke:var(--concrete); stroke-width:2; stroke-dasharray:1 9; stroke-linecap:round; opacity:.7; }
+.track path.solid{ stroke:var(--on-dark-2); stroke-dasharray:none; opacity:.35; stroke-width:1; }
+.station{ position:relative; z-index:1; }
+.station:nth-child(1){ margin-top:clamp(0px, 15vw, 240px); }
+.station:nth-child(2){ margin-top:clamp(0px, 10vw, 160px); }
+.station:nth-child(3){ margin-top:clamp(0px, 5vw, 80px); }
+.station-shell{ width:100%; height:auto; }
+.station-plinth{ height:18px; border-radius:2px 2px 0 0; }
+.station-plinth.plinth{ background-image:var(--noise), linear-gradient(180deg, #7A8187, #50575D); }
+.station h3{ margin-top:22px; font-weight:800; font-size:clamp(1.55rem, 2.2vw, 2.15rem); letter-spacing:-.025em; line-height:1.1; }
+.station h3 a{ display:inline-flex; align-items:center; gap:.3em; min-height:44px; text-decoration:none; background:linear-gradient(var(--signal), var(--signal)) 0 100%/0 2px no-repeat; transition:background-size .45s var(--ease); }
+.station h3 a:hover{ background-size:100% 2px; }
+.station h3 .ico{ width:.75em; height:.75em; color:var(--signal); }
+.station p{ margin-top:10px; color:var(--on-dark-2); max-width:36ch; }
+
+/* ---------- Gesucht: two platforms ---------- */
+.edge{ position:absolute; left:0; right:0; top:-1px; width:100%; height:clamp(48px, 7vw, 110px); transform:translateY(-99%); pointer-events:none; }
+.sought{ background-color:var(--concrete-l); background-image:var(--noise), linear-gradient(180deg, #E1E4E5, #D2D6D8); }
+.sought .edge{ color:#E1E4E5; }
+.sought .intro{ color:var(--ink-2); }
+.platforms{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px, 3vw, 48px); }
+.platform{ position:relative; display:flex; flex-direction:column; }
+.platform-shell{ width:100%; height:auto; position:relative; z-index:2; }
+.platform-body{ position:relative; z-index:1; flex:1; margin:-18px clamp(10px, 2.6vw, 34px) 0; padding:44px clamp(18px, 2.4vw, 34px) 30px; background:rgba(241,245,248,.62); box-shadow:0 1px 0 rgba(255,255,255,.7) inset; }
+.platform h3{ font-weight:800; font-size:clamp(1.6rem, 2.6vw, 2.4rem); letter-spacing:-.025em; line-height:1.05; }
+.criteria{ margin:24px 0 0; display:grid; gap:0; }
+.criteria div{ display:grid; grid-template-columns:minmax(80px, 7.5rem) 1fr; gap:16px; padding:14px 0; border-top:1px solid rgba(10,21,36,.14); }
+.criteria dt{ font-weight:600; color:var(--ink); }
+.criteria dd{ margin:0; color:var(--ink-2); }
+.platform-slab{ position:relative; z-index:1; display:flex; align-items:center; justify-content:flex-start; padding:22px clamp(18px, 2.4vw, 34px) 26px calc(clamp(10px, 2.6vw, 34px) + clamp(18px, 2.4vw, 34px)); border-radius:0 0 4px 4px; }
+.platform-slab.plinth{ background-image:var(--noise), repeating-linear-gradient(180deg, transparent 0 23px, rgba(0,0,0,.14) 23px 24px), linear-gradient(180deg, #8C9296, #6D7378); }
+
+/* ---------- Über mich: canopy over the portrait ---------- */
+.about{ background:linear-gradient(180deg, #D2D6D8 0%, var(--glacier) 22%, #E8EFF4 100%); }
+.about-grid{ display:grid; grid-template-columns:minmax(0, 5fr) minmax(0, 6fr); gap:clamp(32px, 6vw, 110px); align-items:center; }
+.canopy{ position:relative; padding-top:22%; }
+.about-shell{ position:absolute; z-index:2; left:-8%; top:0; width:116%; height:auto; pointer-events:none; }
+.portrait{ position:relative; z-index:1; margin:0 0 0 12%; aspect-ratio:4/5; display:grid; place-items:end start; padding:22px; background-color:#B8BEC2; background-image:var(--noise), repeating-linear-gradient(180deg, transparent 0 39px, rgba(10,21,36,.08) 39px 40px), linear-gradient(160deg, #CBD1D4, #A3AAAF); color:var(--ink); box-shadow:0 30px 50px -30px rgba(10,21,36,.5); }
+.portrait .leaf{ position:absolute; width:46%; right:9%; top:30%; color:rgba(10,21,36,.12); }
+.portrait figcaption{ position:relative; font:600 1rem/1.3 var(--text); background:var(--glacier); padding:10px 14px; border-radius:999px; }
+.about h2{ font-weight:800; font-size:clamp(2.4rem, 5vw, 4.6rem); letter-spacing:-.035em; line-height:1; }
+.role{ margin-top:14px; font-weight:600; color:var(--ink-2); font-size:1.1rem; }
+.about-text{ margin-top:28px; font-size:clamp(1.1rem, 1.5vw, 1.35rem); line-height:1.55; max-width:40ch; color:var(--ink); }
+.textlink{ display:inline-flex; align-items:center; gap:8px; min-height:44px; margin-top:26px; font-weight:600; text-decoration:underline; text-decoration-color:var(--signal-deep); text-decoration-thickness:2px; }
+.textlink:hover{ text-decoration-thickness:3px; }
+.textlink .ico{ color:var(--signal-deep); }
+
+/* ---------- Kontakt: Bergstation ---------- */
+.summit{ position:relative; overflow:hidden; padding:0 var(--gutter-r) clamp(70px, 8vw, 120px) var(--gutter); background:linear-gradient(180deg, #E8EFF4 0%, #D7E3EC 60%, #C9D8E4 100%); }
+.summit-stage{ position:relative; margin:0 calc(-1 * var(--gutter-r)) 0 calc(-1 * var(--gutter)); height:clamp(220px, 28.75vw, 520px); }
+.summit-shell{ position:absolute; inset:0; width:100%; height:100%; }
+.summit .wrap{ position:relative; }
+.summit h2{ font-weight:800; font-size:clamp(2.2rem, 4.6vw, 4.4rem); letter-spacing:-.03em; line-height:1.02; margin-top:clamp(-120px, -7vw, -30px); position:relative; }
+.mail{ display:inline-block; margin-top:clamp(18px, 2vw, 30px); font-family:var(--display); font-weight:900; font-size:clamp(1.9rem, 7.2vw, 6rem); letter-spacing:-.04em; line-height:1.05; color:var(--ink); text-decoration:none; background:linear-gradient(var(--signal), var(--signal)) 0 92%/100% .12em no-repeat; transition:background-size .5s var(--ease), color .3s; overflow-wrap:anywhere; }
+.mail:hover{ background-size:100% .5em; }
+.summit-foot{ display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:28px; margin-top:clamp(36px, 5vw, 72px); }
+address{ font-style:normal; font-size:1.1rem; line-height:1.55; color:var(--ink-2); }
+address strong{ color:var(--ink); font-weight:600; }
+.contours{ position:absolute; left:0; right:0; bottom:0; width:100%; height:auto; pointer-events:none; color:#93AEC6; }
+
+footer{ background:var(--night); color:var(--on-dark-2); padding:28px var(--gutter-r) 30px var(--gutter); }
+.foot{ max-width:1320px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px 28px; }
+.foot .brand{ font-size:1.15rem; }
+.foot .brand .leaf{ width:26px; height:26px; }
+.foot ul{ display:flex; gap:8px; margin:0 0 0 auto; padding:0; list-style:none; }
+.foot a:not(.brand){ display:inline-flex; align-items:center; min-height:44px; padding:0 8px; color:var(--on-dark); }
+
+/* ---------- mid widths ---------- */
+@media (max-width:1099px){
+  .hero-aside{ position:relative; left:auto; top:auto; width:auto; z-index:4; padding:0 var(--gutter-r) 56px var(--gutter); margin-top:-6%; }
+  .hero-aside p{ max-width:52ch; }
+  .stage{ min-height:0; }
+  .slope{ grid-template-columns:repeat(2, minmax(0, 1fr)); row-gap:56px; }
+  .station:nth-child(1){ margin-top:120px; } .station:nth-child(2){ margin-top:60px; }
+  .station:nth-child(3){ margin-top:60px; } .station:nth-child(4){ margin-top:0; }
+}
+/* ---------- phone: recomposed ---------- */
+@media (max-width:759px){
+  body{ font-size:1rem; }
+  .signage{ flex-wrap:wrap; row-gap:4px; padding-top:10px; }
+  .signs-nav{ order:3; width:100%; margin:0; }
+  .signs{ margin:0 -10px; justify-content:space-between; gap:0; }
+  .signs a{ padding:0 10px; font-size:.95rem; }
+  .signs a::before{ display:none; }
+  .lang{ margin-left:auto; }
+  .stage{ aspect-ratio:auto; height:auto; padding-top:104px; display:flex; flex-direction:column; }
+  .hero-plinth{ display:none; }
+  .hero-base{ display:block; height:40px; }
+  .hero-shell--wide{ display:none; }
+  .hero-shell--phone{ display:block; position:relative; inset:auto; width:100%; height:auto; order:1; }
+  .hero h1{ position:relative; left:auto; top:auto; order:2; padding:0 var(--gutter); margin-top:-6%; font-size:clamp(2.55rem, 12.4vw, 3.6rem); max-width:none; line-height:.98; }
+  .hero h1 span{ display:block; max-width:8.6em; }
+  .hero-aside{ margin-top:0; padding-top:28px; }
+  .actions .btn{ flex:1 1 auto; justify-content:center; }
+  .ridge{ bottom:auto; top:300px; width:220%; left:-60%; max-width:none; }
+  .rail{ right:3px; width:12px; height:46vh; background:none; box-shadow:none; backdrop-filter:none; -webkit-backdrop-filter:none; pointer-events:none; }
+  .rail-track{ top:0; bottom:0; width:2px; background:rgba(120,138,156,.55); }
+  .rail ol{ inset:0; }
+  .rail a{ visibility:hidden; }
+  .rail .lbl{ display:none; }
+  .cabin{ width:12px; height:16px; margin:-8px 0 0 -6px; top:calc((1 - var(--p, 0)) * 100%); }
+  .station-head{ display:block; }
+  .station-head .platform-line{ display:none; }
+  .intro{ margin-top:-12px; }
+  .slope{ grid-template-columns:1fr; row-gap:64px; padding-left:28px; }
+  .station:nth-child(n){ margin-top:0; }
+  .station:nth-child(even){ margin-left:8%; }
+  .station:nth-child(odd){ margin-right:8%; }
+  .platforms{ grid-template-columns:1fr; gap:56px; }
+  .platform-body{ margin:-12px 8px 0; padding:34px 18px 22px; }
+  .platform-slab{ padding:18px 18px 20px 26px; }
+  .criteria div{ grid-template-columns:1fr; gap:2px; padding:12px 0; }
+  .about-grid{ grid-template-columns:1fr; }
+  .portrait{ margin-left:14%; margin-right:4%; }
+  .summit-stage{ height:46vw; min-height:170px; }
+  .summit h2{ margin-top:0; }
+  .foot ul{ margin-left:0; width:100%; }
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{ transition-duration:0s!important; animation:none!important; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#inhalt" data-i18n="skip">Zum Inhalt springen</a>
+
+<header class="signage">
+  <a class="brand" href="#top" aria-label="tenverde, zum Seitenanfang" data-i18n-aria="home"><svg class="leaf" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="rotate(35 32 32)"><path fill-rule="evenodd" fill="currentColor" d="M32 58C14 46 12 22 32 6C52 22 50 46 32 58ZM30.4 52L32 14L33.6 52Z"/></g></svg><span>tenverde</span></a>
+  <nav class="signs-nav" aria-label="Hauptnavigation" data-i18n-aria="navLabel">
+    <ul class="signs">
+      <li><a href="#unternehmen" data-i18n="n1">Unternehmen</a></li>
+      <li><a href="#gesucht" data-i18n="n2">Gesucht</a></li>
+      <li><a href="#ueber" data-i18n="n3">Über mich</a></li>
+      <li><a href="#kontakt" data-i18n="n4">Kontakt</a></li>
+    </ul>
+  </nav>
+  <div class="lang" role="group" aria-label="Sprache wählen" data-i18n-aria="langLabel">
+    <button type="button" data-lang="de" aria-pressed="true" lang="de">DE</button>
+    <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+  </div>
+</header>
+
+<nav class="rail" aria-label="Strecke von der Talstation zur Bergstation" data-i18n-aria="railLabel">
+  <div class="rail-track"></div>
+  <ol>
+    <li data-stop="kontakt"><a href="#kontakt"><span class="dot"></span><span class="lbl" data-i18n="s4">Bergstation</span></a></li>
+    <li data-stop="ueber"><a href="#ueber"><span class="dot"></span><span class="lbl" data-i18n="n3">Über mich</span></a></li>
+    <li data-stop="gesucht"><a href="#gesucht"><span class="dot"></span><span class="lbl" data-i18n="n2">Gesucht</span></a></li>
+    <li data-stop="unternehmen"><a href="#unternehmen"><span class="dot"></span><span class="lbl" data-i18n="n1">Unternehmen</span></a></li>
+    <li data-stop="top" class="is-here"><a href="#top"><span class="dot"></span><span class="lbl" data-i18n="s0">Talstation</span></a></li>
+  </ol>
+  <div class="cabin"><svg viewBox="0 0 28 36" aria-hidden="true" focusable="false"><path d="M14 0v5" stroke="currentColor" stroke-width="2"/><path d="M5 7h18c2.2 0 4 1.8 4 4v16c0 4.4-3.6 8-8 8H9c-4.4 0-8-3.6-8-8V11c0-2.2 1.8-4 4-4Z" fill="var(--signal)" stroke="var(--night)" stroke-width="1.5"/><path d="M5 12h18v8H5z" fill="var(--night)" opacity=".85"/></svg></div>
+</nav>
+
+<main id="inhalt">
+  <section class="hero" id="top" aria-labelledby="h-hero">
+    <svg class="ridge" viewBox="0 0 1600 300" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 210 L80 170 L150 186 L230 120 L290 150 L360 96 L420 128 L470 104 L540 140 L610 84 L680 118 L740 70 L800 112 L870 92 L930 132 L1000 78 L1070 120 L1130 100 L1200 146 L1280 96 L1350 136 L1420 112 L1500 160 L1600 130 L1600 300 L0 300Z" fill="#102338"/><path d="M0 250 L120 214 L220 236 L330 190 L450 226 L560 200 L690 236 L820 196 L960 230 L1090 204 L1220 238 L1360 206 L1480 232 L1600 214 L1600 300 L0 300Z" fill="#0D1D30"/></svg>
+    <div class="stage">
+      <div class="plinth hero-plinth" aria-hidden="true"></div>
+      <h1 id="h-hero"><span data-i18n="h1">Wir investieren in Dinge, die wachsen.</span></h1>
+      <svg class="shell hero-shell hero-shell--wide" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false" data-shell data-sx="1020" data-sy="210">
+<defs>
+<linearGradient id="hs-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7FAFC"/><stop offset=".38" stop-color="#E3EBF2"/><stop offset=".72" stop-color="#C4D3E0"/><stop offset="1" stop-color="#9FB4C8"/></linearGradient>
+<linearGradient id="hs-u" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5F7891"/><stop offset="1" stop-color="#8EA6BD"/></linearGradient>
+<linearGradient id="hs-l" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="hs-s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="hs-p" class="spec-grad" gradientUnits="userSpaceOnUse" cx="1020" cy="210" r="420"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset=".22" stop-color="#fff" stop-opacity=".7"/><stop offset=".55" stop-color="#EAF6FF" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<radialGradient id="hs-g"><stop offset="0" stop-color="#BFD8EE" stop-opacity=".28"/><stop offset="1" stop-color="#BFD8EE" stop-opacity="0"/></radialGradient>
+<clipPath id="hs-c"><path d="M -20 150 C 300 70 650 50 1000 100 C 1250 140 1450 104 1620 92 L 1620 250 C 1460 318 1300 352 1150 384 C 980 420 840 440 680 428 C 520 416 380 368 290 400 C 200 432 150 600 146 880 L 52 880 C 48 640 20 480 -20 440 Z"/></clipPath>
+</defs>
+<ellipse cx="120" cy="900" rx="420" ry="70" fill="url(#hs-g)"/>
+<path d="M 1620 250 L 1620 336 C 1462 392 1306 410 1156 432 C 990 456 846 470 684 456 C 528 442 400 400 314 428 C 230 456 188 610 184 880 L 146 880 C 150 600 200 432 290 400 C 380 368 520 416 680 428 C 840 440 980 420 1150 384 C 1300 352 1460 318 1620 250 Z" fill="url(#hs-u)"/>
+<path d="M -20 150 C 300 70 650 50 1000 100 C 1250 140 1450 104 1620 92 L 1620 250 C 1460 318 1300 352 1150 384 C 980 420 840 440 680 428 C 520 416 380 368 290 400 C 200 432 150 600 146 880 L 52 880 C 48 640 20 480 -20 440 Z" fill="url(#hs-f)"/>
+<g clip-path="url(#hs-c)">
+<path d="M 0 300 C 300 220 700 210 1000 250 C 1250 280 1450 220 1620 180" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 140 520 C 220 330 500 280 820 300 C 1100 318 1350 260 1620 190" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 360 60 C 420 200 470 300 520 410" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 760 50 C 800 200 830 320 850 440" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 1160 90 C 1180 200 1190 300 1190 380" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/>
+<path d="M 40 190 C 320 110 660 92 1000 140 C 1240 176 1440 140 1620 128 L 1620 148 C 1440 162 1240 204 1000 176 C 660 136 320 150 40 214 Z" fill="url(#hs-l)"/><path d="M 520 330 C 700 350 900 360 1120 330 C 1300 300 1460 250 1620 190 L 1620 206 C 1460 270 1300 326 1120 352 C 900 382 700 372 520 344 Z" fill="url(#hs-l)"/>
+<rect class="streak" x="-320" y="-200" width="256" height="1400" fill="url(#hs-s)" transform="translate(720 0) skewX(-28)"/>
+<rect x="0" y="0" width="1600" height="1000" fill="url(#hs-p)"/>
+</g>
+<path d="M 1620 250 C 1460 318 1300 352 1150 384 C 980 420 840 440 680 428 C 520 416 380 368 290 400 C 200 432 150 600 146 880" fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="2" stroke-linecap="round"/>
+</svg>
+      <svg class="shell hero-shell hero-shell--phone" viewBox="0 84 400 368" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" data-shell data-sx="120" data-sy="190">
+<defs>
+<linearGradient id="hm-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7FAFC"/><stop offset=".38" stop-color="#E3EBF2"/><stop offset=".72" stop-color="#C4D3E0"/><stop offset="1" stop-color="#9FB4C8"/></linearGradient>
+<linearGradient id="hm-u" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5F7891"/><stop offset="1" stop-color="#8EA6BD"/></linearGradient>
+<linearGradient id="hm-l" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="hm-s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="hm-p" class="spec-grad" gradientUnits="userSpaceOnUse" cx="120" cy="190" r="190"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset=".22" stop-color="#fff" stop-opacity=".7"/><stop offset=".55" stop-color="#EAF6FF" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+
+<clipPath id="hm-c"><path d="M -10 128 C 90 96 220 92 320 112 C 370 122 396 116 410 104 L 410 250 C 396 300 372 340 352 372 C 340 350 320 330 290 320 C 220 300 130 330 50 400 C 30 418 6 426 -10 424 Z"/></clipPath>
+</defs>
+
+<path d="M 352 372 C 340 350 320 330 290 320 C 220 300 130 330 50 400 C 30 418 6 426 -10 424 L -10 444 C 8 446 34 438 56 420 C 134 352 222 324 290 338 C 318 344 338 358 352 372 Z" fill="url(#hm-u)"/><path d="M 410 250 L 410 282 C 398 320 376 354 352 372 C 372 340 396 300 410 250 Z" fill="url(#hm-u)"/>
+<path d="M -10 128 C 90 96 220 92 320 112 C 370 122 396 116 410 104 L 410 250 C 396 300 372 340 352 372 C 340 350 320 330 290 320 C 220 300 130 330 50 400 C 30 418 6 426 -10 424 Z" fill="url(#hm-f)"/>
+<g clip-path="url(#hm-c)">
+<path d="M -10 220 C 100 160 240 140 410 140" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 120 30 C 130 140 136 250 136 360" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 280 30 C 290 120 296 220 300 320" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/>
+<path d="M 10 156 C 110 124 230 120 330 140 C 370 148 396 144 410 134 L 410 146 C 394 158 368 164 328 156 C 230 136 110 140 10 170 Z" fill="url(#hm-l)"/>
+<rect class="streak" x="-80" y="-90.4" width="64" height="632.8" fill="url(#hm-s)" transform="translate(180 0) skewX(-28)"/>
+<rect x="0" y="0" width="400" height="452" fill="url(#hm-p)"/>
+</g>
+<path d="M 410 250 C 396 300 372 340 352 372 C 340 350 320 330 290 320 C 220 300 130 330 50 400 C 30 418 6 426 -10 424" fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
+    </div>
+    <div class="hero-aside">
+      <p data-i18n="lead">tenverde ist meine Beteiligungsgesellschaft mit Sitz in Innsbruck. Hier liegen meine Softwareunternehmen, meine Beteiligungen an Startups und meine Immobilien.</p>
+      <div class="actions">
+        <a class="btn btn--go" href="mailto:office@tenverde.at"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.5 6.5h17v11h-17z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m4 7 8 6.2L20 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span data-i18n="cta1">Kontakt aufnehmen</span></a>
+        <a class="btn btn--ghost" href="#gesucht"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="cta2">Was ich suche</span></a>
+      </div>
+    </div>
+    <div class="plinth hero-base" aria-hidden="true"></div>
+  </section>
+
+  <section class="section companies" aria-labelledby="unternehmen">
+    <div class="wrap">
+      <div class="station-head"><h2 id="unternehmen" tabindex="-1" data-i18n="coH">Unternehmen, die ich selbst aufbaue</h2><span class="platform-line" aria-hidden="true"></span></div>
+      <div class="slope-box">
+      <svg class="track" aria-hidden="true" focusable="false"><path d=""/></svg>
+      <ul class="slope">
+        <li class="station">
+          <svg class="shell station-shell" viewBox="0 0 320 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" data-shell data-sx="120" data-sy="50">
+<defs>
+<linearGradient id="sa-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7FAFC"/><stop offset=".38" stop-color="#E3EBF2"/><stop offset=".72" stop-color="#C4D3E0"/><stop offset="1" stop-color="#9FB4C8"/></linearGradient>
+<linearGradient id="sa-u" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5F7891"/><stop offset="1" stop-color="#8EA6BD"/></linearGradient>
+<linearGradient id="sa-l" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="sa-s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="sa-p" class="spec-grad" gradientUnits="userSpaceOnUse" cx="120" cy="50" r="120"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset=".22" stop-color="#fff" stop-opacity=".7"/><stop offset=".55" stop-color="#EAF6FF" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<radialGradient id="sa-g"><stop offset="0" stop-color="#BFD8EE" stop-opacity=".30"/><stop offset="1" stop-color="#BFD8EE" stop-opacity="0"/></radialGradient>
+<clipPath id="sa-c"><path d="M 6 150 C 4 110 10 70 40 52 C 90 22 160 30 210 40 C 250 48 285 30 316 8 L 316 42 C 290 62 255 78 214 80 C 160 82 110 78 76 92 C 52 102 40 124 38 150 Z"/></clipPath>
+</defs>
+<ellipse cx="160" cy="150" rx="150" ry="16" fill="url(#sa-g)"/>
+<path d="M 316 42 L 314 60 C 288 80 254 96 214 98 C 162 100 116 96 84 108 C 62 116 52 132 50 150 L 38 150 C 40 124 52 102 76 92 C 110 78 160 82 214 80 C 255 78 290 62 316 42 Z" fill="url(#sa-u)"/>
+<path d="M 6 150 C 4 110 10 70 40 52 C 90 22 160 30 210 40 C 250 48 285 30 316 8 L 316 42 C 290 62 255 78 214 80 C 160 82 110 78 76 92 C 52 102 40 124 38 150 Z" fill="url(#sa-f)"/>
+<g clip-path="url(#sa-c)">
+<path d="M 20 110 C 60 70 150 60 316 30" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 120 20 C 126 50 130 70 132 90" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 230 30 C 236 50 238 64 240 80" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/>
+<path d="M 40 62 C 100 34 170 40 230 52 C 270 58 296 42 316 24 L 316 30 C 296 50 268 66 228 62 C 170 54 100 50 40 70 Z" fill="url(#sa-l)"/>
+<rect class="streak" x="-64" y="-30" width="51.2" height="210" fill="url(#sa-s)" transform="translate(144 0) skewX(-28)"/>
+<rect x="0" y="0" width="320" height="150" fill="url(#sa-p)"/>
+</g>
+
+</svg>
+          <div class="station-plinth plinth" aria-hidden="true"></div>
+          <h3><a href="https://neojuris.ai" target="_blank" rel="noopener">neojuris.ai<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr" data-i18n="newtab">(öffnet in neuem Tab)</span></a></h3>
+          <p data-i18n="c1">KI-Software für juristische Arbeit. Recherche, Entwürfe und Prüfung von Dokumenten für Kanzleien und Rechtsabteilungen.</p>
+        </li>
+        <li class="station">
+          <svg class="shell station-shell" viewBox="0 0 320 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" data-shell data-sx="230" data-sy="40">
+<defs>
+<linearGradient id="sb-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7FAFC"/><stop offset=".38" stop-color="#E3EBF2"/><stop offset=".72" stop-color="#C4D3E0"/><stop offset="1" stop-color="#9FB4C8"/></linearGradient>
+<linearGradient id="sb-u" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5F7891"/><stop offset="1" stop-color="#8EA6BD"/></linearGradient>
+<linearGradient id="sb-l" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="sb-s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="sb-p" class="spec-grad" gradientUnits="userSpaceOnUse" cx="230" cy="40" r="120"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset=".22" stop-color="#fff" stop-opacity=".7"/><stop offset=".55" stop-color="#EAF6FF" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<radialGradient id="sb-g"><stop offset="0" stop-color="#BFD8EE" stop-opacity=".30"/><stop offset="1" stop-color="#BFD8EE" stop-opacity="0"/></radialGradient>
+<clipPath id="sb-c"><path d="M 4 40 C 50 10 110 20 160 46 C 210 20 270 10 316 40 C 300 64 262 78 224 80 C 196 82 176 100 172 150 L 148 150 C 144 100 124 82 96 80 C 58 78 20 64 4 40 Z"/></clipPath>
+</defs>
+<ellipse cx="160" cy="150" rx="150" ry="16" fill="url(#sb-g)"/>
+<path d="M 4 40 C 20 64 58 78 96 80 C 124 82 144 100 148 150 L 136 150 C 132 108 116 96 92 96 C 52 94 18 78 4 54 Z" fill="url(#sb-u)"/><path d="M 316 40 C 300 64 262 78 224 80 C 196 82 176 100 172 150 L 184 150 C 188 108 204 96 228 96 C 268 94 302 78 316 54 Z" fill="url(#sb-u)"/>
+<path d="M 4 40 C 50 10 110 20 160 46 C 210 20 270 10 316 40 C 300 64 262 78 224 80 C 196 82 176 100 172 150 L 148 150 C 144 100 124 82 96 80 C 58 78 20 64 4 40 Z" fill="url(#sb-f)"/>
+<g clip-path="url(#sb-c)">
+<path d="M 60 20 C 70 40 80 60 96 80" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 260 20 C 250 40 240 60 224 80" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 160 46 L 160 150" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/>
+<path d="M 20 42 C 60 20 110 26 160 52 C 210 26 260 20 300 42 C 260 30 210 36 160 62 C 110 36 60 30 20 42 Z" fill="url(#sb-l)"/>
+<rect class="streak" x="-64" y="-30" width="51.2" height="210" fill="url(#sb-s)" transform="translate(144 0) skewX(-28)"/>
+<rect x="0" y="0" width="320" height="150" fill="url(#sb-p)"/>
+</g>
+
+</svg>
+          <div class="station-plinth plinth" aria-hidden="true"></div>
+          <h3><a href="https://immobily.io" target="_blank" rel="noopener">immobily.io<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr" data-i18n="newtab">(öffnet in neuem Tab)</span></a></h3>
+          <p data-i18n="c2">Software für Immobilien. Digitale Werkzeuge für Eigentümer, Verwalter und Makler.</p>
+        </li>
+        <li class="station">
+          <svg class="shell station-shell" viewBox="0 0 320 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" data-shell data-sx="90" data-sy="40">
+<defs>
+<linearGradient id="sc-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7FAFC"/><stop offset=".38" stop-color="#E3EBF2"/><stop offset=".72" stop-color="#C4D3E0"/><stop offset="1" stop-color="#9FB4C8"/></linearGradient>
+<linearGradient id="sc-u" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5F7891"/><stop offset="1" stop-color="#8EA6BD"/></linearGradient>
+<linearGradient id="sc-l" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="sc-s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="sc-p" class="spec-grad" gradientUnits="userSpaceOnUse" cx="90" cy="40" r="120"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset=".22" stop-color="#fff" stop-opacity=".7"/><stop offset=".55" stop-color="#EAF6FF" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<radialGradient id="sc-g"><stop offset="0" stop-color="#BFD8EE" stop-opacity=".30"/><stop offset="1" stop-color="#BFD8EE" stop-opacity="0"/></radialGradient>
+<clipPath id="sc-c"><path d="M 20 30 C 40 6 110 4 170 24 C 230 44 280 90 316 150 L 296 150 C 262 110 220 88 170 84 C 120 80 70 96 40 104 C 12 112 4 56 20 30 Z"/></clipPath>
+</defs>
+<ellipse cx="160" cy="150" rx="150" ry="16" fill="url(#sc-g)"/>
+<path d="M 40 104 C 70 96 120 80 170 84 C 220 88 262 110 296 150 L 280 150 C 250 120 214 104 170 102 C 124 100 76 116 46 122 C 30 126 22 118 20 110 C 26 110 32 106 40 104 Z" fill="url(#sc-u)"/>
+<path d="M 20 30 C 40 6 110 4 170 24 C 230 44 280 90 316 150 L 296 150 C 262 110 220 88 170 84 C 120 80 70 96 40 104 C 12 112 4 56 20 30 Z" fill="url(#sc-f)"/>
+<g clip-path="url(#sc-c)">
+<path d="M 10 70 C 80 50 180 50 250 100" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 90 10 C 96 40 100 70 104 92" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 200 34 C 206 60 210 80 212 96" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/>
+<path d="M 30 26 C 70 10 130 12 180 32 C 230 52 270 92 300 136 C 262 96 224 64 178 46 C 130 28 70 26 30 40 Z" fill="url(#sc-l)"/>
+<rect class="streak" x="-64" y="-30" width="51.2" height="210" fill="url(#sc-s)" transform="translate(144 0) skewX(-28)"/>
+<rect x="0" y="0" width="320" height="150" fill="url(#sc-p)"/>
+</g>
+
+</svg>
+          <div class="station-plinth plinth" aria-hidden="true"></div>
+          <h3><a href="https://beamswerk.ai" target="_blank" rel="noopener">beamswerk.ai<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr" data-i18n="newtab">(öffnet in neuem Tab)</span></a></h3>
+          <p data-i18n="c3">KI-Anwendungen für Unternehmen. Automatisierung von Abläufen, die heute noch von Hand laufen.</p>
+        </li>
+        <li class="station">
+          <svg class="shell station-shell" viewBox="0 0 320 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" data-shell data-sx="200" data-sy="60">
+<defs>
+<linearGradient id="sd-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7FAFC"/><stop offset=".38" stop-color="#E3EBF2"/><stop offset=".72" stop-color="#C4D3E0"/><stop offset="1" stop-color="#9FB4C8"/></linearGradient>
+<linearGradient id="sd-u" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5F7891"/><stop offset="1" stop-color="#8EA6BD"/></linearGradient>
+<linearGradient id="sd-l" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="sd-s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="sd-p" class="spec-grad" gradientUnits="userSpaceOnUse" cx="200" cy="60" r="120"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset=".22" stop-color="#fff" stop-opacity=".7"/><stop offset=".55" stop-color="#EAF6FF" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<radialGradient id="sd-g"><stop offset="0" stop-color="#BFD8EE" stop-opacity=".30"/><stop offset="1" stop-color="#BFD8EE" stop-opacity="0"/></radialGradient>
+<clipPath id="sd-c"><path d="M 4 64 C 70 40 170 32 250 42 C 284 46 310 58 316 76 L 316 150 L 294 150 C 292 120 286 100 268 92 C 200 98 110 98 4 92 Z"/></clipPath>
+</defs>
+<ellipse cx="160" cy="150" rx="150" ry="16" fill="url(#sd-g)"/>
+<path d="M 4 92 C 110 98 200 98 268 92 C 286 100 292 120 294 150 L 282 150 C 280 126 274 112 262 108 C 196 112 108 110 4 106 Z" fill="url(#sd-u)"/>
+<path d="M 4 64 C 70 40 170 32 250 42 C 284 46 310 58 316 76 L 316 150 L 294 150 C 292 120 286 100 268 92 C 200 98 110 98 4 92 Z" fill="url(#sd-f)"/>
+<g clip-path="url(#sd-c)">
+<path d="M 60 50 L 60 96" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 140 40 L 140 98" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 220 40 L 220 96" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 4 78 C 100 66 200 62 316 100" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/>
+<path d="M 10 64 C 80 46 170 40 250 50 C 280 54 300 62 312 74 C 290 64 270 62 248 60 C 170 52 90 56 10 72 Z" fill="url(#sd-l)"/>
+<rect class="streak" x="-64" y="-30" width="51.2" height="210" fill="url(#sd-s)" transform="translate(144 0) skewX(-28)"/>
+<rect x="0" y="0" width="320" height="150" fill="url(#sd-p)"/>
+</g>
+
+</svg>
+          <div class="station-plinth plinth" aria-hidden="true"></div>
+          <h3><a href="https://diekryptologen.com/" target="_blank" rel="noopener">Die Kryptologen<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr" data-i18n="newtab">(öffnet in neuem Tab)</span></a></h3>
+          <p data-i18n="c4">Der Krypto-Podcast aus Wien. Bitcoin, Blockchain und Kryptoökonomie verständlich eingeordnet.</p>
+        </li>
+      </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sought day" aria-labelledby="gesucht">
+    <svg class="edge" viewBox="0 0 1600 110" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 110 L0 84 C 260 30 520 10 800 46 C 1080 82 1340 70 1600 18 L1600 110 Z" fill="currentColor"/></svg>
+    <div class="wrap">
+      <div class="station-head"><h2 id="gesucht" tabindex="-1" data-i18n="gH">Ich suche Startups und Immobilien.</h2><span class="platform-line" aria-hidden="true"></span></div>
+      <p class="intro" data-i18n="gP">tenverde investiert eigenes Kapital und hält langfristig. Ich entscheide selbst und schnell, ohne Fonds und ohne Komitee.</p>
+      <div class="platforms">
+        <article class="platform" aria-labelledby="p-startup">
+          <svg class="shell platform-shell" viewBox="0 0 600 170" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" data-shell data-sx="180" data-sy="50">
+<defs>
+<linearGradient id="pl-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".4" stop-color="#EAF0F5"/><stop offset=".75" stop-color="#CFDBE5"/><stop offset="1" stop-color="#AFC1D1"/></linearGradient>
+<linearGradient id="pl-u" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6E859C"/><stop offset="1" stop-color="#9DB1C4"/></linearGradient>
+<linearGradient id="pl-l" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="pl-s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="pl-p" class="spec-grad" gradientUnits="userSpaceOnUse" cx="180" cy="50" r="200"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset=".22" stop-color="#fff" stop-opacity=".7"/><stop offset=".55" stop-color="#EAF6FF" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<radialGradient id="pl-g"><stop offset="0" stop-color="#0B1726" stop-opacity=".22"/><stop offset="1" stop-color="#0B1726" stop-opacity="0"/></radialGradient>
+<clipPath id="pl-c"><path d="M 0 24 C 140 -4 320 18 470 62 C 530 80 575 100 600 126 L 600 140 C 560 128 500 120 430 118 C 300 114 150 118 60 140 C 46 144 40 156 38 170 L 0 170 Z"/></clipPath>
+</defs>
+<ellipse cx="300" cy="168" rx="300" ry="10" fill="url(#pl-g)"/>
+<path d="M 600 140 L 598 152 C 556 142 500 136 430 134 C 302 132 156 136 70 154 C 60 157 54 163 52 170 L 38 170 C 40 156 46 144 60 140 C 150 118 300 114 430 118 C 500 120 560 128 600 140 Z" fill="url(#pl-u)"/>
+<path d="M 0 24 C 140 -4 320 18 470 62 C 530 80 575 100 600 126 L 600 140 C 560 128 500 120 430 118 C 300 114 150 118 60 140 C 46 144 40 156 38 170 L 0 170 Z" fill="url(#pl-f)"/>
+<g clip-path="url(#pl-c)">
+<path d="M 120 10 C 124 60 126 100 126 130" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 260 12 C 264 60 266 90 266 116" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 400 40 C 402 80 404 100 404 118" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 0 90 C 200 60 400 70 600 132" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/>
+<path d="M 10 36 C 150 10 320 30 470 72 C 520 86 560 102 590 122 C 556 106 516 96 466 86 C 320 50 150 34 10 50 Z" fill="url(#pl-l)"/>
+<rect class="streak" x="-120" y="-34" width="96" height="237.99999999999997" fill="url(#pl-s)" transform="translate(270 0) skewX(-28)"/>
+<rect x="0" y="0" width="600" height="170" fill="url(#pl-p)"/>
+</g>
+
+</svg>
+          <div class="platform-body">
+            <h3 id="p-startup" data-i18n="pS">Startup-Beteiligungen</h3>
+            <dl class="criteria">
+              <div><dt data-i18n="sPhaseT">Phase</dt><dd data-i18n="sPhase">Pre-Seed, Seed</dd></div>
+              <div><dt data-i18n="sSecT">Branchen</dt><dd data-i18n="sSec">Software, KI, LegalTech, PropTech</dd></div>
+              <div><dt data-i18n="sRegT">Region</dt><dd data-i18n="sReg">Österreich, Deutschland, Schweiz</dd></div>
+              <div><dt data-i18n="sTixT">Ticket</dt><dd data-i18n="sTix">nach Absprache</dd></div>
+              <div><dt data-i18n="sPlusT">Dazu</dt><dd data-i18n="sPlus">Erfahrung aus Gründung, Produkt und Recht. Kontakte zu Kanzleien und in die Immobilienbranche.</dd></div>
+            </dl>
+          </div>
+          <div class="platform-slab plinth"><a class="btn btn--go" href="mailto:office@tenverde.at?subject=Pitch%20Deck"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.5 6.5h17v11h-17z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m4 7 8 6.2L20 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span data-i18n="sBtn">Pitch Deck senden</span></a></div>
+        </article>
+        <article class="platform" aria-labelledby="p-immo">
+          <svg class="shell platform-shell" viewBox="0 0 600 170" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" data-shell data-sx="420" data-sy="50">
+<defs>
+<linearGradient id="pr-f" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".4" stop-color="#EAF0F5"/><stop offset=".75" stop-color="#CFDBE5"/><stop offset="1" stop-color="#AFC1D1"/></linearGradient>
+<linearGradient id="pr-u" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6E859C"/><stop offset="1" stop-color="#9DB1C4"/></linearGradient>
+<linearGradient id="pr-l" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="pr-s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="pr-p" class="spec-grad" gradientUnits="userSpaceOnUse" cx="420" cy="50" r="200"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset=".22" stop-color="#fff" stop-opacity=".7"/><stop offset=".55" stop-color="#EAF6FF" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<radialGradient id="pr-g"><stop offset="0" stop-color="#0B1726" stop-opacity=".22"/><stop offset="1" stop-color="#0B1726" stop-opacity="0"/></radialGradient>
+<clipPath id="pr-c"><path d="M 600 24 C 460 -4 280 18 130 62 C 70 80 25 100 0 126 L 0 140 C 40 128 100 120 170 118 C 300 114 450 118 540 140 C 554 144 560 156 562 170 L 600 170 Z"/></clipPath>
+</defs>
+<ellipse cx="300" cy="168" rx="300" ry="10" fill="url(#pr-g)"/>
+<path d="M 0 140 L 2 152 C 44 142 100 136 170 134 C 298 132 444 136 530 154 C 540 157 546 163 548 170 L 562 170 C 560 156 554 144 540 140 C 450 118 300 114 170 118 C 100 120 40 128 0 140 Z" fill="url(#pr-u)"/>
+<path d="M 600 24 C 460 -4 280 18 130 62 C 70 80 25 100 0 126 L 0 140 C 40 128 100 120 170 118 C 300 114 450 118 540 140 C 554 144 560 156 562 170 L 600 170 Z" fill="url(#pr-f)"/>
+<g clip-path="url(#pr-c)">
+<path d="M 480 10 C 476 60 474 100 474 130" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 340 12 C 336 60 334 90 334 116" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 200 40 C 198 80 196 100 196 118" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 600 90 C 400 60 200 70 0 132" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/>
+<path d="M 590 36 C 450 10 280 30 130 72 C 80 86 40 102 10 122 C 44 106 84 96 134 86 C 280 50 450 34 590 50 Z" fill="url(#pr-l)"/>
+<rect class="streak" x="-120" y="-34" width="96" height="237.99999999999997" fill="url(#pr-s)" transform="translate(270 0) skewX(-28)"/>
+<rect x="0" y="0" width="600" height="170" fill="url(#pr-p)"/>
+</g>
+
+</svg>
+          <div class="platform-body">
+            <h3 id="p-immo" data-i18n="pI">Immobilien</h3>
+            <dl class="criteria">
+              <div><dt data-i18n="iObjT">Objekte</dt><dd data-i18n="iObj">Wohnhäuser, Zinshäuser, Grundstücke mit Widmung</dd></div>
+              <div><dt data-i18n="iRegT">Region</dt><dd data-i18n="iReg">Tirol und Westösterreich</dd></div>
+              <div><dt data-i18n="iZusT">Zustand</dt><dd data-i18n="iZus">Bestand, gern mit Sanierungs- oder Entwicklungsbedarf</dd></div>
+              <div><dt data-i18n="iAnkT">Ankauf</dt><dd data-i18n="iAnk">direkt von Eigentümern oder über Makler, auch off-market</dd></div>
+            </dl>
+          </div>
+          <div class="platform-slab plinth"><a class="btn btn--go" href="mailto:office@tenverde.at?subject=Immobilie"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.5 6.5h17v11h-17z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m4 7 8 6.2L20 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span data-i18n="iBtn">Exposé senden</span></a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about day" aria-labelledby="ueber">
+    <div class="wrap about-grid">
+      <div class="canopy">
+        <svg class="shell about-shell" viewBox="0 0 600 260" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" data-shell data-sx="200" data-sy="60">
+<defs>
+<linearGradient id="ab-f" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".4" stop-color="#EAF0F5"/><stop offset=".75" stop-color="#CFDBE5"/><stop offset="1" stop-color="#AFC1D1"/></linearGradient>
+<linearGradient id="ab-u" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6E859C"/><stop offset="1" stop-color="#9DB1C4"/></linearGradient>
+<linearGradient id="ab-l" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="ab-s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="ab-p" class="spec-grad" gradientUnits="userSpaceOnUse" cx="200" cy="60" r="200"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset=".22" stop-color="#fff" stop-opacity=".7"/><stop offset=".55" stop-color="#EAF6FF" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<radialGradient id="ab-g"><stop offset="0" stop-color="#0B1726" stop-opacity=".18"/><stop offset="1" stop-color="#0B1726" stop-opacity="0"/></radialGradient>
+<clipPath id="ab-c"><path d="M 4 260 C 0 160 40 70 160 36 C 290 0 470 4 560 46 C 592 62 606 86 600 116 C 560 96 500 88 430 90 C 330 92 230 102 150 132 C 90 156 62 196 56 260 Z"/></clipPath>
+</defs>
+<ellipse cx="300" cy="256" rx="280" ry="10" fill="url(#ab-g)"/>
+<path d="M 600 116 L 596 130 C 556 112 498 106 430 108 C 332 110 236 120 160 148 C 104 170 78 206 72 260 L 56 260 C 62 196 90 156 150 132 C 230 102 330 92 430 90 C 500 88 560 96 600 116 Z" fill="url(#ab-u)"/>
+<path d="M 4 260 C 0 160 40 70 160 36 C 290 0 470 4 560 46 C 592 62 606 86 600 116 C 560 96 500 88 430 90 C 330 92 230 102 150 132 C 90 156 62 196 56 260 Z" fill="url(#ab-f)"/>
+<g clip-path="url(#ab-c)">
+<path d="M 0 200 C 100 110 300 70 600 90" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 200 10 C 206 50 210 80 212 110" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 380 6 C 384 40 386 70 386 92" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/>
+<path d="M 30 160 C 50 90 110 50 200 34 C 320 14 460 18 560 56 C 460 34 320 34 210 52 C 120 68 66 106 44 170 Z" fill="url(#ab-l)"/>
+<rect class="streak" x="-120" y="-52" width="96" height="364" fill="url(#ab-s)" transform="translate(270 0) skewX(-28)"/>
+<rect x="0" y="0" width="600" height="260" fill="url(#ab-p)"/>
+</g>
+
+</svg>
+        <figure class="portrait" role="img" aria-label="Porträt Lukas Leys folgt" data-i18n-aria="portrait">
+          <svg class="leaf" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="rotate(35 32 32)"><path fill-rule="evenodd" fill="currentColor" d="M32 58C14 46 12 22 32 6C52 22 50 46 32 58ZM30.4 52L32 14L33.6 52Z"/></g></svg>
+          <figcaption data-i18n="portrait">Porträt Lukas Leys folgt</figcaption>
+        </figure>
+      </div>
+      <div>
+        <div class="station-head" style="margin-bottom:0"><h2 id="ueber" tabindex="-1">Lukas Leys</h2><span class="platform-line" aria-hidden="true"></span></div>
+        <p class="role" data-i18n="role">Gründer und Geschäftsführer der tenverde GmbH</p>
+        <p class="about-text" data-i18n="about">Ich gründe Softwareunternehmen und investiere in junge Firmen und in Immobilien. tenverde bündelt das unter einem Dach. Was ich aufbaue, will ich lange halten und in Ruhe wachsen lassen.</p>
+        <a class="textlink" href="https://www.linkedin.com/in/lukasleys/" target="_blank" rel="noopener"><span data-i18n="li">Profil auf LinkedIn</span><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr" data-i18n="newtab">(öffnet in neuem Tab)</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="summit day" aria-labelledby="kontakt">
+    <div class="summit-stage"><svg class="shell summit-shell" viewBox="0 0 1600 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false" data-shell data-sx="600" data-sy="120">
+<defs>
+<linearGradient id="su-f" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".4" stop-color="#EAF0F5"/><stop offset=".75" stop-color="#CFDBE5"/><stop offset="1" stop-color="#AFC1D1"/></linearGradient>
+<linearGradient id="su-u" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6E859C"/><stop offset="1" stop-color="#9DB1C4"/></linearGradient>
+<linearGradient id="su-l" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="su-s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="su-p" class="spec-grad" gradientUnits="userSpaceOnUse" cx="600" cy="120" r="380"><stop offset="0" stop-color="#fff" stop-opacity="1"/><stop offset=".22" stop-color="#fff" stop-opacity=".7"/><stop offset=".55" stop-color="#EAF6FF" stop-opacity=".22"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+
+<clipPath id="su-c"><path d="M 1620 460 L 1522 460 C 1512 382 1470 320 1380 292 C 1180 232 900 252 640 232 C 420 214 200 162 -20 204 L -20 64 C 200 4 480 42 760 72 C 1060 102 1320 62 1500 122 C 1580 152 1620 222 1620 300 Z"/></clipPath>
+</defs>
+
+<path d="M -20 204 C 200 162 420 214 640 232 C 900 252 1180 232 1380 292 C 1470 320 1512 382 1522 460 L 1490 460 C 1480 396 1446 348 1370 324 C 1176 266 900 282 640 262 C 420 246 200 196 -20 236 Z" fill="url(#su-u)"/>
+<path d="M 1620 460 L 1522 460 C 1512 382 1470 320 1380 292 C 1180 232 900 252 640 232 C 420 214 200 162 -20 204 L -20 64 C 200 4 480 42 760 72 C 1060 102 1320 62 1500 122 C 1580 152 1620 222 1620 300 Z" fill="url(#su-f)"/>
+<g clip-path="url(#su-c)">
+<path d="M 300 20 C 310 100 316 160 320 200" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 700 40 C 706 120 708 180 708 240" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M 1100 60 C 1104 140 1104 200 1100 250" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/><path d="M -20 150 C 400 110 900 170 1580 200" fill="none" stroke="#7D97AF" stroke-opacity=".32" stroke-width="1.2"/>
+<path d="M -20 96 C 200 40 480 76 760 104 C 1060 134 1320 96 1500 156 C 1560 178 1596 220 1610 270 C 1580 230 1540 200 1490 184 C 1320 128 1060 164 760 134 C 480 106 200 72 -20 124 Z" fill="url(#su-l)"/>
+<rect class="streak" x="-320" y="-92" width="256" height="644" fill="url(#su-s)" transform="translate(720 0) skewX(-28)"/>
+<rect x="0" y="0" width="1600" height="460" fill="url(#su-p)"/>
+</g>
+<path d="M -20 204 C 200 162 420 214 640 232 C 900 252 1180 232 1380 292 C 1470 320 1512 382 1522 460" fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="2" stroke-linecap="round"/>
+</svg></div>
+    <div class="wrap">
+      <h2 id="kontakt" tabindex="-1" data-i18n="kH">Schreiben Sie mir.</h2>
+      <a class="mail" href="mailto:office@tenverde.at">office@tenverde.at</a>
+      <div class="summit-foot">
+        <address><strong>tenverde GmbH</strong><br>Kirschentalgasse 14/D21<br>6020 Innsbruck, <span data-i18n="country">Österreich</span></address>
+      </div>
+    </div>
+    <svg class="contours" viewBox="0 0 1600 260" preserveAspectRatio="none" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".7"><path d="M0 170 L90 140 L170 156 L260 98 L330 128 L410 70 L480 104 L540 82 L620 120 L700 60 L780 96 L850 50 L920 92 L1000 72 L1070 112 L1150 58 L1230 100 L1300 80 L1380 126 L1470 76 L1540 112 L1600 96"/><path d="M0 200 L110 176 L200 190 L300 140 L380 166 L470 120 L560 152 L640 132 L730 166 L820 116 L910 150 L1010 126 L1100 162 L1200 120 L1290 150 L1390 136 L1490 168 L1600 142" opacity=".6"/><path d="M0 232 L140 212 L260 226 L380 190 L500 214 L620 186 L760 214 L900 182 L1040 210 L1180 186 L1320 214 L1460 196 L1600 214" opacity=".4"/></svg>
+  </section>
+</main>
+
+<footer>
+  <div class="foot">
+    <a class="brand" href="#top" aria-label="tenverde, zum Seitenanfang" data-i18n-aria="home"><svg class="leaf" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><g transform="rotate(35 32 32)"><path fill-rule="evenodd" fill="currentColor" d="M32 58C14 46 12 22 32 6C52 22 50 46 32 58ZM30.4 52L32 14L33.6 52Z"/></g></svg><span>tenverde</span></a>
+    <span>© 2026 tenverde GmbH</span>
+    <ul>
+      <li><a href="../impressum.html" data-i18n="imp">Impressum</a></li>
+      <li><a href="../impressum.html#datenschutz" data-i18n="dsg">Datenschutz</a></li>
+    </ul>
+  </div>
+</footer>
+<script>
+(function(){
+  var D = {"de":{"title":"tenverde · Beteiligungsgesellschaft in Innsbruck","desc":"tenverde ist die Beteiligungsgesellschaft von Lukas Leys in Innsbruck: Softwareunternehmen, Beteiligungen an Startups und Immobilien.","skip":"Zum Inhalt springen","navLabel":"Hauptnavigation","home":"tenverde, zum Seitenanfang","n1":"Unternehmen","n2":"Gesucht","n3":"Über mich","n4":"Kontakt","langLabel":"Sprache wählen","railLabel":"Strecke von der Talstation zur Bergstation","s0":"Talstation","s4":"Bergstation","h1":"Wir investieren in Dinge, die wachsen.","lead":"tenverde ist meine Beteiligungsgesellschaft mit Sitz in Innsbruck. Hier liegen meine Softwareunternehmen, meine Beteiligungen an Startups und meine Immobilien.","cta1":"Kontakt aufnehmen","cta2":"Was ich suche","coH":"Unternehmen, die ich selbst aufbaue","c1":"KI-Software für juristische Arbeit. Recherche, Entwürfe und Prüfung von Dokumenten für Kanzleien und Rechtsabteilungen.","c2":"Software für Immobilien. Digitale Werkzeuge für Eigentümer, Verwalter und Makler.","c3":"KI-Anwendungen für Unternehmen. Automatisierung von Abläufen, die heute noch von Hand laufen.","c4":"Der Krypto-Podcast aus Wien. Bitcoin, Blockchain und Kryptoökonomie verständlich eingeordnet.","newtab":"(öffnet in neuem Tab)","gH":"Ich suche Startups und Immobilien.","gP":"tenverde investiert eigenes Kapital und hält langfristig. Ich entscheide selbst und schnell, ohne Fonds und ohne Komitee.","pS":"Startup-Beteiligungen","sPhaseT":"Phase","sPhase":"Pre-Seed, Seed","sSecT":"Branchen","sSec":"Software, KI, LegalTech, PropTech","sRegT":"Region","sReg":"Österreich, Deutschland, Schweiz","sTixT":"Ticket","sTix":"nach Absprache","sPlusT":"Dazu","sPlus":"Erfahrung aus Gründung, Produkt und Recht. Kontakte zu Kanzleien und in die Immobilienbranche.","sBtn":"Pitch Deck senden","pI":"Immobilien","iObjT":"Objekte","iObj":"Wohnhäuser, Zinshäuser, Grundstücke mit Widmung","iRegT":"Region","iReg":"Tirol und Westösterreich","iZusT":"Zustand","iZus":"Bestand, gern mit Sanierungs- oder Entwicklungsbedarf","iAnkT":"Ankauf","iAnk":"direkt von Eigentümern oder über Makler, auch off-market","iBtn":"Exposé senden","role":"Gründer und Geschäftsführer der tenverde GmbH","about":"Ich gründe Softwareunternehmen und investiere in junge Firmen und in Immobilien. tenverde bündelt das unter einem Dach. Was ich aufbaue, will ich lange halten und in Ruhe wachsen lassen.","li":"Profil auf LinkedIn","portrait":"Porträt Lukas Leys folgt","kH":"Schreiben Sie mir.","country":"Österreich","imp":"Impressum","dsg":"Datenschutz"},"en":{"title":"tenverde · Holding company in Innsbruck","desc":"tenverde is the holding company of Lukas Leys in Innsbruck: software companies, stakes in startups and real estate.","skip":"Skip to content","navLabel":"Main navigation","home":"tenverde, back to top","n1":"Companies","n2":"Looking for","n3":"About","n4":"Contact","langLabel":"Choose language","railLabel":"Route from valley station to mountain station","s0":"Valley station","s4":"Mountain station","h1":"We invest in things that grow.","lead":"tenverde is my holding company, based in Innsbruck. It holds my software companies, my stakes in startups and my real estate.","cta1":"Get in touch","cta2":"What I look for","coH":"Companies I am building","c1":"AI software for legal work. Research, drafting and document review for law firms and in-house teams.","c2":"Software for real estate. Digital tools for owners, property managers and agents.","c3":"AI applications for businesses. Automating workflows that still run by hand today.","c4":"The crypto podcast from Vienna. Bitcoin, blockchain and the crypto economy explained clearly.","newtab":"(opens in a new tab)","gH":"I am looking for startups and real estate.","gP":"tenverde invests its own capital and holds for the long term. I decide myself and quickly, with no fund and no committee.","pS":"Startup investments","sPhaseT":"Stage","sPhase":"Pre-Seed, Seed","sSecT":"Sectors","sSec":"Software, AI, LegalTech, PropTech","sRegT":"Region","sReg":"Austria, Germany, Switzerland","sTixT":"Ticket","sTix":"by arrangement","sPlusT":"Plus","sPlus":"Experience in founding, product and law. Contacts to law firms and the real estate industry.","sBtn":"Send pitch deck","pI":"Real estate","iObjT":"Assets","iObj":"Residential and multi-family buildings, zoned plots","iRegT":"Region","iReg":"Tyrol and western Austria","iZusT":"Condition","iZus":"Existing stock, ideally in need of renovation or development","iAnkT":"Deals","iAnk":"directly from owners or through agents, off-market welcome","iBtn":"Send exposé","role":"Founder and managing director of tenverde GmbH","about":"I found software companies and invest in young businesses and in real estate. tenverde brings all of it under one roof. What I build, I intend to hold for a long time and let grow at its own pace.","li":"Profile on LinkedIn","portrait":"Portrait of Lukas Leys to follow","kH":"Write to me.","country":"Austria","imp":"Legal notice","dsg":"Privacy"}};
+  var root = document.documentElement;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ----- language ----- */
+  function apply(lang){
+    if (!D[lang]) lang = 'de';
+    var d = D[lang];
+    root.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){ var k = el.getAttribute('data-i18n'); if (d[k] != null) el.textContent = d[k]; });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){ var k = el.getAttribute('data-i18n-aria'); if (d[k] != null) el.setAttribute('aria-label', d[k]); });
+    document.title = d.title;
+    var m = document.querySelector('meta[name="description"]'); if (m) m.setAttribute('content', d.desc);
+    document.querySelectorAll('[data-lang]').forEach(function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang)); });
+    try { localStorage.setItem('tenverde-lang', lang); } catch (e) {}
+    requestAnimationFrame(layoutAll);
+  }
+  var start = 'de';
+  try { var s = localStorage.getItem('tenverde-lang'); if (s === 'de' || s === 'en') start = s; } catch (e) {}
+  try { var q = new URLSearchParams(location.search).get('lang'); if (q === 'de' || q === 'en') start = q; } catch (e) {}
+  document.querySelectorAll('[data-lang]').forEach(function(b){ b.addEventListener('click', function(){ apply(b.getAttribute('data-lang')); }); });
+
+  /* ----- funicular rail: scroll is the ascent ----- */
+  var rail = document.querySelector('.rail');
+  var stops = ['top','unternehmen','gesucht','ueber','kontakt'];
+  var items = stops.map(function(id){ return rail.querySelector('[data-stop="' + id + '"]'); });
+  var heads = stops.map(function(id){ return document.getElementById(id); });
+  var anchors = [];
+  function measure(){
+    var max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+    anchors = heads.map(function(el, i){ if (i === 0) return 0; var y = el.getBoundingClientRect().top + scrollY - innerHeight * .35; return Math.min(Math.max(y, 1), max); });
+    for (var i = 1; i < anchors.length; i++) if (anchors[i] <= anchors[i-1]) anchors[i] = anchors[i-1] + 1;
+  }
+  var lastHere = -1;
+  function ride(){
+    var y = scrollY, n = anchors.length, idx = 0, f = 0;
+    for (var i = 0; i < n - 1; i++){ if (y >= anchors[i]) { idx = i; f = Math.min(1, (y - anchors[i]) / (anchors[i+1] - anchors[i])); } }
+    if (y >= anchors[n-1]) { idx = n - 1; f = 0; }
+    var here = f >= 1 ? Math.min(idx + 1, n - 1) : idx;
+    var p = reduce ? here / (n - 1) : Math.min(1, (idx + f) / (n - 1));
+    rail.style.setProperty('--p', p.toFixed(4));
+    if (here !== lastHere){
+      lastHere = here;
+      items.forEach(function(li, k){ li.classList.toggle('is-here', k === here); li.classList.toggle('is-passed', k < here); });
+      heads.forEach(function(h, k){ var sec = h.closest('section') || h; sec.classList.toggle('is-current', k === here); });
+    }
+  }
+
+  /* ----- unternehmen: the track line through the four plinths ----- */
+  var slope = document.querySelector('.slope-box'), trackSvg = slope && slope.querySelector('.track');
+  function drawTrack(){
+    if (!trackSvg) return;
+    var box = slope.getBoundingClientRect();
+    var pts = [].map.call(slope.querySelectorAll('.station-plinth'), function(p){ var r = p.getBoundingClientRect(); return [r.left - box.left, r.top - box.top + r.height / 2, r.width]; });
+    if (!pts.length) return;
+    trackSvg.setAttribute('viewBox', '0 0 ' + box.width + ' ' + box.height);
+    var single = pts.every(function(p){ return Math.abs(p[0] - pts[0][0]) < box.width * .2; }) && pts.length > 1 && pts[1][1] - pts[0][1] > 40;
+    var d = '';
+    if (single){
+      var x = 10;
+      d = 'M ' + x + ' ' + (pts[0][1] - 40) + ' L ' + x + ' ' + (pts[pts.length-1][1] + 40);
+      pts.forEach(function(p){ d += ' M ' + x + ' ' + p[1] + ' L ' + p[0] + ' ' + p[1]; });
+    } else {
+      pts.slice().sort(function(a,b){ return a[0] - b[0] || b[1] - a[1]; });
+      var a = pts[0], b = pts[pts.length - 1];
+      d = 'M ' + (a[0] - 30) + ' ' + (a[1] + 30 * (a[1] - b[1]) / Math.max(1, b[0] + b[2] - a[0])) + ' L ' + (b[0] + b[2] + 30) + ' ' + (b[1] - 30 * (a[1] - b[1]) / Math.max(1, b[0] + b[2] - a[0]));
+    }
+    trackSvg.querySelector('path').setAttribute('d', d);
+  }
+
+  /* ----- light on the glass: specular follows the pointer ----- */
+  var shells = [].map.call(document.querySelectorAll('svg[data-shell]'), function(svg){
+    var vb = svg.viewBox.baseVal;
+    var o = { svg: svg, g: svg.querySelector('.spec-grad'), st: svg.querySelector('.streak'), w: vb.width, h: vb.height,
+      x: +svg.getAttribute('data-sx'), y: +svg.getAttribute('data-sy'), sx: 0, vis: false };
+    o.tx = o.x; o.ty = o.y; o.tsx = 0; o.ox = o.x; o.oy = o.y;
+    return o;
+  });
+  var px = null, py = null, mouse = false, raf = 0;
+  function toLocal(o){
+    var m = o.svg.getScreenCTM(); if (!m) return null;
+    var pt = o.svg.createSVGPoint(); pt.x = px; pt.y = py; return pt.matrixTransform(m.inverse());
+  }
+  function targets(){
+    shells.forEach(function(o){
+      if (!o.vis || !o.svg.getClientRects().length) return;
+      if (mouse && px !== null){
+        var l = toLocal(o); if (!l) return;
+        o.tx = l.x; o.ty = l.y; o.tsx = (px / innerWidth - .5) * o.w * .5;
+      } else {
+        var r = o.svg.getBoundingClientRect();
+        var k = Math.min(1, Math.max(0, (innerHeight - r.top) / (innerHeight + r.height)));
+        o.tx = o.w * (.12 + .76 * k); o.ty = o.oy; o.tsx = (k - .5) * o.w * .5;
+      }
+    });
+  }
+  function tick(){
+    raf = 0; var moving = false;
+    shells.forEach(function(o){
+      if (!o.vis) return;
+      var dx = o.tx - o.x, dy = o.ty - o.y, ds = o.tsx - o.sx;
+      if (Math.abs(dx) + Math.abs(dy) + Math.abs(ds) < .4) return;
+      o.x += dx * .14; o.y += dy * .14; o.sx += ds * .1; moving = true;
+      o.g.setAttribute('cx', o.x.toFixed(1)); o.g.setAttribute('cy', o.y.toFixed(1));
+      o.st.setAttribute('transform', 'translate(' + (o.w * .45 + o.sx).toFixed(1) + ' 0) skewX(-28)');
+    });
+    if (moving) raf = requestAnimationFrame(tick);
+  }
+  function kick(){ if (reduce) return; targets(); if (!raf) raf = requestAnimationFrame(tick); }
+  if (!reduce){
+    if ('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(es){ es.forEach(function(e){ shells.forEach(function(o){ if (o.svg === e.target) o.vis = e.isIntersecting; }); }); kick(); });
+      shells.forEach(function(o){ io.observe(o.svg); });
+    } else shells.forEach(function(o){ o.vis = true; });
+    addEventListener('pointermove', function(e){ if (e.pointerType !== 'mouse' && e.pointerType !== 'pen') return; mouse = true; px = e.clientX; py = e.clientY; kick(); }, { passive: true });
+    document.addEventListener('pointerleave', function(){ mouse = false; kick(); });
+  }
+
+  /* ----- wiring ----- */
+  var ticking = false;
+  function onScroll(){ if (ticking) return; ticking = true; requestAnimationFrame(function(){ ticking = false; ride(); if (!mouse) kick(); else kick(); }); }
+  function layoutAll(){ measure(); drawTrack(); ride(); }
+  addEventListener('scroll', onScroll, { passive: true });
+  addEventListener('resize', function(){ requestAnimationFrame(layoutAll); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(layoutAll);
+  addEventListener('load', layoutAll);
+  apply(start);
+  layoutAll();
+})();
+</script>
+</body>
+</html>

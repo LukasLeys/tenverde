@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "vorschlaege/08-leuchtwald/index.html"
+        ],
+        "createdAt": "2026-10-20T21:24:32.534Z",
+        "reason": "brief for direction 08 Leuchtwald: bioluminescent world where light is the material; glow is the committed world, multi-hued, not a single neon accent"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "vorschlaege/galerie.html"
+        ],
+        "createdAt": "2026-10-20T21:36:25.554Z",
+        "reason": "Agent: Detector misst die Dunkelmodus-Tokens gegen Weiß; im echten Rendering stehen helle Tokens nur auf dunklem Grund (Dunkel 8:1, Hell 6,9:1 geprüft)"
+      }
+    ]
+  }
+}

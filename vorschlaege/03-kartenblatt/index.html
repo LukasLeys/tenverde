@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="meta.title">tenverde GmbH · Innsbruck</title>
+<meta name="description" content="tenverde ist die Beteiligungsgesellschaft von Lukas Leys mit Sitz in Innsbruck. Softwareunternehmen, Beteiligungen an Startups und Immobilien." data-i18n-attr="content:meta.desc">
+<meta name="theme-color" content="#FBF9F3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow+Semi+Condensed:wght@500;600&family=Barlow:wght@400;500&family=Spectral:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papier:#FBF9F3;
+  --papier-2:#F1ECDF;
+  --tafel:rgba(251,249,243,.95);
+  --tinte:#201C17;
+  --tinte-2:#4A4038;
+  --braun:#9C6633;
+  --braun-d:#6B4220;
+  --titel-braun:#4A2E15;
+  --wald:#3E6B3A;
+  --wald-tint:#D3E5C3;
+  --fels:#6B6763;
+  --eis:#E1EEF7;
+  --eis-l:#5A93C4;
+  --wasser:#2B679C;
+  --rot:#C42A1F;
+  --rot-d:#A3221A;
+  --gelb:#F2C230;
+  --raster:#5C7A99;
+  --linie:rgba(32,28,23,.55);
+  --kopf-h:64px;
+  --rand:clamp(16px,4.2vw,64px);
+  --halo:0 0 1px var(--papier),0 0 2px var(--papier),0 0 3px var(--papier),0 0 5px var(--papier),0 0 9px var(--papier),0 0 14px var(--papier);
+  --f-titel:'Barlow Condensed','Arial Narrow',sans-serif;
+  --f-label:'Barlow Semi Condensed','Arial Narrow',sans-serif;
+  --f-text:'Barlow',system-ui,sans-serif;
+  --f-kursiv:'Spectral',Georgia,serif;
+  color-scheme:light;
+  scrollbar-color:var(--braun) var(--papier-2);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overflow-x:clip;scroll-padding-top:calc(var(--kopf-h) + 16px)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--papier);color:var(--tinte);font:400 1.0625rem/1.58 var(--f-text);position:relative;overflow-x:clip;min-height:100vh}
+::selection{background:var(--rot);color:#fff}
+::-webkit-scrollbar{width:12px;height:12px}
+::-webkit-scrollbar-track{background:var(--papier-2)}
+::-webkit-scrollbar-thumb{background:var(--braun);border:3px solid var(--papier-2);border-radius:6px}
+::-webkit-scrollbar-thumb:hover{background:var(--braun-d)}
+img,svg,canvas{display:block}
+a{color:var(--rot-d);text-decoration-thickness:1.5px;text-underline-offset:4px}
+a:hover{color:var(--tinte)}
+:focus-visible{outline:3px solid var(--rot);outline-offset:3px;border-radius:2px}
+h1,h2,h3{margin:0;font-weight:600;text-wrap:balance}
+p{margin:0}
+.nur-sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.springen{position:absolute;left:16px;top:-80px;z-index:60;background:var(--tinte);color:var(--papier);padding:12px 16px;font:600 1rem var(--f-label);text-decoration:none}
+.springen:focus{top:12px}
+
+/* Kartenebenen */
+#karte{position:absolute;inset:0 0 auto 0;z-index:0;overflow:hidden;pointer-events:none}
+#karte canvas{position:absolute;left:0}
+#spur{position:absolute;left:0;top:0;z-index:1;pointer-events:none;overflow:visible}
+#spur .spur-halo{fill:none;stroke:var(--papier);stroke-width:7;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
+#spur .spur{fill:none;stroke:var(--rot);stroke-width:2.6;stroke-dasharray:9 6;stroke-linecap:butt;stroke-linejoin:round}
+#spur .spitze{fill:var(--rot);stroke:var(--papier);stroke-width:2.5}
+#lupe{position:fixed;left:0;top:0;z-index:2;pointer-events:none;opacity:0;transition:opacity .25s ease-out;will-change:transform}
+#lupe.an{opacity:1}
+#lupe canvas{position:absolute;left:0;top:0}
+#lupe .ring{position:absolute;left:0;top:0}
+#lupe .ablesung{position:absolute;left:0;top:0;white-space:nowrap;font:500 .9375rem/1.3 var(--f-label);font-variant-numeric:tabular-nums;color:var(--tinte);background:var(--tafel);border:1px solid var(--linie);padding:6px 10px}
+#lupe .ablesung b{font-weight:600;color:var(--braun-d)}
+
+/* Kopf als Zeichenerklärung */
+.kopf{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.93);border-bottom:1px solid var(--linie);backdrop-filter:saturate(1.1)}
+.kopf-innen{max-width:1520px;margin:0 auto;height:var(--kopf-h);padding:0 var(--rand);display:flex;align-items:center;gap:24px}
+.marke{display:flex;align-items:center;gap:10px;color:var(--tinte);text-decoration:none;min-height:44px;padding-right:6px}
+.marke svg{width:30px;height:30px;fill:var(--wald)}
+.marke span{font:600 1.75rem/1 var(--f-titel);letter-spacing:.01em}
+.kopf nav{margin-left:auto}
+.kopf nav ul{list-style:none;margin:0;padding:0;display:flex;gap:4px}
+.kopf nav a{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 12px;color:var(--tinte);text-decoration:none;font:500 1.0625rem/1 var(--f-label);letter-spacing:.01em}
+.kopf nav a:hover{color:var(--rot-d);text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:6px}
+.kopf nav svg{width:22px;height:22px;flex:none}
+.sprache{display:flex;border:1px solid var(--linie)}
+.sprache button{appearance:none;border:0;margin:0;background:transparent;color:var(--tinte);font:600 .9375rem/1 var(--f-label);letter-spacing:.06em;min-width:44px;min-height:42px;cursor:pointer}
+.sprache button[aria-pressed="true"]{background:var(--tinte);color:var(--papier)}
+.sprache button:not([aria-pressed="true"]):hover{background:var(--papier-2)}
+
+main{position:relative;z-index:3}
+.blatt{max-width:1520px;margin:0 auto;padding:0 var(--rand)}
+
+/* Kopfblatt */
+.kopfblatt{min-height:calc(100svh - var(--kopf-h));padding-top:clamp(40px,8vh,96px);padding-bottom:40px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);grid-template-areas:"titel titel" "lead aktion" "legende aktion";grid-template-rows:auto auto 1fr;column-gap:56px}
+.titel{grid-area:titel;font:700 clamp(2.75rem,1rem + 6.2vw,6rem)/.9 var(--f-titel);text-transform:uppercase;letter-spacing:.005em;color:var(--tinte);max-width:9.6em;text-shadow:var(--halo)}
+.beschreibung{grid-area:lead;align-self:start;margin-top:clamp(24px,4vh,40px);max-width:33rem;position:relative}
+.beschreibung p{font:400 italic clamp(1.1875rem,1rem + .55vw,1.4375rem)/1.45 var(--f-kursiv);color:var(--tinte)}
+.tafel{background:var(--tafel);border:1px solid var(--linie);padding:18px 22px}
+.kolophon{display:flex;align-items:center;gap:10px;margin-top:16px;padding-top:12px;border-top:1px solid rgba(32,28,23,.3)}
+.kolophon svg{width:24px;height:24px;fill:var(--wald)}
+.kolophon-name{font:600 1.5rem/1 var(--f-titel);color:var(--tinte)}
+.kolophon-blatt{margin-left:auto;font:500 1rem/1 var(--f-label);letter-spacing:.04em;color:var(--tinte-2)}
+.startpunkt{position:absolute;right:-9px;bottom:22px;width:18px;height:18px}
+.aktion{grid-area:aktion;align-self:start;justify-self:start;margin-top:clamp(120px,22vh,220px);display:grid;grid-template-columns:auto 1fr;column-gap:16px;row-gap:12px;align-items:center}
+.aktion .huette-gross{width:44px;height:44px;grid-row:1}
+.knopf{display:inline-flex;align-items:center;gap:12px;min-height:56px;padding:0 24px 0 22px;background:var(--rot);color:#fff;text-decoration:none;font:600 1.625rem/1 var(--f-titel);letter-spacing:.02em;text-transform:uppercase;border:1px solid var(--rot-d);box-shadow:0 2px 0 rgba(32,28,23,.0),0 6px 18px -8px rgba(80,20,10,.55);transition:background-color .2s ease-out,transform .2s cubic-bezier(.16,1,.3,1)}
+.knopf svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2.2}
+.knopf:hover{background:var(--rot-d);color:#fff;transform:translateY(-2px)}
+.knopf:focus-visible{outline-color:var(--tinte)}
+.zweit{grid-column:2;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 12px;justify-self:start;background:var(--tafel);border:1px solid var(--linie);color:var(--tinte);text-decoration:none;font:500 1.0625rem/1 var(--f-label)}
+.zweit svg{width:18px;height:18px;stroke:var(--rot-d);fill:none;stroke-width:1.8}
+.zweit:hover{color:var(--rot-d);text-decoration:underline}
+.legende{grid-area:legende;align-self:end;justify-self:start;width:fit-content;margin-top:48px;max-width:100%;padding:14px 20px 16px}
+.legende h2{font:600 1.0625rem/1 var(--f-label);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+.legende ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,auto);gap:8px 28px}
+.legende li{display:flex;align-items:center;gap:10px;font:500 .9375rem/1.2 var(--f-label);color:var(--tinte-2)}
+.legende li svg{width:34px;height:16px;flex:none}
+.massstab{display:flex;align-items:flex-end;gap:14px;margin-top:14px;padding-top:12px;border-top:1px solid rgba(32,28,23,.25);font:500 .9375rem/1 var(--f-label);color:var(--tinte-2);font-variant-numeric:tabular-nums}
+.massstab svg{width:auto;height:30px;flex:none}
+
+/* Abschnitte */
+.abschnitt{padding-top:clamp(96px,14vh,160px)}
+.ueberschrift{font:700 clamp(2.25rem,1rem + 3.6vw,4.25rem)/.95 var(--f-titel);text-transform:uppercase;letter-spacing:.02em;color:var(--titel-braun);max-width:12em;text-shadow:var(--halo)}
+
+/* Hütten */
+.huetten{list-style:none;margin:72px 0 0;padding:0}
+.huette{position:relative;margin-bottom:64px;padding-top:var(--dy,0px)}
+.huette .sym{position:absolute;left:var(--x);top:calc(var(--dy,0px) + 14px);width:36px;height:36px;margin-left:-18px}
+.etikett{position:relative;width:min(440px,calc(100% - 56px))}
+.huette[data-seite="r"] .etikett{margin-left:calc(var(--x) + 44px)}
+.huette[data-seite="l"] .etikett{margin-left:max(0px,calc(var(--x) - 44px - 440px));width:min(440px,calc(var(--x) - 44px))}
+.etikett::before{content:"";position:absolute;top:32px;width:30px;height:1px;background:var(--tinte)}
+.huette[data-seite="r"] .etikett::before{left:-31px}
+.huette[data-seite="l"] .etikett::before{right:-31px}
+.etikett h3{font:600 clamp(1.75rem,1.2rem + 1vw,2.125rem)/1.05 var(--f-titel);letter-spacing:.01em}
+.etikett h3 a{color:var(--tinte);text-decoration:none;display:inline-flex;align-items:center;gap:8px;min-height:44px}
+.etikett h3 a:hover{color:var(--rot-d);text-decoration:underline;text-decoration-thickness:2px}
+.etikett h3 svg{width:18px;height:18px;stroke:var(--rot-d);fill:none;stroke-width:2}
+.etikett p{color:var(--tinte-2);margin-top:4px}
+
+/* Gesucht */
+.einleitung{margin-top:32px;max-width:40rem}
+.einleitung p{font:400 italic 1.25rem/1.5 var(--f-kursiv)}
+.gabel{display:block;width:16px;height:16px;margin:56px 0 0 50%;translate:-8px 0}
+.routen{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(32px,5vw,88px);margin-top:56px;align-items:start}
+.route{position:relative;padding:30px 30px 28px}
+.route .wp-start{position:absolute;top:-10px;left:38px;width:20px;height:20px}
+.route h3{font:700 clamp(1.875rem,1.2rem + 1.4vw,2.625rem)/1 var(--f-titel);text-transform:uppercase;letter-spacing:.02em;color:var(--titel-braun);padding-left:44px}
+.fakten{position:relative;margin:22px 0 0;padding:0 0 0 44px}
+.fakten::before{content:"";position:absolute;left:17px;top:6px;bottom:-30px;width:3px;background:repeating-linear-gradient(to bottom,var(--rot) 0 9px,transparent 9px 15px)}
+.fakt{position:relative;display:grid;grid-template-columns:7.5rem 1fr;gap:4px 16px;padding:12px 0;border-bottom:1px dotted rgba(32,28,23,.35)}
+.fakt:last-child{border-bottom:0}
+.fakt::before{content:"";position:absolute;left:-33px;top:17px;width:11px;height:11px;border-radius:50%;background:var(--papier);border:2.5px solid var(--rot)}
+.fakt dt{font:600 .9375rem/1.5 var(--f-label);letter-spacing:.06em;text-transform:uppercase;color:var(--braun-d)}
+.fakt dd{margin:0;color:var(--tinte)}
+.wegweiser{position:relative;display:inline-flex;align-items:stretch;margin:22px 0 0 0;text-decoration:none;color:var(--tinte);min-height:64px}
+.wegweiser .flagge{flex:none;width:22px;align-self:stretch;background:linear-gradient(to bottom,var(--rot) 0 33.3%,#fff 33.3% 66.6%,var(--rot) 66.6%);border:1px solid var(--tinte);border-right:0}
+.wegweiser .tafel-gelb{display:flex;flex-direction:column;justify-content:center;gap:2px;background:var(--gelb);padding:10px 46px 10px 16px;clip-path:polygon(0 0,calc(100% - 26px) 0,100% 50%,calc(100% - 26px) 100%,0 100%);border-left:0}
+.wegweiser .ww-ziel{font:700 1.5rem/1 var(--f-titel);text-transform:uppercase;letter-spacing:.03em}
+.wegweiser .ww-adr{font:500 .9375rem/1.2 var(--f-label)}
+.wegweiser:hover .tafel-gelb{background:#E8B21C}
+.wegweiser:hover .ww-ziel{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+.wegweiser:focus-visible{outline-offset:4px}
+.wp-ende{position:absolute;left:0;top:50%;width:2px;height:2px}
+
+/* Über mich */
+.autor{position:relative;display:grid;grid-template-columns:minmax(200px,300px) minmax(0,1fr);gap:clamp(24px,4vw,56px);max-width:1000px;margin-left:clamp(0px,6vw,120px);padding:clamp(20px,3vw,36px);border:1px solid var(--tinte);outline:1px solid var(--tinte);outline-offset:-6px}
+.autor .wp-autor{position:absolute;top:-18px;left:52%;width:34px;height:34px}
+.portraet{margin:0;position:relative;aspect-ratio:4/5;background:var(--papier-2);border:1px solid var(--linie);overflow:hidden}
+.portraet svg{position:absolute;inset:0;width:100%;height:100%}
+.portraet figcaption{position:absolute;left:50%;top:50%;translate:-50% -50%;width:max-content;max-width:80%;text-align:center;background:var(--papier);border:1px solid var(--linie);padding:10px 14px;font:600 1.0625rem/1.25 var(--f-label);color:var(--tinte)}
+.autor-text{align-self:center;max-width:36rem}
+.autor-text h2{font:700 clamp(2.5rem,1.4rem + 3vw,4.25rem)/.95 var(--f-titel);text-transform:uppercase;letter-spacing:.02em;color:var(--titel-braun)}
+.rolle{margin-top:10px;font:500 1.1875rem/1.35 var(--f-label);color:var(--tinte-2)}
+.autor-text .text{margin-top:18px;font-size:1.125rem;line-height:1.6}
+.verweis{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:14px;font:600 1.125rem/1 var(--f-label)}
+.verweis svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
+
+/* Kontakt */
+.kontakt{padding-top:clamp(150px,22vh,240px);padding-bottom:clamp(72px,10vh,120px);display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px;align-items:end}
+.kontakt h2{font:700 clamp(2.5rem,1rem + 5vw,6rem)/.9 var(--f-titel);text-transform:uppercase;letter-spacing:.01em;color:var(--tinte);text-shadow:var(--halo)}
+.mail{display:inline-block;margin-top:18px;font:600 clamp(2rem,.8rem + 4.6vw,5.25rem)/1.05 var(--f-titel);color:var(--rot-d);text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:.14em;text-shadow:var(--halo);overflow-wrap:anywhere}
+.mail:hover{color:var(--tinte)}
+.anschrift{margin-top:28px;font-style:normal;display:inline-block;font-size:1.125rem;line-height:1.55}
+.ziel{justify-self:center;align-self:center;display:grid;justify-items:center;gap:10px;text-align:center}
+.ziel .wp-ziel{width:56px;height:56px}
+.ortsname{font:600 clamp(1.75rem,1.2rem + 1.5vw,2.75rem)/1 var(--f-titel);letter-spacing:.32em;text-transform:uppercase;margin-right:-.32em;color:var(--tinte);text-shadow:var(--halo)}
+.koord{font:500 1.0625rem/1 var(--f-label);font-variant-numeric:tabular-nums;color:var(--tinte-2);background:var(--tafel);padding:6px 10px;border:1px solid var(--linie)}
+
+/* Impressum der Karte */
+.leiste{position:relative;z-index:3;background:var(--papier);border-top:1px solid var(--tinte);box-shadow:0 -4px 0 -3px var(--tinte)}
+.leiste-innen{max-width:1520px;margin:0 auto;padding:18px var(--rand) 22px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font:500 1rem/1.3 var(--f-label);color:var(--tinte-2)}
+.leiste a{display:inline-flex;align-items:center;min-height:44px;color:var(--tinte)}
+.leiste a:hover{color:var(--rot-d)}
+.leiste .hinweis{margin-left:auto}
+.leiste .massstab{margin:0;padding:0;border:0}
+
+/* Schmale Ansichten: neu gesetzt */
+@media (max-width:1080px){
+  .kopf nav a{padding:0 8px}
+  .kopf nav svg{display:none}
+}
+@media (max-width:860px){
+  :root{--kopf-h:104px}
+  .kopf{position:relative}
+  .kopf-innen{height:auto;flex-wrap:wrap;gap:0;padding-top:6px;padding-bottom:4px}
+  .kopf nav{order:3;flex-basis:100%;margin:0 -8px}
+  .kopf nav ul{justify-content:space-between}
+  .sprache{margin-left:auto}
+  .kopfblatt{min-height:auto;grid-template-columns:minmax(0,1fr);grid-template-areas:"titel" "lead" "aktion" "legende";padding-top:36px}
+  .beschreibung{margin-right:8px}
+  .startpunkt{right:auto;left:10px;bottom:-9px}
+  .aktion{margin-top:56px;padding-left:2px}
+  .legende ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .legende{width:auto}
+  .huetten{margin-top:48px}
+  .huette{--x:28px!important;--dy:0px!important;margin-bottom:40px}
+  .huette .sym{left:28px}
+  .huette[data-seite] .etikett{margin-left:60px;width:auto}
+  .huette[data-seite] .etikett::before{left:-17px;right:auto;width:14px}
+  .gabel{margin-left:20px}
+  .routen{grid-template-columns:minmax(0,1fr);gap:56px}
+  .route{padding:28px 18px 24px}
+  .route .wp-start{left:10px}
+  .route h3{padding-left:0}
+  .fakten{padding-left:34px}
+  .fakten::before{left:9px}
+  .fakt{grid-template-columns:minmax(0,1fr)}
+  .fakt::before{left:-31px}
+  .autor{grid-template-columns:minmax(0,1fr);margin-left:0;padding:18px}
+  .autor .wp-autor{left:12px}
+  .portraet{max-width:300px}
+  .kontakt{grid-template-columns:minmax(0,1fr);gap:28px}
+  .ziel{order:-1;justify-self:start;justify-items:start;text-align:left;grid-template-columns:auto 1fr;align-items:center;column-gap:14px}
+  .ziel .wp-ziel{grid-row:span 2;width:44px;height:44px}
+  .ortsname{letter-spacing:.2em}
+  .leiste .hinweis{margin-left:0}
+}
+@media (max-width:420px){
+  .kopf nav a{font-size:1rem;padding:0 6px}
+  .knopf{font-size:1.4375rem;padding:0 18px}
+  .legende ul{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+<a class="springen" href="#inhalt" data-i18n="skip">Zum Inhalt</a>
+
+<div id="karte" role="img" aria-label="Topografisches Kartenblatt, frei erzeugt: Höhenlinien, Fels, Wald, Gletscher und ein roter Weg, der die Abschnitte verbindet." data-i18n-attr="aria-label:karte.alt"></div>
+<svg id="spur" aria-hidden="true" focusable="false"></svg>
+<div id="lupe" aria-hidden="true"><canvas></canvas><svg class="ring"></svg><div class="ablesung"></div></div>
+
+<header class="kopf" id="top">
+  <div class="kopf-innen">
+    <a class="marke" href="#top" aria-label="tenverde, zum Seitenanfang" data-i18n-attr="aria-label:marke.alt">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><g transform="rotate(35 32 32)"><path fill-rule="evenodd" d="M32 58C14 46 12 22 32 6C52 22 50 46 32 58ZM30.4 52L32 14L33.6 52Z"/></g></svg>
+      <span>tenverde</span>
+    </a>
+    <nav aria-label="Hauptnavigation" data-i18n-attr="aria-label:nav.alt">
+      <ul>
+        <li><a href="#unternehmen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11.5 12 4l8.5 7.5V20h-17z" fill="#C42A1F" stroke="#201C17" stroke-width="1.4" stroke-linejoin="round"/></svg><span data-i18n="nav.u">Unternehmen</span></a></li>
+        <li><a href="#gesucht"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 18c5-1 6-11 11-11s5 6 9 4" fill="none" stroke="#C42A1F" stroke-width="2.4" stroke-dasharray="4 3"/></svg><span data-i18n="nav.g">Gesucht</span></a></li>
+        <li><a href="#ueber"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 21 19.5H3z" fill="none" stroke="#201C17" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="14" r="2.2" fill="#201C17"/></svg><span data-i18n="nav.m">Über mich</span></a></li>
+        <li><a href="#kontakt"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="#FBF9F3" stroke="#C42A1F" stroke-width="2.4"/><circle cx="12" cy="12" r="3.4" fill="#C42A1F"/></svg><span data-i18n="nav.k">Kontakt</span></a></li>
+      </ul>
+    </nav>
+    <div class="sprache" role="group" aria-label="Sprache" data-i18n-attr="aria-label:sprache.alt">
+      <button type="button" data-lang="de" aria-pressed="true" lang="de">DE</button>
+      <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="inhalt">
+  <section class="blatt kopfblatt" aria-labelledby="titel">
+    <h1 id="titel" class="titel" data-i18n="hero.titel">Wir investieren in Dinge, die wachsen.</h1>
+    <div class="beschreibung tafel">
+      <p data-i18n="hero.lead">tenverde ist meine Beteiligungsgesellschaft mit Sitz in Innsbruck. Hier liegen meine Softwareunternehmen, meine Beteiligungen an Startups und meine Immobilien.</p>
+      <div class="kolophon"><svg viewBox="0 0 64 64" aria-hidden="true"><g transform="rotate(35 32 32)"><path fill-rule="evenodd" d="M32 58C14 46 12 22 32 6C52 22 50 46 32 58ZM30.4 52L32 14L33.6 52Z"/></g></svg><span class="kolophon-name">tenverde</span><span class="kolophon-blatt" data-i18n="hero.blatt">Blatt Innsbruck</span></div>
+      <svg class="startpunkt" data-wp="start" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="6.5" fill="#C42A1F" stroke="#FBF9F3" stroke-width="2.5"/></svg>
+    </div>
+    <div class="aktion">
+      <svg class="huette-gross" data-wp="hero" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11.5 12 4l8.5 7.5V20h-17z" fill="#C42A1F" stroke="#201C17" stroke-width="1.2" stroke-linejoin="round"/><path d="M10 20v-5h4v5" fill="none" stroke="#FBF9F3" stroke-width="1.2"/></svg>
+      <a class="knopf" href="#gesucht"><span data-i18n="hero.cta1">Was ich suche</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6"/></svg></a>
+      <a class="zweit" href="mailto:office@tenverde.at"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13"/><path d="m3.5 6.5 8.5 7 8.5-7"/></svg><span data-i18n="hero.cta2">Kontakt aufnehmen</span></a>
+    </div>
+    <aside class="legende tafel" aria-labelledby="legende-titel">
+      <h2 id="legende-titel" data-i18n="leg.titel">Zeichenerklärung</h2>
+      <ul>
+        <li><svg viewBox="0 0 34 16" aria-hidden="true"><path d="M1 11c6-6 10 2 16-3s10-2 16-4" fill="none" stroke="#9C6633" stroke-width="1"/><path d="M1 15c7-5 11 0 17-3s10-2 15-3" fill="none" stroke="#9C6633" stroke-width="1.8"/></svg><span data-i18n="leg.hoehe">Höhenlinie</span></li>
+        <li><svg viewBox="0 0 34 16" aria-hidden="true"><g stroke="#6B6763" stroke-width="1.1"><path d="M3 3l2 6M8 2l1.5 7M13 3l1 6M18 2l2 8M23 3l1 6M28 2l2 7M6 9l1 5M16 10l2 5M26 9l1 5"/></g></svg><span data-i18n="leg.fels">Fels</span></li>
+        <li><svg viewBox="0 0 34 16" aria-hidden="true"><rect x="0.5" y="0.5" width="33" height="15" fill="#D3E5C3" stroke="#3E6B3A" stroke-width=".8"/><g fill="none" stroke="#3E6B3A" stroke-width=".9"><circle cx="7" cy="5" r="1.6"/><circle cx="17" cy="10" r="1.6"/><circle cx="27" cy="5" r="1.6"/></g></svg><span data-i18n="leg.wald">Wald</span></li>
+        <li><svg viewBox="0 0 34 16" aria-hidden="true"><rect x="0.5" y="0.5" width="33" height="15" fill="#E1EEF7" stroke="#5A93C4" stroke-width=".8"/><path d="M2 11c7-4 12 1 18-2s8-3 12-2" fill="none" stroke="#5A93C4" stroke-width="1"/></svg><span data-i18n="leg.eis">Gletscher</span></li>
+        <li><svg viewBox="0 0 34 16" aria-hidden="true"><path d="M1 9c8-6 12 4 18 0s10-3 14-2" fill="none" stroke="#2B679C" stroke-width="4.5"/><path d="M1 9c8-6 12 4 18 0s10-3 14-2" fill="none" stroke="#E1EEF7" stroke-width="2"/></svg><span data-i18n="leg.wasser">Gewässer</span></li>
+        <li><svg viewBox="0 0 34 16" aria-hidden="true"><path d="M1 8h32" stroke="#C42A1F" stroke-width="2.6" stroke-dasharray="6 4"/></svg><span data-i18n="leg.weg">Weg</span></li>
+        <li><svg viewBox="0 0 34 16" aria-hidden="true"><path d="M10 8 17 2l7 6v7H10z" fill="#C42A1F" stroke="#201C17" stroke-width="1" stroke-linejoin="round"/></svg><span data-i18n="leg.huette">Hütte</span></li>
+        <li><svg viewBox="0 0 34 16" aria-hidden="true"><path d="M17 1.5 24 14.5H10z" fill="none" stroke="#201C17" stroke-width="1.3"/><circle cx="17" cy="10.5" r="1.7" fill="#201C17"/></svg><span data-i18n="leg.punkt">Vermessungspunkt</span></li>
+        <li><svg viewBox="0 0 34 16" aria-hidden="true"><circle cx="17" cy="8" r="6.3" fill="#FBF9F3" stroke="#C42A1F" stroke-width="2"/><circle cx="17" cy="8" r="2.4" fill="#C42A1F"/></svg><span data-i18n="leg.ziel">Ziel</span></li>
+      </ul>
+      <div class="massstab">
+        <svg viewBox="0 0 166 30" width="166" height="30" aria-hidden="true"><g font-family="Barlow Semi Condensed, sans-serif" font-size="11" fill="#4A4038"><text x="4" y="10">0</text><text x="72" y="10">500 m</text><text x="146" y="10">1 km</text></g><rect x="7.5" y="16.5" width="151.2" height="7" fill="#FBF9F3" stroke="#201C17"/><rect x="7.5" y="16.5" width="37.8" height="7" fill="#201C17"/><rect x="83.1" y="16.5" width="37.8" height="7" fill="#201C17"/></svg>
+        <span data-i18n="leg.massstab">Maßstab 1:25.000</span>
+      </div>
+    </aside>
+  </section>
+
+  <section class="blatt abschnitt" id="unternehmen" aria-labelledby="u-titel">
+    <h2 class="ueberschrift" id="u-titel" data-i18n="u.titel">Unternehmen, die ich selbst aufbaue</h2>
+    <ol class="huetten">
+      <li class="huette" data-seite="l" style="--x:66%">
+        <svg class="sym" data-wp="h1" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11.5 12 4l8.5 7.5V20h-17z" fill="#C42A1F" stroke="#201C17" stroke-width="1.3" stroke-linejoin="round"/></svg>
+        <div class="etikett tafel">
+          <h3><a href="https://neojuris.ai" target="_blank" rel="noopener">neojuris.ai<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg><span class="nur-sr" data-i18n="neu">(öffnet in neuem Tab)</span></a></h3>
+          <p data-i18n="u.1">KI-Software für juristische Arbeit. Recherche, Entwürfe und Prüfung von Dokumenten für Kanzleien und Rechtsabteilungen.</p>
+        </div>
+      </li>
+      <li class="huette" data-seite="r" style="--x:16%;--dy:8px">
+        <svg class="sym" data-wp="h2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11.5 12 4l8.5 7.5V20h-17z" fill="#C42A1F" stroke="#201C17" stroke-width="1.3" stroke-linejoin="round"/></svg>
+        <div class="etikett tafel">
+          <h3><a href="https://immobily.io" target="_blank" rel="noopener">immobily.io<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg><span class="nur-sr" data-i18n="neu">(öffnet in neuem Tab)</span></a></h3>
+          <p data-i18n="u.2">Software für Immobilien. Digitale Werkzeuge für Eigentümer, Verwalter und Makler.</p>
+        </div>
+      </li>
+      <li class="huette" data-seite="l" style="--x:84%;--dy:4px">
+        <svg class="sym" data-wp="h3" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11.5 12 4l8.5 7.5V20h-17z" fill="#C42A1F" stroke="#201C17" stroke-width="1.3" stroke-linejoin="round"/></svg>
+        <div class="etikett tafel">
+          <h3><a href="https://beamswerk.ai" target="_blank" rel="noopener">beamswerk.ai<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg><span class="nur-sr" data-i18n="neu">(öffnet in neuem Tab)</span></a></h3>
+          <p data-i18n="u.3">KI-Anwendungen für Unternehmen. Automatisierung von Abläufen, die heute noch von Hand laufen.</p>
+        </div>
+      </li>
+      <li class="huette" data-seite="r" style="--x:36%">
+        <svg class="sym" data-wp="h4" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 11.5 12 4l8.5 7.5V20h-17z" fill="#C42A1F" stroke="#201C17" stroke-width="1.3" stroke-linejoin="round"/></svg>
+        <div class="etikett tafel">
+          <h3><a href="https://diekryptologen.com/" target="_blank" rel="noopener">Die Kryptologen<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg><span class="nur-sr" data-i18n="neu">(öffnet in neuem Tab)</span></a></h3>
+          <p data-i18n="u.4">Der Krypto-Podcast aus Wien. Bitcoin, Blockchain und Kryptoökonomie verständlich eingeordnet.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="blatt abschnitt" id="gesucht" aria-labelledby="g-titel">
+    <h2 class="ueberschrift" id="g-titel" data-i18n="g.titel">Ich suche Startups und Immobilien.</h2>
+    <div class="einleitung tafel"><p data-i18n="g.intro">tenverde investiert eigenes Kapital und hält langfristig. Ich entscheide selbst und schnell, ohne Fonds und ohne Komitee.</p></div>
+    <svg class="gabel" data-wp="gabel" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5.5" fill="#C42A1F" stroke="#FBF9F3" stroke-width="2.5"/></svg>
+    <div class="routen">
+      <article class="route tafel" aria-labelledby="r1-titel">
+        <svg class="wp-start" data-wp="r1s" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7" fill="#FBF9F3" stroke="#C42A1F" stroke-width="3"/></svg>
+        <h3 id="r1-titel" data-i18n="r1.titel">Startup-Beteiligungen</h3>
+        <dl class="fakten">
+          <div class="fakt"><dt data-i18n="r1.k1">Phase</dt><dd data-i18n="r1.v1">Pre-Seed, Seed</dd></div>
+          <div class="fakt"><dt data-i18n="r1.k2">Branchen</dt><dd data-i18n="r1.v2">Software, KI, LegalTech, PropTech</dd></div>
+          <div class="fakt"><dt data-i18n="r1.k3">Region</dt><dd data-i18n="r1.v3">Österreich, Deutschland, Schweiz</dd></div>
+          <div class="fakt"><dt data-i18n="r1.k4">Ticket</dt><dd data-i18n="r1.v4">nach Absprache</dd></div>
+          <div class="fakt"><dt data-i18n="r1.k5">Dazu</dt><dd data-i18n="r1.v5">Erfahrung aus Gründung, Produkt und Recht. Kontakte zu Kanzleien und in die Immobilienbranche.</dd></div>
+        </dl>
+        <a class="wegweiser" href="mailto:office@tenverde.at?subject=Pitch%20Deck"><span class="flagge" aria-hidden="true"></span><span class="tafel-gelb"><span class="ww-ziel" data-i18n="r1.cta">Pitch Deck senden</span><span class="ww-adr">office@tenverde.at</span></span><span class="wp-ende" data-wp="r1e" aria-hidden="true"></span></a>
+      </article>
+      <article class="route tafel" aria-labelledby="r2-titel">
+        <svg class="wp-start" data-wp="r2s" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7" fill="#FBF9F3" stroke="#C42A1F" stroke-width="3"/></svg>
+        <h3 id="r2-titel" data-i18n="r2.titel">Immobilien</h3>
+        <dl class="fakten">
+          <div class="fakt"><dt data-i18n="r2.k1">Objekte</dt><dd data-i18n="r2.v1">Wohnhäuser, Zinshäuser, Grundstücke mit Widmung</dd></div>
+          <div class="fakt"><dt data-i18n="r2.k2">Region</dt><dd data-i18n="r2.v2">Tirol und Westösterreich</dd></div>
+          <div class="fakt"><dt data-i18n="r2.k3">Zustand</dt><dd data-i18n="r2.v3">Bestand, gern mit Sanierungs- oder Entwicklungsbedarf</dd></div>
+          <div class="fakt"><dt data-i18n="r2.k4">Ankauf</dt><dd data-i18n="r2.v4">direkt von Eigentümern oder über Makler, auch off-market</dd></div>
+        </dl>
+        <a class="wegweiser" href="mailto:office@tenverde.at?subject=Immobilie"><span class="flagge" aria-hidden="true"></span><span class="tafel-gelb"><span class="ww-ziel" data-i18n="r2.cta">Exposé senden</span><span class="ww-adr">office@tenverde.at</span></span><span class="wp-ende" data-wp="r2e" aria-hidden="true"></span></a>
+      </article>
+    </div>
+  </section>
+
+  <section class="blatt abschnitt" id="ueber" aria-labelledby="m-titel">
+    <div class="autor tafel">
+      <svg class="wp-autor" data-wp="autor" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 3 31 29H3z" fill="#FBF9F3" stroke="#201C17" stroke-width="2" stroke-linejoin="round"/><circle cx="17" cy="20" r="3.2" fill="#201C17"/></svg>
+      <figure class="portraet">
+        <svg id="portraet-linien" viewBox="0 0 240 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"></svg>
+        <figcaption data-i18n="m.portraet">Porträt Lukas Leys folgt</figcaption>
+      </figure>
+      <div class="autor-text">
+        <h2 id="m-titel">Lukas Leys</h2>
+        <p class="rolle" data-i18n="m.rolle">Gründer und Geschäftsführer der tenverde GmbH</p>
+        <p class="text" data-i18n="m.text">Ich gründe Softwareunternehmen und investiere in junge Firmen und in Immobilien. tenverde bündelt das unter einem Dach. Was ich aufbaue, will ich lange halten und in Ruhe wachsen lassen.</p>
+        <a class="verweis" href="https://www.linkedin.com/in/lukasleys/" target="_blank" rel="noopener"><span data-i18n="m.link">Profil auf LinkedIn</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg><span class="nur-sr" data-i18n="neu">(öffnet in neuem Tab)</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="blatt kontakt" id="kontakt" aria-labelledby="k-titel">
+    <div>
+      <h2 id="k-titel" data-i18n="k.titel">Schreiben Sie mir.</h2>
+      <a class="mail" href="mailto:office@tenverde.at">office@tenverde.at</a><br>
+      <address class="anschrift tafel">tenverde GmbH<br>Kirschentalgasse 14/D21<br>6020 Innsbruck<br><span data-i18n="k.land">Österreich</span></address>
+    </div>
+    <div class="ziel">
+      <svg class="wp-ziel" data-wp="ziel" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="24" fill="#FBF9F3" stroke="#C42A1F" stroke-width="4"/><circle cx="28" cy="28" r="13" fill="none" stroke="#C42A1F" stroke-width="2"/><circle cx="28" cy="28" r="5.5" fill="#C42A1F"/></svg>
+      <p class="ortsname">Innsbruck</p>
+      <p class="koord" data-i18n="k.koord">47,2692° N · 11,4041° O</p>
+    </div>
+  </section>
+</main>
+
+<footer class="leiste">
+  <div class="leiste-innen">
+    <span>© 2026 tenverde GmbH</span>
+    <a href="../impressum.html" data-i18n="f.imp">Impressum</a>
+    <a href="../impressum.html#datenschutz" data-i18n="f.ds">Datenschutz</a>
+    <span class="hinweis" data-i18n="f.hinweis">Gelände frei erzeugt. Kein amtliches Kartenwerk.</span>
+  </div>
+</footer>
+
+<script src="karte.js" defer></script>
+</body>
+</html>
