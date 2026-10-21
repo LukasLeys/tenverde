@@ -557,9 +557,9 @@ p { margin: 0; }
 }
 .portrait {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1080 / 1024;
   width: 100%;
-  max-width: 26rem;
+  max-width: 22rem;
   border-radius: 999px 999px 2rem 2rem;
   overflow: hidden;
   display: flex;
@@ -572,7 +572,7 @@ p { margin: 0; }
     var(--loam-2);
   box-shadow: 0 0 0 1px rgba(187, 168, 244, 0.28) inset, 0 30px 80px rgba(0, 0, 0, 0.45);
 }
-.portrait img { object-fit: cover; object-position: 50% 30%; }
+.portrait img { object-fit: cover; object-position: 50% 0; }
 /* Unten weich in den Waldboden, Rand im Lila der Lichtung */
 .portrait::after {
   content: "";
@@ -757,7 +757,7 @@ p { margin: 0; }
   .clearings--zeilen { row-gap: clamp(2rem, 4vw, 4rem); }
   .clearings--zeilen > .clearing { display: block; grid-row: auto; }
   .about { grid-template-columns: minmax(0, 1fr); }
-  .portrait { max-width: 20rem; }
+  .portrait { max-width: 17rem; }
 }
 
 @media (max-width: 520px) {

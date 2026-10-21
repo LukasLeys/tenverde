@@ -134,7 +134,7 @@ export function KontaktBluete({ sprache, titel, mitHinweis }: { sprache: Sprache
 export function Portraet({ text }: { text: string }) {
   return (
     <div className="portrait" data-calm="" data-anchor="" data-ring="">
-      <Image src={lukasLeys} alt={text} fill sizes="(max-width: 860px) 20rem, 26rem" placeholder="blur" />
+      <Image src={lukasLeys} alt={text} fill sizes="(max-width: 860px) 17rem, 22rem" placeholder="blur" />
     </div>
   );
 }
