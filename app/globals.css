@@ -497,6 +497,22 @@ p { margin: 0; }
   text-shadow: 0 0 24px color-mix(in oklab, var(--c) 60%, transparent);
 }
 .growth .ext:hover { color: var(--bloom); }
+/* Name mit Kategorie, Logo des Projekts klein vor der Adresse */
+.growth__kopf { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; }
+.pille {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.3;
+  white-space: nowrap;
+  color: color-mix(in oklab, var(--c) 85%, var(--bloom));
+  background: color-mix(in oklab, var(--c) 9%, rgba(9, 15, 11, 0.7));
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--c) 45%, transparent) inset;
+}
+.growth .ext__logo { width: 24px; height: 24px; flex: none; border-radius: 6px; }
 .growth .ext:hover svg { transform: translate(2px, -2px); }
 
 /* Lichtungen */

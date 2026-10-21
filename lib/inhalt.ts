@@ -1,3 +1,7 @@
+import type { StaticImageData } from 'next/image';
+import logoImmobily from '@/bilder/projekte/immobily.png';
+import logoKryptologen from '@/bilder/projekte/kryptologen.png';
+import logoNeojuris from '@/bilder/projekte/neojuris.png';
 import type { Seite, Sprache } from './routen';
 
 export type NavEintrag = { seite: Seite; text: string };
@@ -22,7 +26,10 @@ export type Projekt = {
   anzeige: string;
   art: 'leaf-1' | 'leaf-2' | 'leaf-3' | 'leaf-4' | 'leaf-5';
   farbe: 'cyan' | 'moss' | 'lilac' | 'ice';
+  /** Kategorie, als Pille neben dem Namen. */
   feld: string;
+  /** App-Symbol des Projekts, klein vor der Adresse im Link. */
+  logo?: StaticImageData;
   text: string;
 };
 
@@ -118,7 +125,8 @@ const de = {
       anzeige: 'neojuris.ai',
       art: 'leaf-4',
       farbe: 'cyan',
-      feld: 'Recht und KI',
+      feld: 'Legal Tech',
+      logo: logoNeojuris,
       text: 'KI-Software für juristische Arbeit. Recherche, Entwürfe und Prüfung von Dokumenten für Kanzleien und Rechtsabteilungen.',
     },
     {
@@ -127,7 +135,8 @@ const de = {
       anzeige: 'immobily.io',
       art: 'leaf-2',
       farbe: 'moss',
-      feld: 'Immobilien',
+      feld: 'Immobilienverwaltung',
+      logo: logoImmobily,
       text: 'KI-Agent für Immobilien in Österreich. Behält Immobilie, Markt und Recht im Blick, erkennt Chancen und erinnert rechtzeitig. Für Eigentümer, Vermieter, Makler und Investoren.',
     },
     {
@@ -135,7 +144,7 @@ const de = {
       anzeige: 'beamswerk.ai',
       art: 'leaf-5',
       farbe: 'lilac',
-      feld: 'KI für Unternehmen',
+      feld: 'HR-Tech',
       text: 'KI-Anwendungen für Unternehmen. Automatisierung von Abläufen, die heute noch von Hand laufen.',
     },
     {
@@ -145,6 +154,7 @@ const de = {
       art: 'leaf-1',
       farbe: 'ice',
       feld: 'Podcast',
+      logo: logoKryptologen,
       text: 'Der Krypto-Podcast aus Wien. Bitcoin, Blockchain und Kryptoökonomie verständlich eingeordnet.',
     },
   ] satisfies Projekt[],
@@ -417,9 +427,9 @@ const en: Inhalt = {
   },
 
   projekte: [
-    { ...de.projekte[0], feld: 'Law and AI', text: 'AI software for legal work. Research, drafting and document review for law firms and in-house teams.' },
-    { ...de.projekte[1], feld: 'Real estate', text: 'AI agent for real estate in Austria. Keeps an eye on property, market and law, spots opportunities and sends timely reminders. For owners, landlords, agents and investors.' },
-    { ...de.projekte[2], feld: 'AI for businesses', text: 'AI applications for businesses. Automating workflows that still run by hand today.' },
+    { ...de.projekte[0], feld: 'Legal tech', text: 'AI software for legal work. Research, drafting and document review for law firms and in-house teams.' },
+    { ...de.projekte[1], feld: 'Property management', text: 'AI agent for real estate in Austria. Keeps an eye on property, market and law, spots opportunities and sends timely reminders. For owners, landlords, agents and investors.' },
+    { ...de.projekte[2], feld: 'HR tech', text: 'AI applications for businesses. Automating workflows that still run by hand today.' },
     { ...de.projekte[3], feld: 'Podcast', text: 'The crypto podcast from Vienna. Bitcoin, blockchain and the crypto economy explained clearly.' },
   ],
 

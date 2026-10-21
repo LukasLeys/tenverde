@@ -15,9 +15,23 @@ export async function spracheAus(params: Promise<{ lang: string }>): Promise<Spr
   return lang;
 }
 
-export function ExternerLink({ href, children, className, neuerTab }: { href: string; children: React.ReactNode; className?: string; neuerTab: string }) {
+export function ExternerLink({
+  href,
+  children,
+  className,
+  neuerTab,
+  vor,
+}: {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+  neuerTab: string;
+  /** Steht vor dem Linktext, z. B. ein Logo. */
+  vor?: React.ReactNode;
+}) {
   return (
     <a className={className} href={href} target="_blank" rel="noopener">
+      {vor}
       <span>{children}</span>
       <span className="sr-only"> {neuerTab}</span>
       <Icon name="arrow" />
@@ -34,10 +48,18 @@ export function Projekte({ projekte, neuerTab, websiteFolgt }: { projekte: Proje
             <use href={`#${p.art}`} />
           </svg>
           <div className="growth__body" data-calm="">
-            <h3>{p.name}</h3>
+            <div className="growth__kopf">
+              <h3>{p.name}</h3>
+              <span className="pille">{p.feld}</span>
+            </div>
             <p>{p.text}</p>
             {p.url ? (
-              <ExternerLink className="ext" href={p.url} neuerTab={neuerTab}>
+              <ExternerLink
+                className="ext"
+                href={p.url}
+                neuerTab={neuerTab}
+                vor={p.logo ? <Image className="ext__logo" src={p.logo} alt="" width={24} height={24} /> : null}
+              >
                 {p.anzeige}
               </ExternerLink>
             ) : (
