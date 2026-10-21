@@ -1,6 +1,6 @@
 # tenverde Logo-Set
 
-Erzeugt mit `node tools/marke.mjs` gegen die laufende Website (`npm run build && npm start`). Die Wortmarke ist Geist 500 als Pfad (`quelle/wortmarke.json`, aus `@fontsource-variable/geist` gezogen). Blatt, Schriftzug und Abstand stehen im selben Verhältnis wie im Kopf der Website.
+Erzeugt mit `node tools/marke.mjs` gegen die laufende Website (`npm run build && npm start`). Die Wortmarke ist Geist 500 als Pfad (`quelle/wortmarke.json`, aus `@fontsource-variable/geist` gezogen). Blatt, Schriftzug und Abstand stehen im selben Verhältnis wie im Kopf der Website. Sichtbarer Abstand von der Blattkante bis zum t: 0,34 der Schriftgröße.
 
 ## Inhalt
 

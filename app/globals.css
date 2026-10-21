@@ -141,7 +141,8 @@ body::after {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.42rem;
+  /* Sichtbarer Abstand Blatt bis t: 0,34 em, wie im Logo (marke/). Das Blatt füllt sein Feld nicht ganz aus. */
+  gap: 0;
   min-height: 44px;
   text-decoration: none;
   color: var(--bloom);
@@ -154,6 +155,7 @@ body::after {
   filter: drop-shadow(0 0 8px rgba(134, 232, 223, 0.55));
 }
 .brand span {
+  margin-left: -0.03em;
   font-family: var(--f-display);
   font-weight: 500;
   font-size: 1.4rem;

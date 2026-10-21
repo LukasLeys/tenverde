@@ -17,11 +17,13 @@ const FARBEN = {
   schwarz: { blatt: '#090f0b', wort: '#090f0b', name: 'Einfarbig dunkel' },
 };
 
-// Maße in Einheiten der Schriftgröße 100 (Seitenkopf: Blatt 30 px, Schrift 22,4 px, Abstand 0,42rem)
+// Maße in Einheiten der Schriftgröße 100 (Seitenkopf: Blatt 30 px, Schrift 22,4 px).
+// Sichtbarer Abstand von der Blattkante bis zum t: 0,34 em (Variante B, gewählt am 21.10.2026).
 const FS = 100;
 const BLATT_GROESSE = (30 / 22.4) * FS;
-const ABSTAND = (0.42 / 1.4) * FS;
 const s = FS / WORT.upm;
+const BLATT_RECHTS = 48.71; // sichtbare rechte Kante des gedrehten Blatts im 64er-Feld
+const ABSTAND = (BLATT_RECHTS / 64) * BLATT_GROESSE + 0.34 * FS - WORT.xmin * s - BLATT_GROESSE;
 
 function blatt(farbe, x, y, groesse) {
   const k = groesse / 64;
