@@ -6,7 +6,7 @@ Stand: 20.10.2026. Zu jeder Frage steht, was die Website heute zeigt, und meine 
 
 1. **Firmenbuchnummer:** Erledigt am 21.10.2026: FN 485841 y (bisher kontractory GmbH, Handelsgericht Wien). Die Umbenennung in tenverde GmbH und die Sitzverlegung nach Innsbruck sind für Anfang November 2026 angekündigt. Das Impressum zeigt schon tenverde GmbH, Innsbruck und Landesgericht Innsbruck. *Nach der Eintragung prüfen:* Name, Sitz und Firmenbuchgericht im Firmenbuch.
 2. **UID-Nummer:** Erledigt am 21.10.2026: ATU73321005.
-3. **Unternehmensgegenstand:** Stimmt „Beteiligungen, Softwareentwicklung, Immobilien“, oder wie steht er im Gesellschaftsvertrag? *Heute:* mit „prüfen“ markiert.
+3. **Unternehmensgegenstand:** Erledigt am 21.10.2026: bleibt wie im Firmenbuch, „IT-Dienstleistungen, digitale Vermittlung von Rechtsdienstleistungen und Beratung zur Digitalisierung des Rechtsdienstleistungsmarkts“ (Wortlaut laut FirmenABC, mit dem Gesellschaftsvertrag abgleichen).
 4. **Gewerbe und Kammer:** Hat die GmbH eine Gewerbeberechtigung, und ist sie Mitglied der Wirtschaftskammer Tirol, mit welcher Fachgruppe? Ohne Gewerbe entfallen die Angaben nach § 63 GewO (Aufsichtsbehörde, Gewerbeordnung). *Heute:* „Mitglied der WK Tirol, prüfen“ und „Aufsichtsbehörde Stadtmagistrat Innsbruck“.
 5. **Offenlegung nach § 25 MedienG:** Gesellschafter Lukas Leys mit 100 % ist seit 21.10.2026 eingetragen (laut Firmenbuchauszug über FirmenABC).
 6. **Server-Logs:** Wie lange sollen sie gespeichert werden? Vercel gibt die Dauer je nach Tarif vor. *Heute:* Platzhalter „Frist ergänzen“.

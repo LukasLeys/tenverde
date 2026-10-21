@@ -40,8 +40,9 @@ export default async function Impressum({ params }: { params: Promise<{ lang: st
           {de ? 'Geschäftsführer' : 'Managing director'}: Mag. Lukas Leys, MSc, BSc
           <br />
           {de ? 'Unternehmensgegenstand' : 'Business purpose'}:{' '}
-          {de ? 'Beteiligungen, Softwareentwicklung, Immobilien' : 'investments, software development, real estate'}{' '}
-          <Platzhalter>{de ? 'prüfen' : 'check'}</Platzhalter>
+          {de
+            ? 'IT-Dienstleistungen, digitale Vermittlung von Rechtsdienstleistungen und Beratung zur Digitalisierung des Rechtsdienstleistungsmarkts'
+            : 'IT services, digital brokerage of legal services and consulting on the digitalisation of the legal services market'}
           <br />
           {de ? 'Firmenbuchnummer' : 'Company register number'}: FN 485841 y
           <br />
