@@ -37,17 +37,17 @@ export default async function Impressum({ params }: { params: Promise<{ lang: st
           {ADRESSE.ort}, {de ? 'Österreich' : 'Austria'}
         </p>
         <p>
-          {de ? 'Geschäftsführer' : 'Managing director'}: Lukas Leys
+          {de ? 'Geschäftsführer' : 'Managing director'}: Mag. Lukas Leys, MSc, BSc
           <br />
           {de ? 'Unternehmensgegenstand' : 'Business purpose'}:{' '}
           {de ? 'Beteiligungen, Softwareentwicklung, Immobilien' : 'investments, software development, real estate'}{' '}
           <Platzhalter>{de ? 'prüfen' : 'check'}</Platzhalter>
           <br />
-          {de ? 'Firmenbuchnummer' : 'Company register number'}: <Platzhalter>FN</Platzhalter>
+          {de ? 'Firmenbuchnummer' : 'Company register number'}: FN 485841 y
           <br />
           {de ? 'Firmenbuchgericht: Landesgericht Innsbruck' : 'Register court: Regional Court of Innsbruck'}
           <br />
-          {de ? 'UID-Nummer' : 'VAT ID'}: <Platzhalter>ATU</Platzhalter>
+          {de ? 'UID-Nummer' : 'VAT ID'}: ATU73321005
         </p>
         <p>
           {de ? 'E-Mail' : 'Email'}: <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
@@ -67,8 +67,8 @@ export default async function Impressum({ params }: { params: Promise<{ lang: st
         </p>
         <p>
           {de
-            ? 'Medieninhaber und Herausgeber: tenverde GmbH. Grundlegende Richtung: Information über die Tätigkeiten der Gesellschaft und ihres Geschäftsführers.'
-            : "Media owner and publisher: tenverde GmbH. Purpose: information about the company's activities and its managing director."}
+            ? 'Medieninhaber und Herausgeber: tenverde GmbH. Gesellschafter: Lukas Leys (100 %). Grundlegende Richtung: Information über die Tätigkeiten der Gesellschaft und ihres Geschäftsführers.'
+            : "Media owner and publisher: tenverde GmbH. Shareholder: Lukas Leys (100 %). Purpose: information about the company's activities and its managing director."}
         </p>
         <h2>{de ? 'Haftung für Links' : 'Liability for links'}</h2>
         <p>

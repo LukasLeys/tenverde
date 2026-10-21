@@ -54,6 +54,7 @@ export default async function Layout({ children, params }: { children: ReactNode
         url: DOMAIN,
         email: EMAIL,
         telephone: TELEFON.href.replace('tel:', ''),
+        vatID: 'ATU73321005',
         logo: `${DOMAIN}/icon.svg`,
         address: {
           '@type': 'PostalAddress',

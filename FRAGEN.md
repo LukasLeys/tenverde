@@ -4,11 +4,11 @@ Stand: 20.10.2026. Zu jeder Frage steht, was die Website heute zeigt, und meine 
 
 ## A. Pflichtangaben und Recht (blockiert die Freischaltung für Suchmaschinen)
 
-1. **Firmenbuchnummer:** Wie lautet die FN der tenverde GmbH? *Heute:* markierter Platzhalter im Impressum.
-2. **UID-Nummer:** Wie lautet die ATU-Nummer? *Heute:* Platzhalter.
+1. **Firmenbuchnummer:** Erledigt am 21.10.2026: FN 485841 y (bisher kontractory GmbH, Handelsgericht Wien). Die Umbenennung in tenverde GmbH und die Sitzverlegung nach Innsbruck sind für Anfang November 2026 angekündigt. Das Impressum zeigt schon tenverde GmbH, Innsbruck und Landesgericht Innsbruck. *Nach der Eintragung prüfen:* Name, Sitz und Firmenbuchgericht im Firmenbuch.
+2. **UID-Nummer:** Erledigt am 21.10.2026: ATU73321005.
 3. **Unternehmensgegenstand:** Stimmt „Beteiligungen, Softwareentwicklung, Immobilien“, oder wie steht er im Gesellschaftsvertrag? *Heute:* mit „prüfen“ markiert.
 4. **Gewerbe und Kammer:** Hat die GmbH eine Gewerbeberechtigung, und ist sie Mitglied der Wirtschaftskammer Tirol, mit welcher Fachgruppe? Ohne Gewerbe entfallen die Angaben nach § 63 GewO (Aufsichtsbehörde, Gewerbeordnung). *Heute:* „Mitglied der WK Tirol, prüfen“ und „Aufsichtsbehörde Stadtmagistrat Innsbruck“.
-5. **Offenlegung nach § 25 MedienG:** Wer sind die Gesellschafter? Für kleine Websites reicht meist die verkürzte Offenlegung, die heute drinsteht. *Empfehlung:* so lassen, außer deine Kanzlei sieht es anders.
+5. **Offenlegung nach § 25 MedienG:** Gesellschafter Lukas Leys mit 100 % ist seit 21.10.2026 eingetragen (laut Firmenbuchauszug über FirmenABC).
 6. **Server-Logs:** Wie lange sollen sie gespeichert werden? Vercel gibt die Dauer je nach Tarif vor. *Heute:* Platzhalter „Frist ergänzen“.
 7. **Vercel und Datenschutz:** Ist der Auftragsverarbeitungsvertrag mit Vercel für das Team NeoJuris akzeptiert? Darf der Text zur Datenübermittlung in die USA so stehen? *Heute:* Vercel als Hoster eingetragen, Serverfunktionen in Frankfurt, Absatz als „rechtlich prüfen“ markiert.
 8. **Rechtliche Prüfung:** Soll eine Kanzlei Impressum und Datenschutz vor dem Livegang lesen? *Empfehlung:* ja, kurz, da die Seite Pitch Decks und Exposés einwirbt.
@@ -21,7 +21,7 @@ Stand: 20.10.2026. Zu jeder Frage steht, was die Website heute zeigt, und meine 
 12. **neojuris.ai:** Passt „KI-Software für juristische Arbeit. Recherche, Entwürfe und Prüfung von Dokumenten für Kanzleien und Rechtsabteilungen.“?
 13. **Die Kryptologen:** Welche Rolle hast du dort (Gründer, Host, Mitherausgeber)? Stimmt „Der Krypto-Podcast aus Wien“?
 14. **Lebenslauf aus öffentlichen Profilen:** Was davon stimmt, mit welchen Jahreszahlen, und was soll auf die Seite? *Heute:* nicht sichtbar, nur in der Vorschau mit `TENVERDE_VORSCHAU=1`.
-    - kontractory, Wien, Gründer und CEO, seit 2020
+    - kontractory, Wien, Gründer und CEO, seit 2020. Laut Firmenbuch gegründet 2018, und es ist dieselbe GmbH, die zur tenverde GmbH wird. Soll die Station dann wegfallen oder als Vorgeschichte von tenverde stehen?
     - Rechtsfux, Gründer, 2018
     - Podcast Krypto.Logisch, 2021 bis 2023
     - Validvent, Mitgründer, Krypto-Beratung und Staking
