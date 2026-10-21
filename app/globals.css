@@ -358,8 +358,10 @@ p { margin: 0; }
   padding-top: 6rem;
   padding-bottom: 5rem;
 }
+.hero { gap: clamp(1.5rem, 3vw, 3rem); }
 .hero__text {
-  max-width: 44rem;
+  flex: 0 1 min(38rem, 54%);
+  min-width: 0;
   position: relative;
 }
 .hero h1 { max-width: 11.5ch; }
@@ -394,6 +396,20 @@ p { margin: 0; }
   aspect-ratio: 1;
   transform: translateY(-50%);
   pointer-events: none;
+}
+/* Startseite: die Rosette nimmt den freien Platz rechts neben dem Text ein und überlagert ihn nicht */
+.hero > .rosette-anchor {
+  position: relative;
+  right: auto;
+  top: auto;
+  transform: none;
+  order: 2;
+  flex: 1 1 0;
+  min-width: 0;
+  width: auto;
+  max-width: 46rem;
+  margin-left: auto;
+  margin-right: calc(-1 * var(--gutter));
 }
 
 /* Abschnitte */
@@ -723,13 +739,19 @@ p { margin: 0; }
     padding-top: 44svh;
     padding-bottom: 3rem;
   }
-  .rosette-anchor {
+  .rosette-anchor,
+  .hero > .rosette-anchor {
+    position: absolute;
     right: auto;
     left: 50%;
     top: 4.25rem;
     width: min(80vw, 26rem);
+    max-width: none;
+    margin: 0;
+    flex: none;
     transform: translateX(-50%);
   }
+  .hero__text { flex: 0 1 auto; }
 
   .growths { grid-template-columns: minmax(0, 1fr); row-gap: 4rem; }
   .growth:nth-child(n) { grid-column: 1 / -1; margin-top: 0; }
