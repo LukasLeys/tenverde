@@ -1,8 +1,10 @@
+import Image from 'next/image';
 import Link from 'next/link';
+import lukasLeys from '@/bilder/lukas-leys.jpg';
 import { ADRESSE, EMAIL, TELEFON, inhalt, type Kriterium, type Projekt } from '@/lib/inhalt';
 import { istSprache, type Sprache } from '@/lib/routen';
 import { notFound } from 'next/navigation';
-import { Blatt, Icon } from './Blatt';
+import { Icon } from './Blatt';
 import { KopierAdresse } from './KopierAdresse';
 import { Leuchtwort } from './Leuchtwort';
 
@@ -129,13 +131,10 @@ export function KontaktBluete({ sprache, titel, mitHinweis }: { sprache: Sprache
   );
 }
 
-export function Portraet({ text, art = 'leaf-5' }: { text: string; art?: 'leaf-5' | 'leaf-1' }) {
+export function Portraet({ text }: { text: string }) {
   return (
-    <div className="portrait" role="img" aria-label={text} data-calm="" data-anchor="" data-ring="">
-      <Blatt art={art} />
-      <p className="portrait__label" aria-hidden="true">
-        {text}
-      </p>
+    <div className="portrait" data-calm="" data-anchor="" data-ring="">
+      <Image src={lukasLeys} alt={text} fill sizes="(max-width: 860px) 20rem, 26rem" placeholder="blur" />
     </div>
   );
 }

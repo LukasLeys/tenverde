@@ -30,7 +30,7 @@ Stand: 20.10.2026. Zu jeder Frage steht, was die Website heute zeigt, und meine 
     - Insticore, frühere Station
 15. **Ausbildung:** Studium, Abschlüsse, Jahre? Soll der juristische Hintergrund sichtbar werden? *Heute:* fehlt ganz.
 16. **Jahreszahlen der aktuellen Stationen:** Seit wann gibt es tenverde, neojuris.ai, immobily.io, beamswerk.ai und Die Kryptologen? *Heute:* „heute“.
-17. **Porträt:** Schickst du ein Foto (4:5, mind. 900 × 1125 px)? *Heute:* beschriftete Fläche auf Start und Über mich.
+17. **Porträt:** Erledigt am 21.10.2026, Foto auf Start und Über uns (Ausschnitt 4:5, 819 × 1024 px). Ein Original in höherer Auflösung würde auf großen Bildschirmen noch schärfer wirken.
 18. **Airbnb Superhost:** Soll dein Airbnb-Profil verlinkt werden? Darf die Seite sagen, wie viele Wohnungen du vermietest? *Heute:* nur „Airbnb Superhost“ ohne Zahlen und ohne Link.
 19. **Ticketgröße:** Soll eine Spanne für Startup-Beteiligungen stehen, z. B. „ab € 25.000“? *Heute:* „nach Absprache“.
 20. **Bisherige Beteiligungen:** Darf die Seite Startups nennen, an denen tenverde beteiligt ist? Das wäre der stärkste Beleg für Gründer. *Heute:* keine genannt.
