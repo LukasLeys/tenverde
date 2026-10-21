@@ -7,6 +7,7 @@ export type Kontaktweg = { titel: string; text: string; cta: string; key: 'start
 // Keine Gedankenstriche, keine Emojis, keine erfundenen Zahlen oder Referenzen.
 
 export const EMAIL = 'office@tenverde.at';
+export const TELEFON = { anzeige: '+43 676 331 4708', href: 'tel:+436763314708' };
 export const LINKEDIN = 'https://www.linkedin.com/in/lukasleys/';
 export const ADRESSE = {
   firma: 'tenverde GmbH',
@@ -325,7 +326,7 @@ const de = {
   kontakt: {
     titel: 'Kontakt',
     h1: 'Schreiben Sie uns.',
-    lead: 'Am schnellsten erreichen Sie uns per E-Mail. Sagen Sie kurz, worum es geht, und schicken Sie mit, was Sie haben.',
+    lead: 'Am schnellsten erreichen Sie uns per E-Mail oder Telefon. Sagen Sie kurz, worum es geht, und schicken Sie mit, was Sie haben.',
     wege: [
       { titel: 'Startup', text: 'Pitch Deck, ein paar Sätze zu Team und Produkt, Stand der Runde.', cta: 'Pitch Deck senden', key: 'startups' },
       { titel: 'Immobilie', text: 'Lage, Zimmer, Fläche, Preisvorstellung, Exposé und Fotos.', cta: 'Exposé senden', key: 'immobilien' },
@@ -334,6 +335,7 @@ const de = {
     anliegenH2: 'Worum geht es?',
     adresseH2: 'Post',
     mailHinweis: 'Falls sich kein E-Mail-Programm öffnet, kopieren Sie die Adresse.',
+    telefon: 'Telefon',
   },
 
   rechtliches: {
@@ -549,7 +551,7 @@ const en: Inhalt = {
   kontakt: {
     titel: 'Contact',
     h1: 'Write to us.',
-    lead: 'Email is the fastest way to reach us. Tell us briefly what it is about and send along what you have.',
+    lead: 'Email or phone is the fastest way to reach us. Tell us briefly what it is about and send along what you have.',
     wege: [
       { titel: 'Startup', text: 'Pitch deck, a few sentences on team and product, status of the round.', cta: 'Send pitch deck', key: 'startups' },
       { titel: 'Property', text: 'Location, rooms, floor area, asking price, exposé and photos.', cta: 'Send exposé', key: 'immobilien' },
@@ -558,6 +560,7 @@ const en: Inhalt = {
     anliegenH2: 'What is it about?',
     adresseH2: 'Post',
     mailHinweis: 'If no email app opens, copy the address.',
+    telefon: 'Phone',
   },
 
   rechtliches: {

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ADRESSE, EMAIL, inhalt } from '@/lib/inhalt';
+import { ADRESSE, EMAIL, TELEFON, inhalt } from '@/lib/inhalt';
 import { pfad, type Sprache } from '@/lib/routen';
 import { Blatt } from './Blatt';
 
@@ -32,6 +32,8 @@ export function Fuss({ sprache }: { sprache: Sprache }) {
           {ADRESSE.ort}, {t.ui.land}
           <br />
           <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+          <br />
+          <a href={TELEFON.href}>{TELEFON.anzeige}</a>
         </address>
       </div>
       <div className="wrap foot__base">

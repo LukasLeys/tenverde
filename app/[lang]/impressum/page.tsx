@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { spracheAus } from '@/components/Bausteine';
 import { Leuchtwort } from '@/components/Leuchtwort';
 import { Platzhalter } from '@/components/Platzhalter';
-import { ADRESSE, EMAIL } from '@/lib/inhalt';
+import { ADRESSE, EMAIL, TELEFON } from '@/lib/inhalt';
 import { seitenMeta } from '@/lib/meta';
 import { SPRACHEN } from '@/lib/routen';
 
@@ -51,6 +51,8 @@ export default async function Impressum({ params }: { params: Promise<{ lang: st
         </p>
         <p>
           {de ? 'E-Mail' : 'Email'}: <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+          <br />
+          {de ? 'Telefon' : 'Phone'}: <a href={TELEFON.href}>{TELEFON.anzeige}</a>
         </p>
         <p>
           {de ? 'Mitglied der Wirtschaftskammer Tirol' : 'Member of the Tyrolean Chamber of Commerce'}{' '}

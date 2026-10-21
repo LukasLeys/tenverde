@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { MailKnopf, spracheAus } from '@/components/Bausteine';
 import { KopierAdresse } from '@/components/KopierAdresse';
 import { Leuchtwort } from '@/components/Leuchtwort';
-import { ADRESSE, EMAIL, inhalt } from '@/lib/inhalt';
+import { ADRESSE, EMAIL, TELEFON, inhalt } from '@/lib/inhalt';
 import { seitenMeta } from '@/lib/meta';
 import { SPRACHEN } from '@/lib/routen';
 
@@ -39,6 +39,9 @@ export default async function Kontakt({ params }: { params: Promise<{ lang: stri
               <KopierAdresse adresse={EMAIL} texte={t.ui} />
               <p className="hint">{k.mailHinweis}</p>
             </div>
+            <p className="kontakt-tel">
+              {k.telefon} <a href={TELEFON.href}>{TELEFON.anzeige}</a>
+            </p>
           </div>
         </div>
       </section>

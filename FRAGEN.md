@@ -44,7 +44,7 @@ Stand: 20.10.2026. Zu jeder Frage steht, was die Website heute zeigt, und meine 
 
     *Heute:* 1 bis 5 Zimmer, bevorzugt Neubau, Airbnb willkommen, direkt oder über Makler, auch off-market.
 22. **Projekte bauen:** Was genau willst du mitbauen: Software, Unternehmen, Immobilienprojekte? In welcher Rolle (Mitgründer, Investor, Umsetzer)? *Heute:* allgemein gehalten, Software und KI, Immobilien, Medien als Beispiele.
-23. **Weitere Kanäle:** Neben LinkedIn auch X, Instagram oder ein Podcast-Link? Eine Telefonnummer oder ein Terminlink (Calendly, Cal.com)? *Heute:* nur E-Mail und LinkedIn.
+23. **Weitere Kanäle:** Neben LinkedIn auch X, Instagram oder ein Podcast-Link? Ein Terminlink (Calendly, Cal.com)? *Heute:* E-Mail, Telefon (+43 676 331 4708, seit 21.10.2026) und LinkedIn.
 24. **Englisch:** Soll ein Muttersprachler die englischen Texte gegenlesen? *Empfehlung:* ja, vor allem Strategie und Ankaufsprofil.
 
 ## C. Technik und Betrieb

@@ -6,7 +6,7 @@ import { Sprite } from '@/components/Blatt';
 import { Fuss } from '@/components/Fuss';
 import { Kopf } from '@/components/Kopf';
 import { Unterholz } from '@/components/Unterholz';
-import { ADRESSE, EMAIL, LINKEDIN, inhalt } from '@/lib/inhalt';
+import { ADRESSE, EMAIL, LINKEDIN, TELEFON, inhalt } from '@/lib/inhalt';
 import { DOMAIN, INDEXIEREN, SPRACHEN, istSprache } from '@/lib/routen';
 import { geist } from '@/lib/schriften';
 
@@ -53,6 +53,7 @@ export default async function Layout({ children, params }: { children: ReactNode
         name: 'tenverde GmbH',
         url: DOMAIN,
         email: EMAIL,
+        telephone: TELEFON.href.replace('tel:', ''),
         logo: `${DOMAIN}/icon.svg`,
         address: {
           '@type': 'PostalAddress',

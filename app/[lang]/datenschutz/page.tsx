@@ -59,11 +59,11 @@ export default async function Datenschutz({ params }: { params: Promise<{ lang: 
             : 'The font Geist is served by this website itself. No data is sent to Google or any other font provider.'}
         </p>
 
-        <h3>{de ? 'Kontakt per E-Mail' : 'Contact by email'}</h3>
+        <h3>{de ? 'Kontakt per E-Mail oder Telefon' : 'Contact by email or phone'}</h3>
         <p>
           {de
-            ? 'Wenn Sie uns schreiben, verarbeiten wir Ihre Angaben und mitgesendete Unterlagen wie Pitch Decks, Exposés oder Projektbeschreibungen, um Ihre Anfrage zu bearbeiten (Art. 6 Abs. 1 lit. b und f DSGVO). Wir geben diese Daten nicht ohne Ihre Zustimmung weiter und löschen sie, sobald sie für die Bearbeitung nicht mehr nötig sind und keine gesetzlichen Aufbewahrungspflichten bestehen.'
-            : 'When you write to us, we process your details and any documents you send, such as pitch decks, exposés or project descriptions, to handle your enquiry (Art. 6(1)(b) and (f) GDPR). We do not pass this data on without your consent and delete it once it is no longer needed and no statutory retention period applies.'}
+            ? 'Wenn Sie uns schreiben oder anrufen, verarbeiten wir Ihre Angaben und mitgesendete Unterlagen wie Pitch Decks, Exposés oder Projektbeschreibungen, um Ihre Anfrage zu bearbeiten (Art. 6 Abs. 1 lit. b und f DSGVO). Wir geben diese Daten nicht ohne Ihre Zustimmung weiter und löschen sie, sobald sie für die Bearbeitung nicht mehr nötig sind und keine gesetzlichen Aufbewahrungspflichten bestehen.'
+            : 'When you write to us or call us, we process your details and any documents you send, such as pitch decks, exposés or project descriptions, to handle your enquiry (Art. 6(1)(b) and (f) GDPR). We do not pass this data on without your consent and delete it once it is no longer needed and no statutory retention period applies.'}
         </p>
 
         <h3>{de ? 'Links zu anderen Websites' : 'Links to other websites'}</h3>

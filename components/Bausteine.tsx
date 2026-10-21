@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ADRESSE, EMAIL, inhalt, type Kriterium, type Projekt } from '@/lib/inhalt';
+import { ADRESSE, EMAIL, TELEFON, inhalt, type Kriterium, type Projekt } from '@/lib/inhalt';
 import { istSprache, type Sprache } from '@/lib/routen';
 import { notFound } from 'next/navigation';
 import { Blatt, Icon } from './Blatt';
@@ -121,6 +121,8 @@ export function KontaktBluete({ sprache, titel, mitHinweis }: { sprache: Sprache
           {ADRESSE.strasse}
           <br />
           {ADRESSE.ort}, {t.ui.land}
+          <br />
+          <a href={TELEFON.href}>{TELEFON.anzeige}</a>
         </address>
       </div>
     </section>
