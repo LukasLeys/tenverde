@@ -22,7 +22,7 @@ node tools/pruefe-seiten.mjs http://localhost:3200 --shots <ordner>   # alle Sei
 - `lib/unterholz/engine.js`: die Canvas-Szene (Wurzelnetz, Sporen, Lichtfeld, Blattrosette). Sie liest die Seite über `data-calm`, `data-anchor`, `data-ring`, `data-strong`, `data-bloom`, `.w` und `#rosette`.
 - `components/`: Kopf, Fuß, Bausteine, Blatt-Sprite, Leuchtwörter, Kopierknopf.
 - `app/globals.css`: das gesamte Styling, Farben als Variablen in `:root`.
-- Schriften Jost und Figtree werden selbst gehostet (`lib/schriften.ts`, Dateien aus `@fontsource-variable`).
+- Schrift Geist wird selbst gehostet (`lib/schriften.ts`, Datei aus `@fontsource-variable/geist`).
 - `vorschlaege/` und `design_handoff_tenverde_website/`: Entwurfsrunden und ursprüngliche Bauanleitung, nicht Teil des Builds.
 
 ## Lebenslauf

@@ -43,7 +43,7 @@ export default async function Kontakt({ params }: { params: Promise<{ lang: stri
         </div>
       </section>
 
-      <section className="section section--tight wrap" aria-labelledby="anliegen-title">
+      <section className="section section--tight section--ende wrap" aria-labelledby="anliegen-title">
         <div className="split">
           <div data-calm="">
             <h2 id="anliegen-title">{k.anliegenH2}</h2>

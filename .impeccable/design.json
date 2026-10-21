@@ -203,7 +203,7 @@
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Hauptüberschrift des ersten Bildes, Jost 200, Wörter reagieren auf Licht."
+        "purpose": "Hauptüberschrift des ersten Bildes, Geist 300, Wörter reagieren auf Licht."
       },
       "headline": {
         "displayName": "Headline",
@@ -223,7 +223,7 @@
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Fließtext in Figtree, tabellarische Ziffern."
+        "purpose": "Fließtext in Geist, tabellarische Ziffern."
       },
       "label": {
         "displayName": "Label",
@@ -323,7 +323,7 @@
       "refersTo": "button-bloom",
       "description": "Primäre Handlung, eine pro Ansicht.",
       "html": "<a class=\"ds-btn-bloom\" href=\"#\">Was ich suche</a>",
-      "css": ".ds-btn-bloom{display:inline-flex;align-items:center;min-height:3.5rem;padding:0 1.75rem;border-radius:999px;background:var(--bloom,#f3fff7);color:#08110c;font:600 1.0625rem/1 var(--f-text,Figtree,sans-serif);text-decoration:none;box-shadow:0 0 0 1px rgba(255,255,255,.6) inset,0 6px 24px rgba(190,255,232,.45),0 14px 60px rgba(134,232,223,.35),0 20px 120px rgba(187,168,244,.25);transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s cubic-bezier(.16,1,.3,1)}.ds-btn-bloom:hover{transform:translateY(-2px);box-shadow:0 0 0 1px #fff inset,0 8px 30px rgba(210,255,238,.65),0 18px 80px rgba(134,232,223,.5),0 26px 140px rgba(187,168,244,.35)}.ds-btn-bloom:focus-visible{outline:2px solid #f3fff7;outline-offset:4px}"
+      "css": ".ds-btn-bloom{display:inline-flex;align-items:center;min-height:3.5rem;padding:0 1.75rem;border-radius:999px;background:var(--bloom,#f3fff7);color:#08110c;font:600 1.0625rem/1 var(--f-text,Geist,sans-serif);text-decoration:none;box-shadow:0 0 0 1px rgba(255,255,255,.6) inset,0 6px 24px rgba(190,255,232,.45),0 14px 60px rgba(134,232,223,.35),0 20px 120px rgba(187,168,244,.25);transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s cubic-bezier(.16,1,.3,1)}.ds-btn-bloom:hover{transform:translateY(-2px);box-shadow:0 0 0 1px #fff inset,0 8px 30px rgba(210,255,238,.65),0 18px 80px rgba(134,232,223,.5),0 26px 140px rgba(187,168,244,.35)}.ds-btn-bloom:focus-visible{outline:2px solid #f3fff7;outline-offset:4px}"
     },
     {
       "name": "Leuchtpille Glühen",
@@ -331,7 +331,7 @@
       "refersTo": "button-glow",
       "description": "E-Mail-Handlung in Lichtungen.",
       "html": "<a class=\"ds-btn-glow\" href=\"#\">Pitch Deck senden <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 6h16v12H4zM4 7l8 6 8-6\"/></svg></a>",
-      "css": ".ds-btn-glow{display:inline-flex;align-items:center;gap:.6rem;min-height:3.5rem;padding:0 1.75rem;border-radius:999px;color:#f3fff7;background:rgba(134,232,223,.07);font:600 1.0625rem/1 Figtree,sans-serif;text-decoration:none;box-shadow:0 0 0 1px rgba(134,232,223,.55) inset,0 4px 24px rgba(134,232,223,.12);transition:background-color .35s cubic-bezier(.16,1,.3,1),box-shadow .35s cubic-bezier(.16,1,.3,1)}.ds-btn-glow:hover{background:rgba(134,232,223,.16);box-shadow:0 0 0 1px rgba(190,255,232,.9) inset,0 6px 30px rgba(134,232,223,.28)}.ds-btn-glow:focus-visible{outline:2px solid #f3fff7;outline-offset:4px}"
+      "css": ".ds-btn-glow{display:inline-flex;align-items:center;gap:.6rem;min-height:3.5rem;padding:0 1.75rem;border-radius:999px;color:#f3fff7;background:rgba(134,232,223,.07);font:600 1.0625rem/1 Geist,sans-serif;text-decoration:none;box-shadow:0 0 0 1px rgba(134,232,223,.55) inset,0 4px 24px rgba(134,232,223,.12);transition:background-color .35s cubic-bezier(.16,1,.3,1),box-shadow .35s cubic-bezier(.16,1,.3,1)}.ds-btn-glow:hover{background:rgba(134,232,223,.16);box-shadow:0 0 0 1px rgba(190,255,232,.9) inset,0 6px 30px rgba(134,232,223,.28)}.ds-btn-glow:focus-visible{outline:2px solid #f3fff7;outline-offset:4px}"
     },
     {
       "name": "Leuchtpille Lila",
@@ -339,14 +339,14 @@
       "refersTo": "button-lilac",
       "description": "Immobilien- und Projektwege.",
       "html": "<a class=\"ds-btn-lilac\" href=\"#\">Exposé senden</a>",
-      "css": ".ds-btn-lilac{display:inline-flex;align-items:center;min-height:3.5rem;padding:0 1.75rem;border-radius:999px;color:#f3fff7;background:rgba(187,168,244,.08);font:600 1.0625rem/1 Figtree,sans-serif;text-decoration:none;box-shadow:0 0 0 1px rgba(187,168,244,.6) inset,0 4px 24px rgba(187,168,244,.12);transition:background-color .35s cubic-bezier(.16,1,.3,1)}.ds-btn-lilac:hover{background:rgba(187,168,244,.18);box-shadow:0 0 0 1px rgba(222,212,255,.95) inset,0 6px 30px rgba(187,168,244,.3)}.ds-btn-lilac:focus-visible{outline:2px solid #f3fff7;outline-offset:4px}"
+      "css": ".ds-btn-lilac{display:inline-flex;align-items:center;min-height:3.5rem;padding:0 1.75rem;border-radius:999px;color:#f3fff7;background:rgba(187,168,244,.08);font:600 1.0625rem/1 Geist,sans-serif;text-decoration:none;box-shadow:0 0 0 1px rgba(187,168,244,.6) inset,0 4px 24px rgba(187,168,244,.12);transition:background-color .35s cubic-bezier(.16,1,.3,1)}.ds-btn-lilac:hover{background:rgba(187,168,244,.18);box-shadow:0 0 0 1px rgba(222,212,255,.95) inset,0 6px 30px rgba(187,168,244,.3)}.ds-btn-lilac:focus-visible{outline:2px solid #f3fff7;outline-offset:4px}"
     },
     {
       "name": "Textlink",
       "kind": "custom",
       "description": "Verweis auf Unterseiten mit lila Unterstreichung.",
       "html": "<a class=\"ds-textlink\" href=\"#\"><span>Strategie lesen</span> <svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></a>",
-      "css": ".ds-textlink{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;color:#d4e3d9;font:500 1.0625rem Figtree,sans-serif;text-decoration:none;text-shadow:0 0 14px rgba(187,168,244,.35);transition:color .3s}.ds-textlink span{text-decoration:underline;text-decoration-color:rgba(187,168,244,.6);text-underline-offset:.3em}.ds-textlink:hover{color:#f3fff7;text-shadow:0 0 16px rgba(222,212,255,.8)}"
+      "css": ".ds-textlink{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;color:#d4e3d9;font:500 1.0625rem Geist,sans-serif;text-decoration:none;text-shadow:0 0 14px rgba(187,168,244,.35);transition:color .3s}.ds-textlink span{text-decoration:underline;text-decoration-color:rgba(187,168,244,.6);text-underline-offset:.3em}.ds-textlink:hover{color:#f3fff7;text-shadow:0 0 16px rgba(222,212,255,.8)}"
     },
     {
       "name": "Navigation",
@@ -354,7 +354,7 @@
       "refersTo": "nav-link",
       "description": "Pillenlinks mit Textlicht und Sprachumschalter.",
       "html": "<nav class=\"ds-nav\"><a href=\"#\">Strategie</a><a href=\"#\" aria-current=\"page\">Ankaufsprofil</a><span class=\"ds-lang\"><a aria-current=\"true\">DE</a><a>EN</a></span></nav>",
-      "css": ".ds-nav{display:flex;align-items:center;gap:.25rem;background:#090f0b;padding:1rem}.ds-nav>a{display:inline-flex;align-items:center;min-height:44px;padding:0 .85rem;border-radius:999px;color:#d4e3d9;font:500 1rem Figtree,sans-serif;text-decoration:none;text-shadow:0 0 14px rgba(134,232,223,.28)}.ds-nav>a:hover,.ds-nav>a[aria-current=page]{color:#f3fff7;text-shadow:0 0 16px rgba(190,255,232,.75)}.ds-nav>a[aria-current=page]{background:rgba(134,232,223,.08)}.ds-lang{display:inline-flex;padding:3px;margin-left:1rem;border-radius:999px;border:1px solid rgba(159,211,174,.22)}.ds-lang a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:40px;border-radius:999px;color:#a9bdb0;font:600 .9375rem/1 Figtree,sans-serif}.ds-lang a[aria-current=true]{background:#f3fff7;color:#090f0b;box-shadow:0 2px 14px rgba(190,255,232,.35)}"
+      "css": ".ds-nav{display:flex;align-items:center;gap:.25rem;background:#090f0b;padding:1rem}.ds-nav>a{display:inline-flex;align-items:center;min-height:44px;padding:0 .85rem;border-radius:999px;color:#d4e3d9;font:500 1rem Geist,sans-serif;text-decoration:none;text-shadow:0 0 14px rgba(134,232,223,.28)}.ds-nav>a:hover,.ds-nav>a[aria-current=page]{color:#f3fff7;text-shadow:0 0 16px rgba(190,255,232,.75)}.ds-nav>a[aria-current=page]{background:rgba(134,232,223,.08)}.ds-lang{display:inline-flex;padding:3px;margin-left:1rem;border-radius:999px;border:1px solid rgba(159,211,174,.22)}.ds-lang a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:40px;border-radius:999px;color:#a9bdb0;font:600 .9375rem/1 Geist,sans-serif}.ds-lang a[aria-current=true]{background:#f3fff7;color:#090f0b;box-shadow:0 2px 14px rgba(190,255,232,.35)}"
     },
     {
       "name": "Chip",
@@ -362,7 +362,7 @@
       "refersTo": "chip",
       "description": "Themen als Anzeige-Pillen.",
       "html": "<span class=\"ds-chip\">PropTech</span>",
-      "css": ".ds-chip{display:inline-block;padding:.6rem 1.1rem;border-radius:999px;color:#d4e3d9;background:rgba(13,21,16,.85);box-shadow:0 0 0 1px rgba(159,211,174,.22) inset;font:400 1.0625rem Figtree,sans-serif}"
+      "css": ".ds-chip{display:inline-block;padding:.6rem 1.1rem;border-radius:999px;color:#d4e3d9;background:rgba(13,21,16,.85);box-shadow:0 0 0 1px rgba(159,211,174,.22) inset;font:400 1.0625rem Geist,sans-serif}"
     },
     {
       "name": "Lichtung mit Kriterien",
@@ -370,14 +370,14 @@
       "refersTo": "clearing",
       "description": "Ersetzt Karten: rahmenlose, abgedunkelte Fläche mit Lichtfleck und Kriterien an Adern.",
       "html": "<article class=\"ds-clearing\"><h3>Startups, früh</h3><dl><dt>Phase</dt><dd>Pre-Seed und Seed</dd><dt>Region</dt><dd>Österreich, Deutschland, Schweiz</dd></dl></article>",
-      "css": ".ds-clearing{--c:#86e8df;padding:clamp(2rem,4vw,3.5rem);color:#d4e3d9;font:400 1.0625rem/1.65 Figtree,sans-serif;background:radial-gradient(closest-side at 32% 18%,color-mix(in oklab,var(--c) 14%,transparent),transparent),radial-gradient(farthest-side at 50% 50%,rgba(13,21,16,.95) 0%,rgba(10,16,12,.85) 62%,rgba(9,15,11,0) 100%),#090f0b}.ds-clearing h3{margin:0;font:300 clamp(1.75rem,2.8vw,2.5rem)/1.1 Jost,Futura,sans-serif;color:#f3fff7;text-shadow:0 0 26px color-mix(in oklab,var(--c) 45%,transparent)}.ds-clearing dl{display:grid;grid-template-columns:minmax(7.5rem,auto) 1fr;column-gap:1.75rem;margin:2rem 0 0}.ds-clearing dt,.ds-clearing dd{margin:0;padding:.95rem 0;border-top:1px solid color-mix(in oklab,var(--c) 22%,transparent)}.ds-clearing dt{color:color-mix(in oklab,var(--c) 70%,#d4e3d9);font-weight:500;font-size:1rem}"
+      "css": ".ds-clearing{--c:#86e8df;padding:clamp(2rem,4vw,3.5rem);color:#d4e3d9;font:400 1.0625rem/1.65 Geist,sans-serif;background:radial-gradient(closest-side at 32% 18%,color-mix(in oklab,var(--c) 14%,transparent),transparent),radial-gradient(farthest-side at 50% 50%,rgba(13,21,16,.95) 0%,rgba(10,16,12,.85) 62%,rgba(9,15,11,0) 100%),#090f0b}.ds-clearing h3{margin:0;font:300 clamp(1.75rem,2.8vw,2.5rem)/1.1 Geist,sans-serif;color:#f3fff7;text-shadow:0 0 26px color-mix(in oklab,var(--c) 45%,transparent)}.ds-clearing dl{display:grid;grid-template-columns:minmax(7.5rem,auto) 1fr;column-gap:1.75rem;margin:2rem 0 0}.ds-clearing dt,.ds-clearing dd{margin:0;padding:.95rem 0;border-top:1px solid color-mix(in oklab,var(--c) 22%,transparent)}.ds-clearing dt{color:color-mix(in oklab,var(--c) 70%,#d4e3d9);font-weight:500;font-size:1rem}"
     },
     {
       "name": "Ader-Liste",
       "kind": "custom",
       "description": "Senkrechte Ader mit leuchtenden Knoten.",
       "html": "<ul class=\"ds-vein\"><li><h3>Software und KI</h3><p>Ich baue KI-Software für Recht.</p></li><li><h3>Immobilien</h3><p>Ein KI-Agent für Immobilien.</p></li></ul>",
-      "css": ".ds-vein{--c:#86e8df;list-style:none;margin:0;padding:0;position:relative;display:flex;flex-direction:column;gap:1.75rem;background:#090f0b}.ds-vein::before{content:'';position:absolute;left:.5rem;top:.6rem;bottom:.6rem;width:1px;background:linear-gradient(to bottom,color-mix(in oklab,var(--c) 70%,transparent),color-mix(in oklab,var(--c) 10%,transparent))}.ds-vein li{position:relative;padding-left:2.5rem}.ds-vein li::before{content:'';position:absolute;left:calc(.5rem - 4px);top:.55rem;width:9px;height:9px;border-radius:50%;background:#f3fff7;box-shadow:0 0 0 3px color-mix(in oklab,var(--c) 30%,transparent),0 0 16px color-mix(in oklab,var(--c) 80%,transparent)}.ds-vein h3{margin:0;font:300 clamp(1.4rem,2vw,1.75rem)/1.1 Jost,sans-serif;color:#f3fff7}.ds-vein p{margin:.4rem 0 0;color:#a9bdb0;font:400 1.0625rem/1.65 Figtree,sans-serif}"
+      "css": ".ds-vein{--c:#86e8df;list-style:none;margin:0;padding:0;position:relative;display:flex;flex-direction:column;gap:1.75rem;background:#090f0b}.ds-vein::before{content:'';position:absolute;left:.5rem;top:.6rem;bottom:.6rem;width:1px;background:linear-gradient(to bottom,color-mix(in oklab,var(--c) 70%,transparent),color-mix(in oklab,var(--c) 10%,transparent))}.ds-vein li{position:relative;padding-left:2.5rem}.ds-vein li::before{content:'';position:absolute;left:calc(.5rem - 4px);top:.55rem;width:9px;height:9px;border-radius:50%;background:#f3fff7;box-shadow:0 0 0 3px color-mix(in oklab,var(--c) 30%,transparent),0 0 16px color-mix(in oklab,var(--c) 80%,transparent)}.ds-vein h3{margin:0;font:300 clamp(1.4rem,2vw,1.75rem)/1.1 Geist,sans-serif;color:#f3fff7}.ds-vein p{margin:.4rem 0 0;color:#a9bdb0;font:400 1.0625rem/1.65 Geist,sans-serif}"
     }
   ],
   "narrative": {
@@ -386,7 +386,7 @@
     "keyCharacteristics": [
       "Grünschwarzer Grund mit zwei sehr schwachen Lichtnebeln (Cyan oben rechts, Lila unten links) und dunkler Vignette.",
       "Lebende Canvas-Szene als Hintergrund aller Seiten, gesteuert über Datenattribute im Markup.",
-      "Jost 200 bis 300 für Titel, Figtree für Text.",
+      "Geist 300 bis 400 für Titel, Geist 400 für Text.",
       "Weißblüte nur für das aktive oder wichtigste Element.",
       "Tiefe entsteht durch Glühen, nie durch Schlagschatten oder Rahmen."
     ],
@@ -403,7 +403,7 @@
       },
       {
         "name": "The Leichtgewicht Rule",
-        "body": "Titel stehen in Jost 200 bis 300; je größer, desto leichter. Fett gibt es nur im Text (500 bis 600 für Knöpfe und Beschriftungen).",
+        "body": "Titel stehen in Geist 300 (h1, h2) und 400 (h3), eng gesetzt. Fett gibt es nur im Text (500 bis 600 für Knöpfe und Beschriftungen).",
         "section": "typography"
       },
       {
@@ -430,7 +430,7 @@
     "dos": [
       "Do Farben nur über die Variablen in `:root` führen und Bauteilfarben über `--c` setzen.",
       "Do jeden neuen Textbereich mit `data-calm` vor der Szene beruhigen und Wuchsstellen mit `data-anchor` anschließen.",
-      "Do Titel in Jost 200 bis 300 setzen, Text in Figtree.",
+      "Do Titel in Geist 300 bis 400 setzen, Text in Geist 400.",
       "Do Tiefe durch Glühen und Innenränder zeigen.",
       "Do für reduzierte Bewegung eine stille Szene ohne Einblendungen zeigen.",
       "Do Zielflächen mindestens 44px hoch halten."

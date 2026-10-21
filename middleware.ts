@@ -1,11 +1,17 @@
 import { NextResponse, type NextRequest } from 'next/server';
-import { EN_ZU_INTERN, INTERN_ZU_EN } from '@/lib/routen';
+import { ALTE_ADRESSEN, EN_ZU_INTERN, INTERN_ZU_EN } from '@/lib/routen';
 
 // Deutsch: /strategie → intern /de/strategie. Englisch: /en/strategy → intern /en/strategie.
 // /de/... und deutsche Slugs unter /en werden auf die öffentliche Adresse umgeleitet.
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
   const url = req.nextUrl.clone();
+
+  const neu = ALTE_ADRESSEN[pathname.replace(/\/$/, '')];
+  if (neu) {
+    url.pathname = neu;
+    return NextResponse.redirect(url, 308);
+  }
 
   if (pathname === '/de' || pathname.startsWith('/de/')) {
     url.pathname = pathname.slice(3) || '/';

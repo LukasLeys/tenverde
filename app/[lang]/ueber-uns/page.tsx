@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { Icon } from '@/components/Blatt';
 import { ExternerLink, KontaktBluete, Portraet, spracheAus } from '@/components/Bausteine';
 import { Leuchtwort } from '@/components/Leuchtwort';
 import { inhalt, LINKEDIN, ZEIGE_UNBESTAETIGT } from '@/lib/inhalt';
@@ -37,11 +36,6 @@ export default async function UeberMich({ params }: { params: Promise<{ lang: st
                 <p key={p}>{p}</p>
               ))}
             </div>
-            <p className="badge">
-              <Icon name="star" />
-              {u.superhost}
-            </p>
-            <p className="about__note">{u.superhostText}</p>
             <div className="about__links">
               <ExternerLink className="textlink" href={LINKEDIN} neuerTab={t.ui.neuerTab}>
                 {u.linkedin}

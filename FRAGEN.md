@@ -42,7 +42,7 @@ Stand: 20.10.2026. Zu jeder Frage steht, was die Website heute zeigt, und meine 
     - Bestand ausgeschlossen oder nur nachrangig?
     - Provision für Makler?
 
-    *Heute:* 2 bis 3 Zimmer, bevorzugt Neubau, Airbnb willkommen, direkt oder über Makler, auch off-market.
+    *Heute:* 1 bis 5 Zimmer, bevorzugt Neubau, Airbnb willkommen, direkt oder über Makler, auch off-market.
 22. **Projekte bauen:** Was genau willst du mitbauen: Software, Unternehmen, Immobilienprojekte? In welcher Rolle (Mitgründer, Investor, Umsetzer)? *Heute:* allgemein gehalten, Software und KI, Immobilien, Medien als Beispiele.
 23. **Weitere Kanäle:** Neben LinkedIn auch X, Instagram oder ein Podcast-Link? Eine Telefonnummer oder ein Terminlink (Calendly, Cal.com)? *Heute:* nur E-Mail und LinkedIn.
 24. **Englisch:** Soll ein Muttersprachler die englischen Texte gegenlesen? *Empfehlung:* ja, vor allem Strategie und Ankaufsprofil.

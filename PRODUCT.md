@@ -15,7 +15,7 @@ Next.js (App Router), wie bei neojuris.ai. Hosting voraussichtlich Vercel.
 Drei Gruppen, gleichwertig, keine hat Vorrang:
 
 - Gründerinnen und Gründer in Pre-Seed und Seed (Software, KI, LegalTech, PropTech; Österreich, Deutschland, Schweiz), die einen Business Angel suchen und ihr Pitch Deck schicken sollen.
-- Eigentümer und Makler, die im Raum Innsbruck oder Wien eine Wohnung (2 bis 3 Zimmer, bevorzugt Neubau, gern für Airbnb geeignet) verkaufen und einen schnellen Direktkäufer suchen, gern off-market.
+- Eigentümer und Makler, die im Raum Innsbruck oder Wien eine Immobilie (vor allem Wohnungen mit 1 bis 5 Zimmern, bevorzugt Neubau, gern für Airbnb geeignet) verkaufen und einen schnellen Direktkäufer suchen, gern off-market.
 - Menschen mit einem Projekt, die jemanden suchen, der mitbaut.
 - Partner, Banken, Kanzleien, Presse und Netzwerk, für die die Seite die Visitenkarte von Lukas Leys und seinen Firmen ist.
 
@@ -37,10 +37,10 @@ Ein Gründer, der selbst Software baut (Recht, Immobilien, KI) und mit eigenem K
 
 - Projekte im Bestand: neojuris.ai (KI-Software für juristische Arbeit), immobily.io (Software für Immobilien), beamswerk.ai (KI-Anwendungen für Unternehmen), Die Kryptologen (Krypto-Podcast aus Wien).
 - Strategie Startups: investiert gern früh und ist, wenn möglich, von Anfang an dabei (Pre-Seed, Seed); Software, KI, LegalTech, PropTech; AT, DE, CH; Ticket nach Absprache.
-- Strategie Immobilien (bestätigt 2026-10-20, ersetzt „Tirol und Westösterreich“): sucht Immobilien im Raum Innsbruck und Wien. Eigenes Ankaufsprofil: primär Wohnungen mit 2 bis 3 Zimmern, bevorzugt Neubau, Wohnungen für Airbnb-Vermietung immer gern. Direkt von Eigentümern oder über Makler, auch off-market.
+- Strategie Immobilien (bestätigt 2026-10-20, ersetzt „Tirol und Westösterreich“): sucht Immobilien im Raum Innsbruck und Wien. Eigenes Ankaufsprofil (aktualisiert 2026-10-21): primär Wohnungen mit 1 bis 5 Zimmern, bevorzugt Neubau, Immobilien für Airbnb-Vermietung immer gern. Direkt von Eigentümern oder über Makler, auch off-market.
 - Lukas Leys ist Airbnb Superhost (vom Nutzer genannt).
 - Projekte bauen: Lukas baut auch selbst gern Projekte. Wer etwas mit ihm bauen oder umsetzen möchte, meldet sich; Projekte werden gemeinsam angeschaut.
-- Seiten: Startseite, Strategie, Ankaufsprofil, Projekte bauen, Über mich mit Lebenslauf, Kontakt, Impressum, Datenschutz; DE und EN.
+- Seiten: Startseite, Strategie, Ankaufsprofil, Projekte bauen, Über uns mit Lebenslauf, Kontakt, Impressum, Datenschutz; DE und EN.
 - Lebenslauf: nur bestätigte Stationen live zeigen. Stationen aus öffentlichen Profilen (LinkedIn, TheOrg) sind unbestätigt und werden bis zur Freigabe nur in der Vorschau angezeigt.
 - Adresse: tenverde GmbH, Kirschentalgasse 14/D21, 6020 Innsbruck, Österreich.
 - Schriften selbst hosten (DSGVO), keine Einbindung von Google Fonts im Livebetrieb.
@@ -65,3 +65,9 @@ Ein Gründer, der selbst Software baut (Recht, Immobilien, KI) und mit eigenem K
 2. Klarer Ruf zur Handlung: Deck oder Exposé per E-Mail, ohne Umwege.
 3. Langfristig und ruhig im Inhalt, mutig in der Form.
 4. Nur belegbare Aussagen.
+
+## Stimme (bestätigt 2026-10-21)
+
+- Die Website spricht als Gesellschaft: immer „wir“, nie „ich“. Lukas Leys erscheint als Gründer und Geschäftsführer in der dritten Person.
+- Selbstbeschreibung: „tenverde ist eine Software- und Beteiligungsgesellschaft mit Sitz in Innsbruck, Tirol.“
+- Gesucht werden Immobilien, vor allem Wohnungen mit 1 bis 5 Zimmern. „Airbnb Superhost“ nur als Begründung beim Ankauf (Strategie, Ankaufsprofil), nicht im Bereich Über uns.

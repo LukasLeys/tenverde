@@ -55,8 +55,8 @@ export default async function Datenschutz({ params }: { params: Promise<{ lang: 
         <h3>{de ? 'Schriftarten' : 'Fonts'}</h3>
         <p>
           {de
-            ? 'Die Schriften Jost und Figtree werden von dieser Website selbst ausgeliefert. Es werden dabei keine Daten an Google oder andere Schriftanbieter übertragen.'
-            : 'The fonts Jost and Figtree are served by this website itself. No data is sent to Google or any other font provider.'}
+            ? 'Die Schrift Geist wird von dieser Website selbst ausgeliefert. Es werden dabei keine Daten an Google oder andere Schriftanbieter übertragen.'
+            : 'The font Geist is served by this website itself. No data is sent to Google or any other font provider.'}
         </p>
 
         <h3>{de ? 'Kontakt per E-Mail' : 'Contact by email'}</h3>

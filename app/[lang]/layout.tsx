@@ -8,7 +8,7 @@ import { Kopf } from '@/components/Kopf';
 import { Unterholz } from '@/components/Unterholz';
 import { ADRESSE, EMAIL, LINKEDIN, inhalt } from '@/lib/inhalt';
 import { DOMAIN, INDEXIEREN, SPRACHEN, istSprache } from '@/lib/routen';
-import { figtree, jost } from '@/lib/schriften';
+import { geist } from '@/lib/schriften';
 
 export const dynamicParams = false;
 
@@ -75,7 +75,7 @@ export default async function Layout({ children, params }: { children: ReactNode
   };
 
   return (
-    <html lang={lang} className={`${jost.variable} ${figtree.variable}`} suppressHydrationWarning>
+    <html lang={lang} className={geist.variable} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
       </head>

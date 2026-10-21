@@ -4,8 +4,8 @@ import { chromium } from 'playwright-core';
 const [basis, ordner] = process.argv.slice(2);
 const seiten = [
   ['start', '/'], ['strategie', '/strategie'], ['ankaufsprofil', '/ankaufsprofil'], ['projekte-bauen', '/projekte-bauen'],
-  ['ueber-mich', '/ueber-mich'], ['kontakt', '/kontakt'], ['impressum', '/impressum'], ['datenschutz', '/datenschutz'],
-  ['en-start', '/en'], ['en-strategy', '/en/strategy'], ['en-acquisition-profile', '/en/acquisition-profile'], ['en-build-with-me', '/en/build-with-me'],
+  ['ueber-uns', '/ueber-uns'], ['kontakt', '/kontakt'], ['impressum', '/impressum'], ['datenschutz', '/datenschutz'],
+  ['en-start', '/en'], ['en-strategy', '/en/strategy'], ['en-acquisition-profile', '/en/acquisition-profile'], ['en-build-with-us', '/en/build-with-us'],
   ['en-about', '/en/about'], ['en-contact', '/en/contact'], ['en-legal-notice', '/en/legal-notice'], ['en-privacy', '/en/privacy'],
   ['404', '/gibt-es-nicht'],
 ];

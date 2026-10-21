@@ -6,8 +6,8 @@ const basis = process.argv[2] && !process.argv[2].startsWith('--') ? process.arg
 const si = process.argv.indexOf('--shots');
 const shots = si > 0 ? process.argv[si + 1] : null;
 const seiten = [
-  '/', '/strategie', '/ankaufsprofil', '/projekte-bauen', '/ueber-mich', '/kontakt', '/impressum', '/datenschutz',
-  '/en', '/en/strategy', '/en/acquisition-profile', '/en/build-with-me', '/en/about', '/en/contact', '/en/legal-notice', '/en/privacy',
+  '/', '/strategie', '/ankaufsprofil', '/projekte-bauen', '/ueber-uns', '/kontakt', '/impressum', '/datenschutz',
+  '/en', '/en/strategy', '/en/acquisition-profile', '/en/build-with-us', '/en/about', '/en/contact', '/en/legal-notice', '/en/privacy',
   '/gibt-es-nicht', '/en/does-not-exist',
 ];
 const executablePath = process.env.CHROMIUM_PFAD || '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';

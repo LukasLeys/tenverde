@@ -1,6 +1,8 @@
 /* tenverde: Leuchtwald. Übernommen aus Entwurf 08, erweitert um die Unterseiten. */
 
 :root {
+  --f-display: var(--f-geist);
+  --f-text: var(--f-geist);
   --loam: #090f0b;
   --loam-2: #0e1712;
   --loam-3: #142019;
@@ -153,9 +155,9 @@ body::after {
 }
 .brand span {
   font-family: var(--f-display);
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.4rem;
-  letter-spacing: 0.01em;
+  letter-spacing: -0.02em;
   line-height: 1;
   text-shadow: 0 0 18px rgba(134, 232, 223, 0.35);
 }
@@ -240,24 +242,24 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-weight: 200;
+  font-weight: 300;
   font-size: clamp(2.6rem, 6.6vw, 6rem);
   line-height: 1.02;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.045em;
 }
 
 h2 {
-  font-weight: 250;
+  font-weight: 300;
   font-size: clamp(2.1rem, 4.6vw, 4rem);
   line-height: 1.06;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.035em;
 }
 
 h3 {
-  font-weight: 300;
+  font-weight: 400;
   font-size: clamp(1.75rem, 2.8vw, 2.5rem);
   line-height: 1.1;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 /* Woerter, die auf Licht reagieren */
@@ -608,15 +610,16 @@ p { margin: 0; }
   background:
     radial-gradient(closest-side, rgba(9, 15, 11, 0.94), rgba(9, 15, 11, 0.75) 55%, transparent 100%);
 }
-.contact h2 { color: var(--head); }
+.contact h2 { color: var(--head); font-size: clamp(2rem, 3.6vw, 3.25rem); }
+.subhero.kontakt-hero h1 { font-size: clamp(2.25rem, 4.4vw, 3.75rem); }
 .mail {
   display: inline-block;
-  margin-top: clamp(1.75rem, 4vw, 3rem);
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
   font-family: var(--f-display);
-  font-weight: 250;
-  font-size: clamp(2rem, 8.4vw, 6rem);
+  font-weight: 300;
+  font-size: clamp(1.75rem, 6.4vw, 3.75rem);
   line-height: 1.05;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
   color: var(--bloom);
   text-decoration: none;
   overflow-wrap: anywhere;
@@ -788,6 +791,8 @@ p { margin: 0; }
 .prose p { color: var(--text); font-size: clamp(1.0625rem, 1.2vw, 1.1875rem); line-height: 1.7; }
 
 .section--tight { padding-top: clamp(4.5rem, 9vw, 8rem); }
+/* Letzter Abschnitt vor dem Fuß: Abstand, damit Knöpfe nicht auf der Fußlinie stehen */
+.section--ende { padding-bottom: clamp(5rem, 10vw, 9rem); }
 
 /* Zwei Spalten: Text und Lichtung */
 .split {

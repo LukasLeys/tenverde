@@ -97,7 +97,7 @@ export default async function Startseite({ params }: { params: Promise<{ lang: s
         </div>
       </section>
 
-      <section className="section wrap" id="ueber-mich" aria-labelledby="about-title">
+      <section className="section wrap" id="ueber-uns" aria-labelledby="about-title">
         <div className="about">
           <Portraet text={t.ueber.portraet} />
           <div className="about__text" data-calm="">
@@ -106,10 +106,6 @@ export default async function Startseite({ params }: { params: Promise<{ lang: s
             </Leuchtwort>
             <p className="role">{t.ueber.rolle}</p>
             <p className="bio">{s.ueberText}</p>
-            <p className="badge">
-              <Icon name="star" />
-              {s.superhost}
-            </p>
             <div className="about__links">
               <WeiterLink href={pfad('ueber', sprache)}>{s.ueberCta}</WeiterLink>
             </div>

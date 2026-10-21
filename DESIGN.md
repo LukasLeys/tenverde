@@ -17,41 +17,41 @@ colors:
   line: "rgba(159, 211, 174, 0.22)"
 typography:
   display:
-    fontFamily: "Jost, Futura, Century Gothic, sans-serif"
+    fontFamily: "Geist, Segoe UI, system-ui, sans-serif"
     fontSize: "clamp(2.6rem, 6.6vw, 6rem)"
-    fontWeight: 200
-    lineHeight: 1.02
-    letterSpacing: "-0.025em"
-  headline:
-    fontFamily: "Jost, Futura, Century Gothic, sans-serif"
-    fontSize: "clamp(2.1rem, 4.6vw, 4rem)"
-    fontWeight: 250
-    lineHeight: 1.06
-    letterSpacing: "-0.02em"
-  title:
-    fontFamily: "Jost, Futura, Century Gothic, sans-serif"
-    fontSize: "clamp(1.75rem, 2.8vw, 2.5rem)"
     fontWeight: 300
+    lineHeight: 1.02
+    letterSpacing: "-0.045em"
+  headline:
+    fontFamily: "Geist, Segoe UI, system-ui, sans-serif"
+    fontSize: "clamp(2.1rem, 4.6vw, 4rem)"
+    fontWeight: 300
+    lineHeight: 1.06
+    letterSpacing: "-0.035em"
+  title:
+    fontFamily: "Geist, Segoe UI, system-ui, sans-serif"
+    fontSize: "clamp(1.75rem, 2.8vw, 2.5rem)"
+    fontWeight: 400
     lineHeight: 1.1
-    letterSpacing: "-0.01em"
+    letterSpacing: "-0.02em"
   title-small:
-    fontFamily: "Jost, Futura, Century Gothic, sans-serif"
+    fontFamily: "Geist, Segoe UI, system-ui, sans-serif"
     fontSize: "clamp(1.4rem, 2vw, 1.75rem)"
     fontWeight: 300
     lineHeight: 1.1
   lead:
-    fontFamily: "Figtree, Segoe UI, system-ui, sans-serif"
+    fontFamily: "Geist, Segoe UI, system-ui, sans-serif"
     fontSize: "clamp(1.0625rem, 1.3vw, 1.25rem)"
     fontWeight: 400
     lineHeight: 1.6
   body:
-    fontFamily: "Figtree, Segoe UI, system-ui, sans-serif"
+    fontFamily: "Geist, Segoe UI, system-ui, sans-serif"
     fontSize: "1.0625rem"
     fontWeight: 400
     lineHeight: 1.65
     fontFeature: "tnum"
   label:
-    fontFamily: "Figtree, Segoe UI, system-ui, sans-serif"
+    fontFamily: "Geist, Segoe UI, system-ui, sans-serif"
     fontSize: "0.9375rem"
     fontWeight: 500
     lineHeight: 1
@@ -133,7 +133,7 @@ Die Bildmarke Blatt (fünf Varianten) ist das Saatgut des Systems: Sie ist Logo,
 **Key Characteristics:**
 - Grünschwarzer Grund mit zwei sehr schwachen Lichtnebeln (Cyan oben rechts, Lila unten links) und dunkler Vignette.
 - Lebende Canvas-Szene als Hintergrund aller Seiten, gesteuert über Datenattribute im Markup.
-- Jost 200 bis 300 für Titel, Figtree für Text.
+- Geist 300 bis 400 für Titel, Geist 400 für Text.
 - Weißblüte nur für das aktive oder wichtigste Element.
 - Tiefe entsteht durch Glühen, nie durch Schlagschatten oder Rahmen.
 
@@ -166,10 +166,10 @@ Ein dunkler, warmer Waldboden mit kaltem Sporenlicht in vier Artfarben und einem
 
 ## Typography
 
-**Display Font:** Jost (mit Futura, Century Gothic, sans-serif), variabel 100 bis 900, selbst gehostet
-**Body Font:** Figtree (mit Segoe UI, system-ui, sans-serif), variabel 300 bis 900, selbst gehostet
+**Display Font:** Geist (mit Segoe UI, system-ui, sans-serif), variabel 100 bis 900, selbst gehostet (seit 2026-10-21, vorher Jost)
+**Body Font:** Geist, dieselbe Datei
 
-**Character:** Jost in sehr leichten Schnitten wirkt wie Licht auf dunklem Grund, geometrisch und still. Figtree trägt den Text klar und freundlich.
+**Character:** Geist in leichten Schnitten und eng gesetzt wirkt klar und technisch, passend zu Software und KI. Im Text bleibt sie gut lesbar.
 
 ### Hierarchy
 - **Display** (h1): Hauptüberschrift des ersten Bildes, höchstens 11,5ch breit; auf Unterseiten kleiner (`clamp(2.5rem, 6vw, 5.25rem)`, 16ch). Wörter erscheinen nacheinander aus der Unschärfe.
@@ -181,7 +181,7 @@ Ein dunkler, warmer Waldboden mit kaltem Sporenlicht in vier Artfarben und einem
 - **Label**: Navigation, Sprachumschalter, Zeiten im Lebenslauf, Fußzeile. Keine Großbuchstaben-Kicker.
 
 ### Named Rules
-**The Leichtgewicht Rule.** Titel stehen in Jost 200 bis 300; je größer, desto leichter. Fett gibt es nur im Text (500 bis 600 für Knöpfe und Beschriftungen).
+**The Leichtgewicht Rule.** Titel stehen in Geist 300 (h1, h2) und 400 (h3), eng gesetzt. Fett gibt es nur im Text (500 bis 600 für Knöpfe und Beschriftungen).
 
 **The Leuchtwort Rule.** Wörter in Titeln sind einzeln adressierbar (`.w`) und reagieren über `--lit` auf das Lichtfeld. Sie werden heller und glühen, ändern aber nie ihre Größe oder Laufweite.
 
@@ -238,7 +238,7 @@ Es gibt keine Formulare. Kontakt läuft ausschließlich per E-Mail. Der einzige 
 
 ### Navigation
 - Fester Kopf mit Verlauf von Loam nach transparent; Marke links mit glühendem Blatt.
-- Links als Pillen in Figtree 500 mit Textlicht; aktive Seite in Weißblüte auf zartem Cyan.
+- Links als Pillen in Geist 500 mit Textlicht; aktive Seite in Weißblüte auf zartem Cyan.
 - Sprachumschalter als Pillenpaar, gewählte Sprache gefüllt in Weißblüte.
 - Unter 1024px ein Menüknopf; das Menü öffnet sich als Liste mit großen Zeilen.
 
@@ -249,14 +249,14 @@ Projekte erscheinen als Blattmarke (`.species`, 5.5rem) in ihrer Artfarbe mit Na
 Senkrechte, ausblendende Linie in Artfarbe mit leuchtenden Knoten pro Eintrag. Varianten: Lebenslauf (Zeit links, Ader in der Mitte), Prinzipien (waagrechte Ader über drei Spalten), schlichte Aufzählung.
 
 ### Leuchtadresse und Trieb
-Die E-Mail-Adresse ist das größte Element der Kontaktbereiche: Jost 250 in Weißblüte mit vierlagigem Textlicht. Am letzten Wort der Hauptüberschrift wächst ein kleiner Trieb (Stiel in Wurzelgrün, Zweig in Lila, Blatt in Cyan).
+Die E-Mail-Adresse ist das größte Element der Kontaktbereiche: Geist 300 in Weißblüte mit vierlagigem Textlicht. Am letzten Wort der Hauptüberschrift wächst ein kleiner Trieb (Stiel in Wurzelgrün, Zweig in Lila, Blatt in Cyan).
 
 ## Do's and Don'ts
 
 ### Do:
 - **Do** Farben nur über die Variablen in `:root` führen und Bauteilfarben über `--c` setzen.
 - **Do** jeden neuen Textbereich mit `data-calm` vor der Szene beruhigen und Wuchsstellen mit `data-anchor` anschließen.
-- **Do** Titel in Jost 200 bis 300 setzen, Text in Figtree.
+- **Do** Titel in Geist 300 bis 400 setzen, Text in Geist 400.
 - **Do** Tiefe durch Glühen und Innenränder zeigen.
 - **Do** für reduzierte Bewegung eine stille Szene ohne Einblendungen zeigen.
 - **Do** Zielflächen mindestens 44px hoch halten.

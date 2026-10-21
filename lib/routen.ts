@@ -12,8 +12,8 @@ export const SEITEN = {
   start: { intern: '', de: '/', en: '/en' },
   strategie: { intern: 'strategie', de: '/strategie', en: '/en/strategy' },
   ankaufsprofil: { intern: 'ankaufsprofil', de: '/ankaufsprofil', en: '/en/acquisition-profile' },
-  bauen: { intern: 'projekte-bauen', de: '/projekte-bauen', en: '/en/build-with-me' },
-  ueber: { intern: 'ueber-mich', de: '/ueber-mich', en: '/en/about' },
+  bauen: { intern: 'projekte-bauen', de: '/projekte-bauen', en: '/en/build-with-us' },
+  ueber: { intern: 'ueber-uns', de: '/ueber-uns', en: '/en/about' },
   kontakt: { intern: 'kontakt', de: '/kontakt', en: '/en/contact' },
   impressum: { intern: 'impressum', de: '/impressum', en: '/en/legal-notice' },
   datenschutz: { intern: 'datenschutz', de: '/datenschutz', en: '/en/privacy' },
@@ -36,6 +36,13 @@ export const EN_ZU_INTERN: Record<string, string> = Object.fromEntries(
 export const INTERN_ZU_EN: Record<string, string> = Object.fromEntries(
   Object.entries(EN_ZU_INTERN).map(([en, intern]) => [intern, en]),
 );
+
+/** Frühere öffentliche Adressen → heutige Adresse (308). */
+export const ALTE_ADRESSEN: Record<string, string> = {
+  '/ueber-mich': '/ueber-uns',
+  '/en/build-with-me': '/en/build-with-us',
+  '/en/ueber-mich': '/en/about',
+};
 
 export const DOMAIN = 'https://tenverde.at';
 
