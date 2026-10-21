@@ -1,10 +1,12 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { ADRESSE, EMAIL, TELEFON, inhalt, type Kriterium, type Projekt } from '@/lib/inhalt';
 import { istSprache, type Sprache } from '@/lib/routen';
 import { notFound } from 'next/navigation';
-import { Blatt, Icon } from './Blatt';
+import { Icon } from './Blatt';
 import { KopierAdresse } from './KopierAdresse';
 import { Leuchtwort } from './Leuchtwort';
+import portraet from '@/lib/bilder/lukas-leys.jpg';
 
 /** Liest die Sprache aus den Routenparametern; alles andere ist eine 404. */
 export async function spracheAus(params: Promise<{ lang: string }>): Promise<Sprache> {
@@ -129,13 +131,10 @@ export function KontaktBluete({ sprache, titel, mitHinweis }: { sprache: Sprache
   );
 }
 
-export function Portraet({ text, art = 'leaf-5' }: { text: string; art?: 'leaf-5' | 'leaf-1' }) {
+export function Portraet({ text }: { text: string }) {
   return (
-    <div className="portrait" role="img" aria-label={text} data-calm="" data-anchor="" data-ring="">
-      <Blatt art={art} />
-      <p className="portrait__label" aria-hidden="true">
-        {text}
-      </p>
+    <div className="portrait" data-calm="" data-anchor="" data-ring="">
+      <Image src={portraet} alt={text} sizes="(max-width: 760px) 20rem, 26rem" placeholder="blur" priority />
     </div>
   );
 }

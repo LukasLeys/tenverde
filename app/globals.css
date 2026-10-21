@@ -560,9 +560,6 @@ p { margin: 0; }
   max-width: 26rem;
   border-radius: 999px 999px 2rem 2rem;
   overflow: hidden;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
   background:
     radial-gradient(70% 55% at 50% 22%, rgba(243, 255, 247, 0.16), transparent 70%),
     radial-gradient(90% 70% at 50% 40%, rgba(187, 168, 244, 0.16), transparent 75%),
@@ -570,28 +567,12 @@ p { margin: 0; }
     var(--loam-2);
   box-shadow: 0 0 0 1px rgba(187, 168, 244, 0.28) inset, 0 30px 80px rgba(0, 0, 0, 0.45);
 }
-.portrait svg {
+.portrait img {
   position: absolute;
-  left: 50%;
-  top: 44%;
-  width: 46%;
-  transform: translate(-50%, -50%);
-  stroke: var(--lilac);
-  fill: none;
-  opacity: 0.75;
-  filter: drop-shadow(0 0 12px rgba(187, 168, 244, 0.6));
-}
-.portrait__label {
-  position: relative;
-  margin: 0 1.25rem 1.75rem;
-  padding: 0.6rem 1.1rem;
-  border-radius: 999px;
-  background: rgba(9, 15, 11, 0.78);
-  color: var(--text);
-  font-size: 0.9375rem;
-  font-weight: 500;
-  text-align: center;
-  box-shadow: 0 0 0 1px rgba(187, 168, 244, 0.35) inset;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .about h2 { margin-top: 0; }
 .about .role {

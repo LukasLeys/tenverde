@@ -55,7 +55,7 @@ Ein Gründer, der selbst Software baut (Recht, Immobilien, KI) und mit eigenem K
 
 ## Evidence on Hand
 
-- Porträtfoto von Lukas Leys: wird geliefert (4:5).
+- Porträtfoto von Lukas Leys: geliefert, `lib/bilder/lukas-leys.jpg` (4:5).
 - Keine eigenen Immobilien- oder Tirol-Fotos, keine Produkt-Screens der Firmen.
 - Keine Kennzahlen, Portfoliogrößen, Investitionssummen, Exits oder Referenzen. Nichts davon erfinden.
 
