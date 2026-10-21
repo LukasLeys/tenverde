@@ -15,25 +15,24 @@ for (const [datei, groesse] of [['app/apple-icon.png', 180], ['tools/favicon-48.
   await p.close();
 }
 
-// Open-Graph-Bild: echte Rosette der Startseite, ohne Text, dazu die Wortmarke
+// Open-Graph-Bild: echte Rosette der Startseite, dazu das Logo aus marke/ (vorher node tools/marke.mjs)
 const p = await browser.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1, reducedMotion: 'no-preference' });
 await p.goto(basis + '/', { waitUntil: 'networkidle' });
 await p.addStyleTag({ content: `
   .top, .hero__text, .page > *:not(main), main > *:not(.hero), nextjs-portal { display: none !important; }
   .hero { min-height: 630px !important; }
-  #og-marke { position: fixed; left: 72px; bottom: 72px; z-index: 30; display: flex; align-items: center; gap: 22px; color: #f3fff7; font-family: var(--f-display); font-weight: 250; }
-  #og-marke svg { width: 76px; height: 76px; fill: #f3fff7; filter: drop-shadow(0 0 14px rgba(134,232,223,.7)); }
-  #og-marke b { font-weight: 300; font-size: 104px; letter-spacing: -0.01em; line-height: 1; text-shadow: 0 0 28px rgba(134,232,223,.45); }
-  #og-marke span { display: block; font-family: var(--f-text); font-weight: 500; font-size: 26px; color: #a9bdb0; margin-top: 10px; letter-spacing: 0.02em; }
-  .rosette-anchor { right: 2% !important; width: 560px !important; }
+  #og-marke { position: fixed; left: 72px; bottom: 72px; z-index: 30; color: #f3fff7; }
+  #og-marke svg { display: block; height: 80px; width: auto; filter: drop-shadow(0 0 18px rgba(134,232,223,.5)); }
+  #og-marke span { display: block; font-family: var(--f-text); font-weight: 400; font-size: 28px; color: #a9bdb0; margin-top: 22px; letter-spacing: 0.005em; }
+  .hero > .rosette-anchor { position: fixed !important; left: 640px !important; top: 35px !important; width: 560px !important; max-width: none !important; margin: 0 !important; flex: none !important; }
 `});
-await p.evaluate(() => {
+await p.evaluate((marke) => {
   const d = document.createElement('div');
   d.id = 'og-marke';
-  d.innerHTML = '<svg viewBox="0 0 64 64"><use href="#leaf-1"/></svg><div><b>tenverde</b><span>Innsbruck · Wien</span></div>';
+  d.innerHTML = marke + '<span>Innsbruck · Wien</span>';
   document.body.appendChild(d);
   window.dispatchEvent(new Event('resize'));
-});
+}, readFileSync('marke/quelle/horizontal-hell-ohne-rand.svg', 'utf8'));
 await p.waitForTimeout(4500);
 await p.screenshot({ path: 'app/opengraph-image.png' });
 await browser.close();

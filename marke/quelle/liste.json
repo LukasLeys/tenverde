@@ -1,0 +1,82 @@
+[
+  {
+    "form": "bildmarke",
+    "farbe": "hell",
+    "name": "tenverde-bildmarke-hell"
+  },
+  {
+    "form": "bildmarke",
+    "farbe": "leuchtend",
+    "name": "tenverde-bildmarke-leuchtend"
+  },
+  {
+    "form": "bildmarke",
+    "farbe": "gruen",
+    "name": "tenverde-bildmarke-gruen"
+  },
+  {
+    "form": "bildmarke",
+    "farbe": "schwarz",
+    "name": "tenverde-bildmarke-schwarz"
+  },
+  {
+    "form": "wortmarke",
+    "farbe": "hell",
+    "name": "tenverde-wortmarke-hell"
+  },
+  {
+    "form": "wortmarke",
+    "farbe": "leuchtend",
+    "name": "tenverde-wortmarke-leuchtend"
+  },
+  {
+    "form": "wortmarke",
+    "farbe": "gruen",
+    "name": "tenverde-wortmarke-gruen"
+  },
+  {
+    "form": "wortmarke",
+    "farbe": "schwarz",
+    "name": "tenverde-wortmarke-schwarz"
+  },
+  {
+    "form": "horizontal",
+    "farbe": "hell",
+    "name": "tenverde-horizontal-hell"
+  },
+  {
+    "form": "horizontal",
+    "farbe": "leuchtend",
+    "name": "tenverde-horizontal-leuchtend"
+  },
+  {
+    "form": "horizontal",
+    "farbe": "gruen",
+    "name": "tenverde-horizontal-gruen"
+  },
+  {
+    "form": "horizontal",
+    "farbe": "schwarz",
+    "name": "tenverde-horizontal-schwarz"
+  },
+  {
+    "form": "gestapelt",
+    "farbe": "hell",
+    "name": "tenverde-gestapelt-hell"
+  },
+  {
+    "form": "gestapelt",
+    "farbe": "leuchtend",
+    "name": "tenverde-gestapelt-leuchtend"
+  },
+  {
+    "form": "gestapelt",
+    "farbe": "gruen",
+    "name": "tenverde-gestapelt-gruen"
+  },
+  {
+    "form": "gestapelt",
+    "farbe": "schwarz",
+    "name": "tenverde-gestapelt-schwarz"
+  }
+]

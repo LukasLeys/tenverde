@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="l" cx="50%" cy="46%" r="60%"><stop offset="0" stop-color="#1e7a46"/><stop offset="1" stop-color="#1e7a46"/></radialGradient>
+    <filter id="g" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="26"/></filter>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#l)"/>
+  
+  <g transform="translate(132 132) scale(11.875) rotate(35 32 32)"><path fill="#f3fff7" fill-rule="evenodd" d="M32 58C14 46 12 22 32 6C52 22 50 46 32 58ZM30.4 52L32 14L33.6 52Z"/></g>
+  
+</svg>
