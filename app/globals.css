@@ -539,6 +539,12 @@ p { margin: 0; }
 }
 .clearing .btn { margin-top: 2.25rem; }
 
+/* Startseite: Titel, Text, Kriterien und Knöpfe stehen in beiden Lichtungen auf gleicher Höhe */
+.clearings--zeilen { row-gap: 0; }
+.clearings--zeilen > .clearing { display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 0; }
+.clearings--zeilen > .clearing > * { align-self: start; }
+.clearings--zeilen h3 { white-space: pre-line; }
+
 /* Ueber mich */
 
 .about {
@@ -758,6 +764,8 @@ p { margin: 0; }
   .growth:nth-child(even) { padding-left: clamp(0rem, 8vw, 4rem); }
 
   .clearings { grid-template-columns: minmax(0, 1fr); }
+  .clearings--zeilen { row-gap: clamp(2rem, 4vw, 4rem); }
+  .clearings--zeilen > .clearing { display: block; grid-row: auto; }
   .about { grid-template-columns: minmax(0, 1fr); }
   .portrait { max-width: 20rem; }
 }

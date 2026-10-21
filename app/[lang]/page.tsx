@@ -54,7 +54,7 @@ export default async function Startseite({ params }: { params: Promise<{ lang: s
           </Leuchtwort>
           <p className="lead">{s.strategieLead}</p>
         </div>
-        <div className="clearings">
+        <div className="clearings clearings--zeilen">
           <Lichtung id="startups-title" titel={s.startupsH3}>
             <p className="clearing__text">{s.startupsText}</p>
             <Kriterien liste={t.startups.kriterien} />
