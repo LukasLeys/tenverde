@@ -29,7 +29,7 @@ Jeder Eintrag verlinkt in neuem Tab.
 2. immobily.io · https://immobily.io
    DE: Software für Immobilien. Digitale Werkzeuge für Eigentümer, Verwalter und Makler.
    EN: Software for real estate. Digital tools for owners, property managers and agents.
-3. beamswerk.ai · https://beamswerk.ai
+3. beamwerk.ai · https://beamwerk.ai
    DE: KI-Anwendungen für Unternehmen. Automatisierung von Abläufen, die heute noch von Hand laufen.
    EN: AI applications for businesses. Automating workflows that still run by hand today.
 4. Die Kryptologen · https://diekryptologen.com/

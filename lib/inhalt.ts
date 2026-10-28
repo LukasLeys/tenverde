@@ -140,8 +140,8 @@ const de = {
       text: 'KI-Agent für Immobilien in Österreich. Behält Immobilie, Markt und Recht im Blick, erkennt Chancen und erinnert rechtzeitig. Für Eigentümer, Vermieter, Makler und Investoren.',
     },
     {
-      name: 'beamswerk.ai',
-      anzeige: 'beamswerk.ai',
+      name: 'beamwerk.ai',
+      anzeige: 'beamwerk.ai',
       art: 'leaf-5',
       farbe: 'lilac',
       feld: 'HR-Tech',
@@ -241,7 +241,7 @@ const de = {
       'Wir investieren nicht nur, wir entwickeln auch selbst. Wenn Sie ein Projekt haben und Partner suchen, die mitentwickeln, schreiben Sie uns. Wir schauen uns Ihr Projekt gemeinsam an.',
     womitH2: 'Woran wir arbeiten',
     womit: [
-      { titel: 'Software und KI', text: 'Mit neojuris.ai und beamswerk.ai entwickeln wir KI-Software für Recht und für Unternehmen.' },
+      { titel: 'Software und KI', text: 'Mit neojuris.ai und beamwerk.ai entwickeln wir KI-Software für Recht und für Unternehmen.' },
       { titel: 'Immobilien', text: 'immobily.io ist ein KI-Agent für Immobilien in Österreich. Dazu kaufen und vermieten wir selbst.' },
       { titel: 'Medien', text: 'Mit Die Kryptologen erklären wir Bitcoin, Blockchain und Kryptoökonomie verständlich.' },
     ],
@@ -289,7 +289,7 @@ const de = {
       },
       {
         zeit: 'heute',
-        titel: 'beamswerk.ai',
+        titel: 'beamwerk.ai',
         text: 'Aufbau von KI-Anwendungen, die Abläufe in Unternehmen automatisieren.',
       },
       {
@@ -516,7 +516,7 @@ const en: Inhalt = {
       'We do more than invest, we also develop ourselves. If you have a project and are looking for partners to build it with, write to us. We will look at your project together.',
     womitH2: 'What we work on',
     womit: [
-      { titel: 'Software and AI', text: 'With neojuris.ai and beamswerk.ai we develop AI software for law and for businesses.' },
+      { titel: 'Software and AI', text: 'With neojuris.ai and beamwerk.ai we develop AI software for law and for businesses.' },
       { titel: 'Real estate', text: 'immobily.io is an AI agent for real estate in Austria. We also buy and rent out property ourselves.' },
       { titel: 'Media', text: 'With Die Kryptologen we explain bitcoin, blockchain and the crypto economy clearly.' },
     ],

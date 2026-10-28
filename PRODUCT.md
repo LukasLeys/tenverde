@@ -35,7 +35,7 @@ Ein Gründer, der selbst Software baut (Recht, Immobilien, KI) und mit eigenem K
 
 ## Capabilities and Constraints
 
-- Projekte im Bestand: neojuris.ai (KI-Software für juristische Arbeit), immobily.io (Software für Immobilien), beamswerk.ai (KI-Anwendungen für Unternehmen), Die Kryptologen (Krypto-Podcast aus Wien).
+- Projekte im Bestand: neojuris.ai (KI-Software für juristische Arbeit), immobily.io (Software für Immobilien), beamwerk.ai (KI-Anwendungen für Unternehmen), Die Kryptologen (Krypto-Podcast aus Wien).
 - Strategie Startups: investiert gern früh und ist, wenn möglich, von Anfang an dabei (Pre-Seed, Seed); Software, KI, LegalTech, PropTech; AT, DE, CH; Ticket nach Absprache.
 - Strategie Immobilien (bestätigt 2026-10-20, ersetzt „Tirol und Westösterreich“): sucht Immobilien im Raum Innsbruck und Wien. Eigenes Ankaufsprofil (aktualisiert 2026-10-21): primär Wohnungen mit 1 bis 5 Zimmern, bevorzugt Neubau, Immobilien für Airbnb-Vermietung immer gern. Direkt von Eigentümern oder über Makler, auch off-market.
 - Lukas Leys ist Airbnb Superhost (vom Nutzer genannt).
@@ -44,7 +44,7 @@ Ein Gründer, der selbst Software baut (Recht, Immobilien, KI) und mit eigenem K
 - Lebenslauf: nur bestätigte Stationen live zeigen. Stationen aus öffentlichen Profilen (LinkedIn, TheOrg) sind unbestätigt und werden bis zur Freigabe nur in der Vorschau angezeigt.
 - Adresse: tenverde GmbH, Kirschentalgasse 14/D21, 6020 Innsbruck, Österreich.
 - Schriften selbst hosten (DSGVO), keine Einbindung von Google Fonts im Livebetrieb.
-- Offen: E-Mail-Adresse bestätigen; Firmenbuchnummer, UID, Kammer, Aufsichtsbehörde; Hosting-Anbieter; Beschreibungen von immobily.io und beamswerk.ai vom Kunden bestätigen.
+- Offen: E-Mail-Adresse bestätigen; Firmenbuchnummer, UID, Kammer, Aufsichtsbehörde; Hosting-Anbieter; Beschreibungen von immobily.io und beamwerk.ai vom Kunden bestätigen.
 
 ## Brand Commitments
 

@@ -16,7 +16,7 @@ Stand: 20.10.2026. Zu jeder Frage steht, was die Website heute zeigt, und meine 
 
 ## B. Inhalte und Fakten
 
-10. **beamswerk.ai:** Stimmt „KI-Anwendungen für Unternehmen. Automatisierung von Abläufen, die heute noch von Hand laufen.“? Wie lautet die Website? beamswerk.ai ist derzeit nicht erreichbar. *Heute:* Text ohne Link, „Website folgt“.
+10. **beamwerk.ai:** Stimmt „KI-Anwendungen für Unternehmen. Automatisierung von Abläufen, die heute noch von Hand laufen.“? Wie lautet die Website? beamwerk.ai ist derzeit nicht erreichbar. *Heute:* Text ohne Link, „Website folgt“.
 11. **immobily.io:** Passt der Text, den ich von der Website übernommen habe? „KI-Agent für Immobilien in Österreich. Behält Immobilie, Markt und Recht im Blick, erkennt Chancen und erinnert rechtzeitig. Für Eigentümer, Vermieter, Makler und Investoren.“
 12. **neojuris.ai:** Passt „KI-Software für juristische Arbeit. Recherche, Entwürfe und Prüfung von Dokumenten für Kanzleien und Rechtsabteilungen.“?
 13. **Die Kryptologen:** Welche Rolle hast du dort (Gründer, Host, Mitherausgeber)? Stimmt „Der Krypto-Podcast aus Wien“?
@@ -29,7 +29,7 @@ Stand: 20.10.2026. Zu jeder Frage steht, was die Website heute zeigt, und meine 
     - NEOS, Co-Leitung einer Arbeitsgruppe zur Kryptoökonomie
     - Insticore, frühere Station
 15. **Ausbildung:** Studium, Abschlüsse, Jahre? Soll der juristische Hintergrund sichtbar werden? *Heute:* fehlt ganz.
-16. **Jahreszahlen der aktuellen Stationen:** Seit wann gibt es tenverde, neojuris.ai, immobily.io, beamswerk.ai und Die Kryptologen? *Heute:* „heute“.
+16. **Jahreszahlen der aktuellen Stationen:** Seit wann gibt es tenverde, neojuris.ai, immobily.io, beamwerk.ai und Die Kryptologen? *Heute:* „heute“.
 17. **Porträt:** Erledigt am 21.10.2026, Foto auf Start und Über uns (Ausschnitt 1080 × 1024 px). Ein Original in höherer Auflösung würde auf großen Bildschirmen noch schärfer wirken.
 18. **Airbnb Superhost:** Soll dein Airbnb-Profil verlinkt werden? Darf die Seite sagen, wie viele Wohnungen du vermietest? *Heute:* nur „Airbnb Superhost“ ohne Zahlen und ohne Link.
 19. **Ticketgröße:** Soll eine Spanne für Startup-Beteiligungen stehen, z. B. „ab € 25.000“? *Heute:* „nach Absprache“.
